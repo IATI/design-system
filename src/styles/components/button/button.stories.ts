@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/web-components';
+import type { Meta, StoryObj } from "@storybook/web-components";
 
-import { html } from 'lit';
+import { html } from "lit";
 
 const meta: Meta = {
-  title: "Components/Button"
+  title: "Components/Button",
 };
 
 export default meta;

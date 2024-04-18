@@ -3,6 +3,7 @@
 ## Development
 
 Start storybook:
+
 ```
 npm start
 ```
@@ -14,11 +15,13 @@ npm start
 ## Production build
 
 Build CSS:
+
 ```
 npm run build
 ```
 
 Build storybook:
+
 ```
 npm run build:storybook
 ```
