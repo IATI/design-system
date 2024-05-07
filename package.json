@@ -4,9 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "sass": "src/scss/iati.scss",
+  "style": "dist/css/iati.css",
   "scripts": {
     "start": "storybook dev -p 6006",
-    "build": "sass src/scss:dist --pkg-importer=node --no-source-map --style=expanded",
+    "build": "sass src/scss:dist/css --pkg-importer=node --no-source-map --style=expanded",
     "build:storybook": "storybook build",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint",
