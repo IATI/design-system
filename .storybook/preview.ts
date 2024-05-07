@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/web-components";
 
-import "../src/styles/main.scss";
+import "../src/scss/iati.scss";
 
 const preview: Preview = {};
 
