@@ -2,6 +2,10 @@
   "name": "iati-design-system",
   "description": "A design system for IATI products.",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IATI/design-system.git"
+  },
   "type": "module",
   "sass": "src/scss/iati.scss",
   "style": "dist/css/iati.css",
