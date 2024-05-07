@@ -1,7 +1,7 @@
 {
   "name": "iati-design-system",
   "description": "A design system for IATI products.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IATI/design-system.git"
@@ -13,8 +13,8 @@
     }
   },
   "files": [
-    "dist/{css}/*.{css}",
-    "src/scss/**/*.scss"
+    "src/scss/**/*.scss",
+    "dist/css/**/*.css"
   ],
   "scripts": {
     "start": "storybook dev -p 6006",
