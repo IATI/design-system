@@ -24,7 +24,9 @@ npm start
 
 ## Project Structure
 
-[The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern)
+Sass code roughly follows [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern).
+
+Storybook stories should be placed alongside their respective component.
 
 ## Production build
 
