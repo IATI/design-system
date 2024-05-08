@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+
+# NPM
+node_modules
+
+# Storybook
+*storybook.log
+storybook-static
+
+# Build
+dist
