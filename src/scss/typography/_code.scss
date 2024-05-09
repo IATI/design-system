@@ -1,0 +1,33 @@
+@use "../tokens/color" as *;
+@use "../tokens/font" as *;
+@use "../tokens/spacing" as *;
+
+.iati-code {
+  font-family: $font-stack-monospace;
+  background-color: $color-grey-10;
+  border: 1px solid $color-grey-20;
+  padding: 0.1em 0.2em;
+
+  &--block {
+    display: block;
+    padding: $padding-block;
+    overflow-x: scroll;
+  }
+}
+
+code {
+  @extend .iati-code;
+}
+
+pre {
+  @extend .iati-code;
+  @extend .iati-code--block;
+}
+
+kbd {
+  @extend .iati-code;
+
+  kbd {
+    border: none;
+  }
+}
