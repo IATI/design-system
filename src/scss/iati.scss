@@ -1,3 +1,6 @@
 @use "base";
 @use "tokens";
 @use "typography";
+
+// Expose tokens for use in downstream applications
+@forward "tokens";
