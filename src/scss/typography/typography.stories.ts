@@ -1,10 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
-
 import { html } from "lit";
+
+import Template from "../../../.storybook/StoriesOnlyTemplate.mdx";
 
 const meta: Meta = {
   title: "Core/Typography",
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      page: Template,
+    },
+  },
 };
 
 export default meta;
@@ -47,7 +53,7 @@ export const Body: Story = {
 export const Links: Story = {
   render: () => html`
     <a>This is a link.</a>
-    <p>This paragraph contains a <a>link</a>.</p>
+    <p>This is a <a>link</a> within a paragraph.</p>
   `,
 };
 
