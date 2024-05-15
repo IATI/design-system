@@ -4,6 +4,11 @@ import "../src/scss/iati.scss";
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        order: ["Core", "Components"],
+      },
+    },
     docs: {
       source: {
         format: "dedent",
