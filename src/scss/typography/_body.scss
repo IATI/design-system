@@ -1,0 +1,31 @@
+@use "../tokens/color" as *;
+@use "../tokens/font" as *;
+@use "../tokens/spacing" as *;
+
+html {
+  font-family: $font-stack-body;
+  color: $color-grey-90;
+}
+
+p,
+a,
+li {
+  line-height: 2;
+  font-weight: 300;
+}
+
+a {
+  color: $color-teal-80;
+  text-decoration: underline;
+  line-height: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  border-left: 4px solid $color-grey-90;
+  padding: 0 $padding-block;
+  margin-left: $padding-block;
+}

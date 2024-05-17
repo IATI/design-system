@@ -1,0 +1,44 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+
+.iati-callout {
+  padding: $padding-block;
+  border-left: $border-width solid $color-blue-50;
+  background-color: $color-teal-10;
+  color: $color-teal-90;
+  box-shadow: 0 4px 5px $color-grey-20;
+
+  &--orange {
+    border-color: $color-orange-50;
+    background-color: $color-orange-10;
+    color: $color-orange-90;
+  }
+
+  &--red {
+    border-color: $color-red-50;
+    background-color: $color-red-10;
+    color: $color-red-90;
+  }
+
+  &--green {
+    border-color: $color-green-50;
+    background-color: $color-green-10;
+    color: $color-green-90;
+  }
+
+  &--purple {
+    border-color: $color-purple-50;
+    background-color: $color-purple-10;
+    color: $color-purple-90;
+  }
+
+  & > * {
+    margin: 0;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+}

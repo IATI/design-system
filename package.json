@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "start": "storybook dev -p 6006",
-    "build": "sass --pkg-importer=node --no-source-map --style=expanded src/scss:dist/css ",
+    "build": "sass --pkg-importer=node --no-source-map --style=expanded src/scss:dist/css",
     "build:storybook": "storybook build",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint",

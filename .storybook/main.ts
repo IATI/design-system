@@ -15,6 +15,13 @@ const config: StorybookConfig = {
           },
         },
       },
+      optimizeDeps: {
+        exclude: [
+          "@storybook/blocks",
+          "@storybook/theming",
+          "@storybook/components",
+        ],
+      },
     });
   },
 };
