@@ -22,4 +22,9 @@ BREAKING CHANGE: removes the '.subcomponent' class.
 
 ### What is a breaking change?
 
-A breaking change is any "incompatible API change". In the context of this design system, the API consists of CSS classes and SASS variables/functions/mixins etc. Any change which removes or renames a part of the API must be labelled a breaking change.
+A breaking change is any "incompatible API change". In the context of this design system, the API consists of CSS classes and SASS variables/functions/mixins etc.
+
+Breaking changes include the following:
+
+- Any change which removes or renames a part of the API must be labelled a breaking change.
+- Any change which would require a downstream consumer to change their HTML.
