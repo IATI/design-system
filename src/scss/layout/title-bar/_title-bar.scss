@@ -1,0 +1,36 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+@use "../../base/mixins";
+
+.iati-title-bar {
+  background-color: $color-teal-90;
+
+  &__title {
+    @include mixins.page-width-container();
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding: 1.2em $padding-block;
+    position: relative;
+
+    &:before {
+      content: "";
+      border-left: $border-width solid $color-teal-50;
+      padding: $padding-block;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      background-image: url("http://styles.iatistandard.org/assets/svg/source/marque-white.svg");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 300px;
+      opacity: 0.2;
+    }
+  }
+}
