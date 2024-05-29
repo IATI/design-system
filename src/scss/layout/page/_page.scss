@@ -1,0 +1,6 @@
+@use "../../base/mixins";
+
+.iati-main {
+  @include mixins.page-width-container();
+  flex: 1;
+}
