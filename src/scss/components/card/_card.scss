@@ -1,0 +1,31 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+
+.iati-card {
+  box-shadow: 0 4px 5px $color-grey-20;
+  background-color: white;
+  border-top: $border-width solid $color-teal-90;
+  padding: $padding-block;
+
+  & :first-child {
+    margin-top: 0;
+  }
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  &__subtitle {
+    color: $color-teal-90;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
