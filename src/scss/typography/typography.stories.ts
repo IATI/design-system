@@ -1,16 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 
-import Template from "../../../.storybook/StoriesOnlyTemplate.mdx";
-
 const meta: Meta = {
   title: "Core/Typography",
-  tags: ["autodocs"],
-  parameters: {
-    docs: {
-      page: Template,
-    },
-  },
 };
 
 export default meta;

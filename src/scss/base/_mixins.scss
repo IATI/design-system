@@ -1,0 +1,23 @@
+@use "../tokens/color" as *;
+@use "../tokens/spacing" as *;
+
+@mixin page-width-container {
+  width: 100%;
+  max-width: $page-width-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $padding-block;
+}
+
+@mixin columns {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin unstyled-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

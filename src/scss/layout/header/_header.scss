@@ -1,0 +1,33 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+@use "../../base/mixins";
+
+.iati-header {
+  @include mixins.page-width-container();
+  @include mixins.columns();
+  background-color: $color-teal-90;
+  background-color: white;
+  white-space: nowrap;
+
+  &__logo {
+    height: 60px;
+  }
+
+  &__nav {
+    @include mixins.unstyled-list();
+  }
+
+  &__nav-item {
+    display: inline-block;
+    font-size: 1.1rem;
+
+    & a {
+      text-decoration: none;
+      padding: 0.5rem;
+
+      &:hover {
+        border-bottom: 4px solid currentColor;
+      }
+    }
+  }
+}
