@@ -1,0 +1,28 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+@use "../../base/mixins";
+
+.iati-footer {
+  background-color: $color-teal-90;
+  color: white;
+
+  & a {
+    color: currentColor;
+  }
+
+  & > div {
+    @include mixins.page-width-container();
+    @include mixins.columns();
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid $color-teal-70;
+    margin: 0;
+  }
+
+  &__logo {
+    height: 80px;
+    margin: $padding-block 0;
+  }
+}
