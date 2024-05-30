@@ -7,10 +7,11 @@
   @include mixins.columns();
   background-color: $color-teal-90;
   background-color: white;
-  white-space: nowrap;
+  flex-wrap: wrap;
 
   &__logo {
-    height: 60px;
+    max-height: 60px;
+    max-width: 100%;
   }
 
   &__nav {
