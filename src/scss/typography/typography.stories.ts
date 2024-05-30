@@ -70,6 +70,15 @@ export const Lists: Story = {
   `,
 };
 
+export const DescriptionLists: Story = {
+  render: () => html`
+    <dl>
+      <dt>Term</dt>
+      <dd>Definition</dd>
+    </dl>
+  `,
+};
+
 export const Quotes: Story = {
   render: () => html`
     <p>
