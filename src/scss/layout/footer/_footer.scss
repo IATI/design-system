@@ -13,6 +13,9 @@
   & > div {
     @include mixins.page-width-container();
     @include mixins.columns();
+    flex-wrap: wrap;
+    row-gap: $padding-block;
+    column-gap: $padding-block;
   }
 
   hr {
@@ -22,7 +25,24 @@
   }
 
   &__logo {
-    height: 80px;
+    max-height: 80px;
+    max-width: 100%;
     margin: $padding-block 0;
+  }
+
+  &__list {
+    &-title {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    ul {
+      @include mixins.unstyled-list();
+    }
+  }
+
+  &__social-icons {
+    @include mixins.columns();
+    column-gap: $padding-block;
   }
 }

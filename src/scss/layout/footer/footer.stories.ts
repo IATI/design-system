@@ -20,11 +20,18 @@ export const Footer: Story = {
             class="iati-footer__logo"
           />
         </a>
+        <div class="iati-footer__list">
+          <span class="iati-footer__list-title">Useful Links</span>
+          <ul>
+            <li><a>Contact</a></li>
+            <li><a>Privacy Policy</a></li>
+          </ul>
+        </div>
       </div>
       <hr />
       <div>
-        <div>© Copyright 2024 IATI Secretariat.</div>
-        <div>
+        <span>© Copyright 2024 IATI Secretariat.</span>
+        <div class="iati-footer__social-icons">
           <a href="https://twitter.com/IATI_aid" aria-label="Twitter">
             ${Twitter.render?.call({ ...args })}
           </a>
