@@ -1,0 +1,23 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+
+.iati-search-bar {
+  display: flex;
+  flex-flow: row nowrap;
+
+  & input[type="text"] {
+    flex-grow: 1;
+    padding: $padding-block;
+    border: 1px solid $color-grey-20;
+    border-right: none;
+
+    &::placeholder {
+      color: $color-grey-40;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-grey-30;
+    }
+  }
+}
