@@ -1,0 +1,14 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+
+.iati-button {
+  background-color: $color-teal-90;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding: $padding-block;
+
+  &:hover {
+    background-color: $color-teal-80;
+  }
+}
