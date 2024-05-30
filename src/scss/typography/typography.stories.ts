@@ -58,6 +58,9 @@ export const Lists: Story = {
     <ul>
       <li>This is an unordered list.</li>
       <li>It has bulleted items.</li>
+      <li>
+        <p>Paragraphs within list items shouldn't create extra margins.</p>
+      </li>
     </ul>
     <p>Below is an ordered list:</p>
     <ol>
