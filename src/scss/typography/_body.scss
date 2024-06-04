@@ -7,17 +7,21 @@ html {
   color: $color-grey-90;
 }
 
+body,
 p,
 a,
 li {
-  line-height: 2;
+  line-height: $line-height-body;
   font-weight: 300;
+}
+
+li p {
+  margin: 0;
 }
 
 a {
   color: $color-teal-80;
   text-decoration: underline;
-  line-height: inherit;
 
   &:hover {
     text-decoration: none;
@@ -28,4 +32,19 @@ blockquote {
   border-left: 4px solid $color-grey-90;
   padding: 0 $padding-block;
   margin-left: $padding-block;
+}
+
+dl {
+  dt,
+  dd {
+    line-height: $line-height-body;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: $padding-block;
+  }
 }

@@ -1,16 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 
-import Template from "../../../.storybook/StoriesOnlyTemplate.mdx";
-
 const meta: Meta = {
   title: "Core/Typography",
-  tags: ["autodocs"],
-  parameters: {
-    docs: {
-      page: Template,
-    },
-  },
 };
 
 export default meta;
@@ -66,12 +58,24 @@ export const Lists: Story = {
     <ul>
       <li>This is an unordered list.</li>
       <li>It has bulleted items.</li>
+      <li>
+        <p>Paragraphs within list items shouldn't create extra margins.</p>
+      </li>
     </ul>
     <p>Below is an ordered list:</p>
     <ol>
       <li>This is an ordered list.</li>
       <li>It has numbered items.</li>
     </ol>
+  `,
+};
+
+export const DescriptionLists: Story = {
+  render: () => html`
+    <dl>
+      <dt>Term</dt>
+      <dd>Definition</dd>
+    </dl>
   `,
 };
 

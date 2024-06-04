@@ -1,0 +1,29 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+
+table {
+  border-collapse: collapse;
+  display: inline-block;
+  max-width: 100%;
+  overflow: auto;
+
+  thead,
+  th {
+    background-color: $color-grey-10;
+
+    &,
+    p {
+      font-weight: bold;
+    }
+  }
+
+  th,
+  td {
+    border: 1px solid $color-grey-20;
+    padding: 0.5rem;
+  }
+
+  caption {
+    margin: $padding-block 0;
+  }
+}

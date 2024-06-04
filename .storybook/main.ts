@@ -5,6 +5,9 @@ const config: StorybookConfig = {
   framework: "@storybook/web-components-vite",
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: ["@storybook/addon-essentials"],
+  docs: {
+    autodocs: true,
+  },
   async viteFinal(config) {
     const { mergeConfig } = await import("vite");
     return mergeConfig(config, {

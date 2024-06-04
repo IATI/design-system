@@ -1,0 +1,45 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+@use "../../base/mixins";
+
+.iati-footer {
+  background-color: $color-teal-90;
+  color: white;
+
+  & a {
+    color: currentColor;
+  }
+
+  & > div {
+    @include mixins.page-width-container();
+    @include mixins.columns();
+    flex-wrap: wrap;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid $color-teal-70;
+    margin: 0;
+  }
+
+  &__logo {
+    max-height: 80px;
+    max-width: 100%;
+    margin: $padding-block 0;
+  }
+
+  &__list {
+    &-title {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    ul {
+      @include mixins.unstyled-list();
+    }
+  }
+
+  &__social-icons {
+    @include mixins.columns();
+  }
+}

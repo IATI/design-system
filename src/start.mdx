@@ -1,36 +1,7 @@
-import { Meta, Title } from "@storybook/blocks";
+import { Markdown, Meta, Title } from "@storybook/blocks";
+
+import ReadMe from "../README.md?raw";
 
 <Meta title="Get Started" />
 
-<Title>IATI Design System</Title>
-
-## Installation
-
-There are multiple ways to use the IATI Design System CSS in your product:
-
-### Option 1: CDN
-
-1. Add a link to the CSS in the `<head>` section of your HTML page:
-
-   ```html
-   <head>
-     <link
-       href="https://cdn.jsdelivr.net/npm/iati-design-system@X.Y.Z/dist/css/iati.css"
-       rel="stylesheet"
-     />
-   </head>
-   ```
-
-### Option 2: NPM
-
-1. Install the package with NPM:
-
-   ```
-   npm install iati-design-system
-   ```
-
-2. The CSS can be imported from the following location:
-
-   ```javascript
-   import "iati-design-system/dist/css/iati.css";
-   ```
+<Markdown>{ReadMe}</Markdown>

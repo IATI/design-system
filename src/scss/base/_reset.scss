@@ -16,3 +16,18 @@ strong {
 em {
   font-style: italic;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+a:has(i),
+a:has(img) {
+  text-decoration: none;
+}
