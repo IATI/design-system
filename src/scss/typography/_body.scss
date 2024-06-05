@@ -29,10 +29,8 @@ li p {
 a {
   color: $color-teal-80;
   text-decoration: underline;
-
-  &:hover {
-    text-decoration: none;
-  }
+  text-decoration-color: $color-teal-30;
+  text-underline-position: under;
 
   &:has(i),
   &:has(img) {
