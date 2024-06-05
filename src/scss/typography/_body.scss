@@ -26,6 +26,11 @@ a {
   &:hover {
     text-decoration: none;
   }
+
+  &:has(i),
+  &:has(img) {
+    text-decoration: none;
+  }
 }
 
 blockquote {
