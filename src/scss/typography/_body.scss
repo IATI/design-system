@@ -7,7 +7,6 @@ html {
   color: $color-grey-90;
 }
 
-body,
 p,
 a,
 li {
@@ -30,6 +29,7 @@ a {
   &:has(i),
   &:has(img) {
     text-decoration: none;
+    line-height: 0;
   }
 }
 
