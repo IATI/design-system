@@ -2,8 +2,9 @@
 @use "../tokens/font" as *;
 @use "../tokens/spacing" as *;
 
-html {
+body {
   font-family: $font-stack-body;
+  font-weight: $font-weight-body;
   color: $color-grey-90;
 }
 
@@ -11,7 +12,14 @@ p,
 a,
 li {
   line-height: $line-height-body;
-  font-weight: 300;
+}
+
+strong {
+  font-weight: $font-weight-body-strong;
+}
+
+em {
+  font-style: italic;
 }
 
 li p {
@@ -46,7 +54,7 @@ dl {
   }
 
   dt {
-    font-weight: bold;
+    font-weight: $font-weight-body-strong;
   }
 
   dd {

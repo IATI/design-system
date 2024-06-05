@@ -22,6 +22,11 @@ export const Headings: Story = {
 export const Body: Story = {
   render: () => html`
     <p>
+      This paragraph shows an example of <strong>strong text</strong> and
+      <em>emphasised text</em>. The rest of this story will show how multiple
+      paragraphs look together.
+    </p>
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor
       tortor vitae magna aliquam, nec interdum libero bibendum. Donec lacinia et
       est at tempus. Nullam libero neque, lobortis vitae enim mattis, porttitor
