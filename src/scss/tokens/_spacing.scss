@@ -1,5 +1,7 @@
+@use "screens" as *;
+
 $border-width: 4px;
 
 $padding-block: 1rem;
 
-$page-width-max: 1280px;
+$page-width-max: $screen-xl;
