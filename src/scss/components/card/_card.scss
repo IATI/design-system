@@ -1,6 +1,7 @@
 @use "../../tokens/color" as *;
 @use "../../tokens/font" as *;
 @use "../../tokens/spacing" as *;
+@use "../../base/mixins";
 
 .iati-card {
   box-shadow: 0 4px 5px $color-grey-20;
@@ -30,5 +31,24 @@
     font-size: 0.8rem;
     margin: 0;
     text-transform: uppercase;
+  }
+
+  &__menu {
+    @include mixins.unstyled-list();
+
+    li,
+    a {
+      line-height: 1.2;
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 0.6em 0;
+
+      &.current {
+        font-weight: $font-weight-body-strong;
+      }
+    }
   }
 }
