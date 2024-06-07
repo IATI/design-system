@@ -2,17 +2,24 @@
 @use "../tokens/font" as *;
 @use "../tokens/spacing" as *;
 
-html {
+body {
   font-family: $font-stack-body;
+  font-weight: $font-weight-body;
   color: $color-grey-90;
 }
 
-body,
 p,
 a,
 li {
   line-height: $line-height-body;
-  font-weight: 300;
+}
+
+strong {
+  font-weight: $font-weight-body-strong;
+}
+
+em {
+  font-style: italic;
 }
 
 li p {
@@ -22,9 +29,13 @@ li p {
 a {
   color: $color-teal-80;
   text-decoration: underline;
+  text-decoration-color: $color-teal-30;
+  text-underline-position: under;
 
-  &:hover {
+  &:has(i),
+  &:has(img) {
     text-decoration: none;
+    line-height: 0;
   }
 }
 
@@ -41,7 +52,7 @@ dl {
   }
 
   dt {
-    font-weight: bold;
+    font-weight: $font-weight-body-strong;
   }
 
   dd {

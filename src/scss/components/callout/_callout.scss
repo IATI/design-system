@@ -38,7 +38,8 @@
   }
 
   &__title {
-    font-weight: bold;
+    font-family: $font-stack-heading;
+    font-weight: $font-weight-heading;
     font-size: 1.2rem;
     line-height: $line-height-body;
   }

@@ -9,14 +9,6 @@ button {
   cursor: pointer;
 }
 
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
-}
-
 html {
   height: 100%;
 }
@@ -27,7 +19,7 @@ body {
   flex-flow: column;
 }
 
-a:has(i),
-a:has(img) {
-  text-decoration: none;
+button,
+input {
+  font-weight: inherit;
 }

@@ -18,3 +18,26 @@ export const Card: Story = {
     </div>
   `,
 };
+
+export const CardWithMenu: Story = {
+  render: () => html`
+    <div class="iati-card">
+      <p class="iati-card__title">Card Title</p>
+      <p class="iati-card__subtitle">Subtitle</p>
+      <ul class="iati-card__menu">
+        <li><a>Item 1</a></li>
+        <li>
+          <a>Item 2</a>
+          <ul>
+            <li>
+              <a class="current">Nested Item 1</a>
+              <ul>
+                <li><a>Nested Item 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  `,
+};
