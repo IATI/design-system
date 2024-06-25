@@ -1,0 +1,15 @@
+@use "sass:meta";
+@use "color";
+@use "font";
+
+// Export tokens variables to be used in Storybook documentation
+
+:export {
+  @each $key, $value in meta.module-variables("color") {
+    #{unquote($key)}: $value;
+  }
+
+  @each $key, $value in meta.module-variables("font") {
+    #{unquote($key)}: $value;
+  }
+}
