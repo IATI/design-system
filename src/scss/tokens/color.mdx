@@ -1,0 +1,141 @@
+import { Meta, Title, ColorPalette, ColorItem } from "@storybook/blocks";
+
+import { TokensTable } from "../../../.storybook/blocks/TokensTable";
+import tokens from "./_tokens.module.scss";
+
+<Meta title="Brand/Colour" />
+
+<Title>Colour</Title>
+
+Tokens are exposed as CSS custom properties, e.g. `--color-blue-50`.
+
+## Base
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    colors={{
+      "--color-teal-90": tokens["color-teal-90"],
+      "--color-blue-50": tokens["color-blue-50"],
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    colors={{
+      "--color-purple-50": tokens["color-purple-50"],
+      "--color-orange-50": tokens["color-orange-50"],
+      "--color-green-50": tokens["color-green-50"],
+      "--color-red-50": tokens["color-red-50"],
+    }}
+  />
+</ColorPalette>
+
+## Variants
+
+<ColorPalette>
+  <ColorItem
+    title="Teal"
+    subtitle="--color-teal-XX"
+    colors={{
+      10: tokens["color-teal-10"],
+      20: tokens["color-teal-20"],
+      30: tokens["color-teal-30"],
+      40: tokens["color-teal-40"],
+      50: tokens["color-teal-50"],
+      60: tokens["color-teal-60"],
+      70: tokens["color-teal-70"],
+      80: tokens["color-teal-80"],
+      90: tokens["color-teal-90"],
+    }}
+  />
+  <ColorItem
+    title="Blue"
+    subtitle="--color-blue-XX"
+    colors={{
+      10: tokens["color-blue-10"],
+      20: tokens["color-blue-20"],
+      30: tokens["color-blue-30"],
+      40: tokens["color-blue-40"],
+      50: tokens["color-blue-50"],
+      60: tokens["color-blue-60"],
+      70: tokens["color-blue-70"],
+      80: tokens["color-blue-80"],
+      90: tokens["color-blue-90"],
+    }}
+  />
+  <ColorItem
+    title="Purple"
+    subtitle="--color-purple-XX"
+    colors={{
+      10: tokens["color-purple-10"],
+      20: tokens["color-purple-20"],
+      30: tokens["color-purple-30"],
+      40: tokens["color-purple-40"],
+      50: tokens["color-purple-50"],
+      60: tokens["color-purple-60"],
+      70: tokens["color-purple-70"],
+      80: tokens["color-purple-80"],
+      90: tokens["color-purple-90"],
+    }}
+  />
+  <ColorItem
+    title="Orange"
+    subtitle="--color-orange-XX"
+    colors={{
+      10: tokens["color-orange-10"],
+      20: tokens["color-orange-20"],
+      30: tokens["color-orange-30"],
+      40: tokens["color-orange-40"],
+      50: tokens["color-orange-50"],
+      60: tokens["color-orange-60"],
+      70: tokens["color-orange-70"],
+      80: tokens["color-orange-80"],
+      90: tokens["color-orange-90"],
+    }}
+  />
+  <ColorItem
+    title="Green"
+    subtitle="--color-green-XX"
+    colors={{
+      10: tokens["color-green-10"],
+      20: tokens["color-green-20"],
+      30: tokens["color-green-30"],
+      40: tokens["color-green-40"],
+      50: tokens["color-green-50"],
+      60: tokens["color-green-60"],
+      70: tokens["color-green-70"],
+      80: tokens["color-green-80"],
+      90: tokens["color-green-90"],
+    }}
+  />
+  <ColorItem
+    title="Red"
+    subtitle="--color-red-XX"
+    colors={{
+      10: tokens["color-red-10"],
+      20: tokens["color-red-20"],
+      30: tokens["color-red-30"],
+      40: tokens["color-red-40"],
+      50: tokens["color-red-50"],
+      60: tokens["color-red-60"],
+      70: tokens["color-red-70"],
+      80: tokens["color-red-80"],
+      90: tokens["color-red-90"],
+    }}
+  />
+  <ColorItem
+    title="Grey"
+    subtitle="--color-grey-XX"
+    colors={{
+      10: tokens["color-grey-10"],
+      20: tokens["color-grey-20"],
+      30: tokens["color-grey-30"],
+      40: tokens["color-grey-40"],
+      50: tokens["color-grey-50"],
+      60: tokens["color-grey-60"],
+      70: tokens["color-grey-70"],
+      80: tokens["color-grey-80"],
+      90: tokens["color-grey-90"],
+    }}
+  />
+</ColorPalette>

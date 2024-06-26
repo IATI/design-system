@@ -8,6 +8,9 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    environment:
+      name: npm
+      url: https://www.npmjs.com/package/iati-design-system
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

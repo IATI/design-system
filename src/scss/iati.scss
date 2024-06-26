@@ -1,8 +1,16 @@
+@use "sass:meta";
 @use "base";
 @use "tokens";
 @use "typography";
 @use "components";
 @use "layout";
 
-// Expose tokens for use in downstream applications
+// Expose tokens as Sass variables
 @forward "tokens";
+
+// Expose tokens as CSS custom properties
+:root {
+  @each $name, $value in meta.module-variables("tokens") {
+    --#{$name}: #{$value};
+  }
+}
