@@ -1,0 +1,53 @@
+import { Meta, Title, Typeset } from "@storybook/blocks";
+
+import { TokensTable } from "../../../.storybook/blocks/TokensTable";
+import tokens from "./_tokens.module.scss";
+
+<Meta title="Brand/Fonts" />
+
+<Title>Fonts</Title>
+
+## Headings
+
+**Font:** Pragmatica
+
+<Typeset
+  fontSizes={["2.5rem", "2.0rem", "1.6rem", "1.4rem", "1.2rem", "1.1rem"]}
+  fontWeight={tokens["font-weight-heading"]}
+  sampleText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  fontFamily={tokens["font-stack-heading"]}
+/>
+
+<TokensTable
+  tokens={{
+    "font-stack-heading": tokens["font-stack-heading"],
+    "font-weight-heading": tokens["font-weight-heading"],
+  }}
+/>
+
+## Body
+
+**Font:** Helvetica
+
+<Typeset
+  fontSizes={["1.2rem", "1.0rem", "0.8rem"]}
+  fontWeight={tokens["font-weight-body"]}
+  sampleText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  fontFamily={tokens["font-stack-body"]}
+/>
+
+<Typeset
+  fontSizes={["1.2rem", "1.0rem", "0.8rem"]}
+  fontWeight={tokens["font-weight-body-strong"]}
+  sampleText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  fontFamily={tokens["font-stack-body"]}
+/>
+
+<TokensTable
+  tokens={{
+    "font-stack-body": tokens["font-stack-body"],
+    "font-weight-body": tokens["font-weight-body"],
+    "font-weight-body-strong": tokens["font-weight-body-strong"],
+    "line-height-body": tokens["line-height-body"],
+  }}
+/>
