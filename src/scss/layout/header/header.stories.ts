@@ -12,10 +12,11 @@ export const Header: Story = {
   render: () => html`
     <header class="iati-header">
       <div>
-        <a href="https://iatistandard.org/">
+        <a href="https://iatistandard.org/" aria-label="Go to IATI homepage">
           <img
             src="http://styles.iatistandard.org/assets/svg/source/logo-colour.svg"
             class="iati-header__logo"
+            alt=""
           />
         </a>
       </div>
