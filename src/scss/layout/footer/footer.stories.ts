@@ -14,10 +14,11 @@ export const Footer: Story = {
   render: (args) => html`
     <footer class="iati-footer">
       <div>
-        <a href="https://iatistandard.org/">
+        <a href="https://iatistandard.org/" aria-label="Go to IATI homepage">
           <img
             src="http://styles.iatistandard.org/assets/svg/source/logo-white.svg"
             class="iati-footer__logo"
+            alt=""
           />
         </a>
         <div class="iati-footer__list">
