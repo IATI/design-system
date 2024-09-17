@@ -5,6 +5,7 @@
 .iati-code {
   font-family: $font-stack-monospace;
   background-color: $color-grey-10;
+  color: #000;
   border: 1px solid $color-grey-20;
   padding: 0.1em 0.2em;
 
@@ -15,19 +16,10 @@
   }
 }
 
-code {
-  @extend .iati-code;
-}
-
-pre {
-  @extend .iati-code;
-  @extend .iati-code--block;
-}
-
-kbd {
+.iati-kbd {
   @extend .iati-code;
 
-  kbd {
+  .iati-kbd {
     border: none;
   }
 }

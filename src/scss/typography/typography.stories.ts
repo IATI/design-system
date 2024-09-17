@@ -120,10 +120,14 @@ export const Code: Story = {
       <span>print("This is a block of code")</span>
     </code>
     <p>
-      This paragraph contains a key-binding: <kbd>Ctrl</kbd> + <kbd>C</kbd>.
-      Key-bindings can be nested, e.g.
-      <kbd><kbd>Ctrl</kbd>+<kbd>C</kbd></kbd>
-      .
+      This paragraph contains a key-binding:
+      <kbd class="iati-kbd">Ctrl</kbd> + <kbd class="iati-kbd">C</kbd>
+    </p>
+    <p>
+      Key-bindings can be nested:
+      <kbd class="iati-kbd">
+        <kbd class="iati-kbd">Ctrl</kbd> + <kbd class="iati-kbd">C</kbd>
+      </kbd>
     </p>
   `,
 };
