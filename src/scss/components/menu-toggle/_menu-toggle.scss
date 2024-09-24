@@ -1,0 +1,33 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/font" as *;
+@use "../../tokens/spacing" as *;
+@use "../../tokens/screens" as *;
+
+.iati-menu-toggle {
+  color: #FFF;
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  font-size: 15px;
+  font-family: $font-stack-heading;
+  font-weight: 600;
+  flex-direction: column;
+  display: inline-flex;
+  gap: 0.5em;
+  padding: 0;
+  transition: 0.2s ease-in-out;
+  align-self: stretch;
+  svg {
+    height: auto;
+    stroke: currentColor;
+  }
+  &:hover {
+    color: $color-blue-30;
+  }
+}
+
+.iati-menu-toggle__label {
+  line-height: 1;
+  position: relative;
+  top: .25em;
+}

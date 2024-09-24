@@ -2,47 +2,63 @@
 @use "../../tokens/font" as *;
 @use "../../tokens/spacing" as *;
 @use "../../base/mixins";
+@use "../../tokens/screens" as *;
 
 .iati-footer {
-  background-color: $color-teal-90;
-  color: white;
+  color: #FFF;
+  padding-block: 2rem;
+}
 
-  & a {
+.iati-footer__section {
+  &:not(:first-of-type) {
+    margin-block-start: 2rem;
+    padding-block-start: 2rem;
+    border-block-start: 1px solid currentColor;
+  }
+}
+
+.iati-footer__section--first .iati-footer__container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  @media (min-width: $screen-md) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.iati-footer__section--last .iati-footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  > :first-child {
+    margin-inline-end: auto;
+  }
+}
+
+
+.iati-footer__container {
+ @include mixins.page-width-container();
+}
+
+.iati-footer__legal-nav {
+  color: currentColor;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.1;
+  a {
+    font-size: 1.0625rem;
+    line-height: 1.1;
     color: currentColor;
-  }
-
-  & > div {
-    @include mixins.page-width-container();
-    @include mixins.columns();
-    flex-wrap: wrap;
-  }
-
-  hr {
-    border: none;
-    border-top: 1px solid $color-teal-70;
-    margin: 0;
-  }
-
-  &__logo {
-    max-height: 80px;
-    max-width: 100%;
-    margin: $padding-block 0;
-  }
-
-  &__list {
-    &-title {
-      text-transform: uppercase;
-      font-family: $font-stack-heading;
-      font-weight: $font-weight-heading;
-      line-height: $line-height-body;
-    }
-
-    ul {
-      @include mixins.unstyled-list();
+    text-decoration: none;
+    &:visited, &:hover {
+      color: $color-blue-30;
     }
   }
+}
 
-  &__social-icons {
-    @include mixins.columns();
-  }
+.iati-footer__social {
+  display: flex;
+  gap: 0.5rem;
 }

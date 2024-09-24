@@ -10,5 +10,5 @@ export default meta;
 type Story = StoryObj;
 
 export const Button: Story = {
-  render: () => html`<button class="iati-button">Button</button>`,
+  render: () => html`<button class="iati-button">Buttons</button>`,
 };

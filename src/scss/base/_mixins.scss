@@ -4,9 +4,9 @@
 @mixin page-width-container {
   width: 100%;
   max-width: $page-width-max;
-  margin-left: auto;
+  margin-inline-start: auto;
   margin-right: auto;
-  padding: $padding-block;
+  padding: 0 $padding-block;
 }
 
 @mixin columns {
@@ -30,6 +30,19 @@
   }
 
   li li {
-    padding-left: $padding-block;
+    padding-inline-start: $padding-block;
   }
+}
+
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

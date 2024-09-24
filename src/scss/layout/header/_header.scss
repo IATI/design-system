@@ -2,59 +2,104 @@
 @use "../../tokens/screens" as *;
 @use "../../tokens/spacing" as *;
 @use "../../base/mixins";
+@use "../../tokens/font" as *;
 
 .iati-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.iati-header__container {
   @include mixins.page-width-container();
-  @include mixins.columns();
+}
+
+.iati-header__section--first {
+  background-color: #FFF;
+  .iati-header__container {
+    @include mixins.columns();
+    flex-wrap: wrap;
+    padding-block: 0.5rem;
+  }
+}
+
+.iati-header__section--last {
   background-color: $color-teal-90;
-  background-color: white;
-  flex-wrap: wrap;
-  padding: $padding-block 3rem 0 3rem;
-
-  &__logo {
-    height: 40px;
-    max-width: 100%;
-    margin-bottom: $padding-block;
-
-    @media (min-width: $screen-sm) {
-      height: 56px;
-    }
-  }
-
-  &__nav {
-    @include mixins.unstyled-list();
-    align-self: flex-end;
-  }
-
-  &__nav-item {
-    display: inline-block;
+  .iati-header__container {
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    margin: 0 0.2rem;
-
-    & a {
-      display: inline-block;
-      padding: $padding-block 0.2rem;
-      color: $color-grey-90;
-      letter-spacing: 0.1rem;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-
     &::after {
+      content: '';
       position: absolute;
-      content: "";
-      background-color: $color-teal-30;
-      bottom: 0;
-      height: 4px;
-      right: 0;
-      width: 0;
-      transition: all ease-out 0.3s;
-    }
-
-    &:hover::after {
-      width: 100%;
+      top: 0;
       left: 0;
-      right: auto;
+      // TODO replace image asset.
+      background-image: url('https://styles.iatistandard.org/assets/svg/source/marque-white.svg');
+      background-repeat: no-repeat;
+      background-position: right 2rem top;
+      background-size: 32.3rem auto;
+      opacity: 0.1;
+      z-index: 0;
+      height: 100%;
+      width: 100%;
+    }
+    & > * {
+      z-index: 10;
+    }
+    &:not(:has(.iati-header__nav[hidden])) {
+      padding-block-end: 0;
+    }
+    @media (min-width: $screen-sm) {
+      padding-block: 2rem;
+    }
+  }
+}
+
+.iati-header__actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+  border-block-end: 1px solid #FFF;
+  padding-block-end: 1rem;
+  margin-block-end: 1rem;
+  > :last-child {
+    margin-inline-start: auto;
+  }
+  @media (min-width: $screen-sm) {
+    border-block-end: none;
+    padding-block-end: 0;
+    margin-block-end: 0;
+    > :last-child {
+      margin-inline-start: 0;
+    }
+  }
+}
+
+.iati-header__nav {
+  margin-block-start: 1.5rem;
+  border-block-start: 1px solid #FFF;
+}
+
+.iati-header__logo {
+  height: 2.5rem;
+  max-width: 100%;
+  @media (min-width: $screen-sm) {
+    height: 3.5rem;
+  }
+}
+
+.iati-header__general-nav {
+  a {
+    font-family: $font-stack-heading;
+    text-decoration: none;
+    font-weight: 800;
+    color: $color-teal-90;
+    font-size: 1.0625rem;
+    line-height: 1.1;
+    &:visited, &:hover {
+      color: $color-teal-90;
     }
   }
 }

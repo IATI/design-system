@@ -1,0 +1,24 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/screens" as *;
+
+.iati-brand-background {
+  background-color: $color-teal-90;
+  display: grid;
+  @media (min-width: $screen-md) {
+    &:after {
+      content: '';
+      grid-area: 1/-1;
+      background-image: url('/images/marque-white.svg');
+      background-repeat: no-repeat;
+      background-position: right 2rem top;
+      background-size: 32.3rem auto;
+      opacity: 0.1;
+
+    }
+    .iati-brand-background__content {
+      grid-area: 1/-1;
+      z-index:1;
+    }
+  }
+}
+
