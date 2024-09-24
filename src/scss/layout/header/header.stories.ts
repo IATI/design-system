@@ -49,8 +49,8 @@ export const WithHorizontalNav: Story = {
           </nav>
         </div>
       </div>
-      <div class="iati-header__section iati-header__section--last">
-        <div class="iati-header__container">
+      <div class="iati-header__section iati-header__section--last iati-brand-background">
+        <div class="iati-header__container iati-brand-background__content">
           <div class="iati-header__actions">
             ${CountrySwitcher.render?.call({ ...args })}
             ${InfoButton.render?.call({ ...args })}
@@ -80,8 +80,8 @@ export const WithMobileNav: Story = {
           ${logo}
         </div>
       </div>
-      <div class="iati-header__section iati-header__section--last">
-        <div class="iati-header__container">
+      <div class="iati-header__section iati-header__section--last iati-brand-background">
+        <div class="iati-header__container iati-brand-background__content">
           <div class="iati-header__actions">
             ${CountrySwitcher.render?.call({ ...args })}
             ${SearchButton.render?.call({ ...args })}

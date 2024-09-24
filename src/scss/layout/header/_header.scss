@@ -23,30 +23,10 @@
 }
 
 .iati-header__section--last {
-  background-color: $color-teal-90;
   .iati-header__container {
     padding-block: 1rem;
     display: flex;
     flex-direction: column;
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      // TODO replace image asset.
-      background-image: url('https://styles.iatistandard.org/assets/svg/source/marque-white.svg');
-      background-repeat: no-repeat;
-      background-position: right 2rem top;
-      background-size: 32.3rem auto;
-      opacity: 0.1;
-      z-index: 0;
-      height: 100%;
-      width: 100%;
-    }
-    & > * {
-      z-index: 10;
-    }
     &:not(:has(.iati-header__nav[hidden])) {
       padding-block-end: 0;
     }
