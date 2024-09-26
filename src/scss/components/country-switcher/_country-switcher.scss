@@ -7,6 +7,7 @@
   position: relative;
   display: inline-block;
   color: #121212;
+  cursor: pointer;
   .iati-country-switcher__label {
     @include mixins.sr-only;
   }

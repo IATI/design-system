@@ -9,6 +9,10 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-export const Button: Story = {
+export const Default: Story = {
   render: () => html`<button class="iati-button">Buttons</button>`,
+};
+
+export const Submit: Story = {
+  render: () => html`<button class="iati-button iati-button--submit">Buttons</button>`,
 };

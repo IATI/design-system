@@ -29,7 +29,7 @@ export const Default: Story = {
         <input id="newsletter-surname" type="text" class="iati-newsletter-form__input" />
       </div>
       <div class="iati-newsletter-form__item">
-        <button class="iati-newsletter-form__submit">Subscribe</button>
+        <button class="iati-newsletter-form__submit iati-button iati-button--submit">Subscribe</button>
       </div>
     </form>
   `,
