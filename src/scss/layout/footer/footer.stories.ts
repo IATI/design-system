@@ -1,22 +1,25 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 
-import { Linkedin, Twitter, Youtube } from "../../components/icon/icon.stories";
-import { AdditionInfo as AdditionalInfoFooterBlock, UsefulLinks as UsefulLinksFooterBlock } from "../../components/footer-block/footer-block.stories";
 import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
+import {
+  AdditionInfo as AdditionalInfoFooterBlock,
+  UsefulLinks as UsefulLinksFooterBlock,
+} from "../../components/footer-block/footer-block.stories";
+import { Linkedin, Twitter, Youtube } from "../../components/icon/icon.stories";
 import { Default as NewsletterForm } from "../../components/newsletter-form/newsletter-form.stories";
 
 const legalNavItems = [
   html`<a href="#">Privacy</a>`,
   html`<a href="#">Data removal</a>`,
-  html`<span>© Copyright IATI 2024. All rights reserved</span>`
+  html`<span>© Copyright IATI 2024. All rights reserved</span>`,
 ];
 
 const meta: Meta = {
   title: "Layout/Footer",
   parameters: {
-    layout: 'fullscreen'
-  }
+    layout: "fullscreen",
+  },
 };
 
 export default meta;
@@ -30,11 +33,13 @@ export const Footer: Story = {
           <div class="iati-footer__container">
             ${UsefulLinksFooterBlock.render?.call({ ...args })}
             <div class="iati-footer-block">
-              <h2 class="iati-footer-block__title iati-footer-block__title--centered">
+              <h2
+                class="iati-footer-block__title iati-footer-block__title--centered"
+              >
                 Sign up to our newsletter
               </h2>
               <div class="iati-footer-block__content">
-              ${NewsletterForm.render?.call({ ...args })}
+                ${NewsletterForm.render?.call({ ...args })}
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ const meta: Meta = {
   title: "Components/Header/Tool Nav",
   parameters: {
     backgrounds: {
-      default: 'dark',
+      default: "dark",
     },
   },
 };
@@ -16,13 +16,14 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-
 export const ToolNav: Story = {
   render: () => html`
     <nav>
       <ul class="iati-tool-nav">
-        ${items.map((i) => html`<li><a href="#" class="iati-tool-nav-link">${i}</a></li>`)}
+        ${items.map(
+          (i) => html`<li><a href="#" class="iati-tool-nav-link">${i}</a></li>`,
+        )}
       </ul>
     </nav>
-  `
+  `,
 };

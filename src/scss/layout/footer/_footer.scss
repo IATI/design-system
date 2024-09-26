@@ -5,7 +5,7 @@
 @use "../../tokens/screens" as *;
 
 .iati-footer {
-  color: #FFF;
+  color: #fff;
   padding-block: 2rem;
 }
 
@@ -37,9 +37,8 @@
   }
 }
 
-
 .iati-footer__container {
- @include mixins.page-width-container();
+  @include mixins.page-width-container();
 }
 
 .iati-footer__legal-nav {
@@ -52,7 +51,8 @@
     line-height: 1.1;
     color: currentColor;
     text-decoration: none;
-    &:visited, &:hover {
+    &:visited,
+    &:hover {
       color: $color-blue-30;
     }
   }

@@ -7,7 +7,7 @@ import { WithHorizontalNav, WithMobileNav } from "../header/header.stories";
 const meta: Meta = {
   title: "Layout/Page",
   parameters: {
-    layout: 'fullscreen'
+    layout: "fullscreen",
   },
 };
 

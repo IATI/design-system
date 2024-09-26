@@ -4,7 +4,7 @@
 @use "../../tokens/screens" as *;
 
 .iati-newsletter-form {
-  color: #FFF;
+  color: #fff;
   display: grid;
   gap: 1rem;
   min-width: min(31.25rem, calc(100vw - 2rem));
@@ -35,7 +35,7 @@
 .iati-newsletter-form__input {
   max-width: 100%;
   border: none;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 0.5em 1em;
 }
 

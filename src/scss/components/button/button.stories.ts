@@ -14,5 +14,6 @@ export const Default: Story = {
 };
 
 export const Submit: Story = {
-  render: () => html`<button class="iati-button iati-button--submit">Buttons</button>`,
+  render: () =>
+    html`<button class="iati-button iati-button--submit">Buttons</button>`,
 };

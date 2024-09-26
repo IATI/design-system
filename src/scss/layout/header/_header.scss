@@ -14,7 +14,7 @@
 }
 
 .iati-header__section--first {
-  background-color: #FFF;
+  background-color: #fff;
   .iati-header__container {
     @include mixins.columns();
     flex-wrap: wrap;
@@ -41,7 +41,7 @@
   gap: 0.5rem;
   justify-content: flex-end;
   align-items: flex-start;
-  border-block-end: 1px solid #FFF;
+  border-block-end: 1px solid #fff;
   padding-block-end: 1rem;
   margin-block-end: 1rem;
   > :last-child {
@@ -59,7 +59,7 @@
 
 .iati-header__nav {
   margin-block-start: 1.5rem;
-  border-block-start: 1px solid #FFF;
+  border-block-start: 1px solid #fff;
 }
 
 .iati-header__logo {
@@ -78,7 +78,8 @@
     color: $color-teal-90;
     font-size: 1.0625rem;
     line-height: 1.1;
-    &:visited, &:hover {
+    &:visited,
+    &:hover {
       color: $color-blue-70;
     }
   }

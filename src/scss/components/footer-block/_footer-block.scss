@@ -4,7 +4,7 @@
 @use "../../base/mixins";
 
 .iati-footer-block {
-  color: #FFF;
+  color: #fff;
 }
 
 .iati-footer-block__title {
@@ -44,7 +44,6 @@
 }
 
 .iati-footer-block__content--columns {
-
   @media (min-width: $screen-sm) {
     columns: 3;
     column-gap: 2rem;

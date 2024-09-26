@@ -1,24 +1,27 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
+import { html } from "lit";
 import logoColourUrl from "../../../assets/svg/logo-colour.svg";
 import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
-import { Search as SearchButton, Info as InfoButton } from "../../components/header-button/header-button.stories";
-import { Default as TitleBar } from "../../components/title-bar/title-bar.stories";
-import { ToolNav } from "../../components/tool-nav/tool-nav.stories";
+import {
+  Info as InfoButton,
+  Search as SearchButton,
+} from "../../components/header-button/header-button.stories";
 import { Open as MenuToggle } from "../../components/menu-toggle/menu-toggle.stories";
 import { MobileNav } from "../../components/mobile-nav/mobile-nav.stories";
-import { html } from "lit";
+import { Default as TitleBar } from "../../components/title-bar/title-bar.stories";
+import { ToolNav } from "../../components/tool-nav/tool-nav.stories";
 
 const generalNavItems = ["IATI home", "News", "Events", "Contacts"];
 
 const meta: Meta = {
   title: "Layout/Header",
   parameters: {
-    layout: 'fullscreen'
+    layout: "fullscreen",
   },
   argTypes: {
     open: {
       defaultValue: true,
-      control: { type: 'boolean' }
+      control: { type: "boolean" },
     },
   },
 };
@@ -28,11 +31,7 @@ type Story = StoryObj;
 
 const logo = html`
   <a href="https://iatistandard.org/" aria-label="Go to IATI homepage">
-    <img
-      src="${logoColourUrl}"
-      class="iati-header__logo"
-      alt=""
-    />
+    <img src="${logoColourUrl}" class="iati-header__logo" alt="" />
   </a>
 `;
 
@@ -49,7 +48,9 @@ export const WithHorizontalNav: Story = {
           </nav>
         </div>
       </div>
-      <div class="iati-header__section iati-header__section--last iati-brand-background">
+      <div
+        class="iati-header__section iati-header__section--last iati-brand-background"
+      >
         <div class="iati-header__container iati-brand-background__content">
           <div class="iati-header__actions">
             ${CountrySwitcher.render?.call({ ...args })}
@@ -69,8 +70,8 @@ export const WithHorizontalNav: Story = {
 export const WithMobileNav: Story = {
   parameters: {
     viewport: {
-      defaultviewport: 'tablet',
-    }
+      defaultviewport: "tablet",
+    },
   },
   render: (args, context) => html`
     ${MobileNav.render({ ...args }, context)}

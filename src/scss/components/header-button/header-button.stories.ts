@@ -4,12 +4,11 @@ import iconSearchUrl from "../../../assets/svg/icon-search.svg";
 
 import { html } from "lit";
 
-
 const meta: Meta = {
   title: "Components/Header/Button",
   parameters: {
     backgrounds: {
-      default: 'dark',
+      default: "dark",
     },
   },
 };
@@ -34,4 +33,3 @@ export const Search: Story = {
     </a>
   `,
 };
-
