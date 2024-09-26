@@ -22,7 +22,7 @@ type Story = StoryObj;
 
 export const MobileNav: Story = {
   render: (args) => html`
-    <div class="iati-mobile-nav js-iati-mobile-nav">
+    <div class="iati-mobile-nav js-iati-mobile-nav ${args.open ? 'iati-mobile-nav--open' : ''}">
       <div class="iati-mobile-nav__overlay js-iati-mobile-overlay"></div>
       <nav class="iati-mobile-nav__menu">
         <div class="iati-mobile-nav__header">
