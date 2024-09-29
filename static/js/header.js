@@ -54,8 +54,8 @@
   );
 
   const overlay = document.querySelector(".js-iati-mobile-overlay");
-  const menuOpenBtn = document.querySelector(".js-iati-menu-togle-open");
-  const menuCloseBtn = document.querySelector(".js-iati-menu-togle-close");
+  const menuOpenBtn = document.querySelector(".js-iati-menu-toggle-open");
+  const menuCloseBtn = document.querySelector(".js-iati-menu-toggle-close");
   const restoreFocus = () => {
     menuOpenBtn.focus();
   };
