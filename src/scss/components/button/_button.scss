@@ -12,3 +12,12 @@
     background-color: $color-teal-80;
   }
 }
+
+.iati-button--submit {
+  color: $color-grey-90;
+  font-weight: 600;
+  background-color: $color-green-50;
+  &:hover {
+    background-color: $color-green-40;
+  }
+}

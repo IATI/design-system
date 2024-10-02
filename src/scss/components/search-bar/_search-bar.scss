@@ -9,7 +9,7 @@
     flex-grow: 1;
     padding: $padding-block;
     border: 1px solid $color-grey-20;
-    border-right: none;
+    border-inline-end: none;
 
     &::placeholder {
       color: $color-grey-40;

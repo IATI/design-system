@@ -10,6 +10,12 @@ const preview: Preview = {
         order: ["Get Started", "Brand", "Core", "Components", "Layout"],
       },
     },
+    backgrounds: {
+      values: [
+        { name: "light", value: "#fff" },
+        { name: "dark", value: "#155366" },
+      ],
+    },
     docs: {
       page: DocsTemplate,
       source: {

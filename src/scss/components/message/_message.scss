@@ -1,0 +1,27 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/font" as *;
+
+.iati-message {
+  padding: 0.8em 1em;
+  font-family: $font-stack-heading;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin: 0;
+  font-weight: 400;
+  a {
+    color: currentColor;
+    text-decoration-color: currentColor;
+  }
+}
+
+.iati-message-highlight {
+  font-weight: 600;
+}
+
+.iati-message--notice {
+  background-color: $color-grey-10;
+}
+
+.iati-message--info {
+  background-color: $color-green-10;
+}
