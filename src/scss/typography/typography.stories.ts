@@ -93,7 +93,7 @@ export const Quotes: Story = {
       dapibus purus. Vestibulum sed dolor nec libero convallis sollicitudin in
       sed ligula. Nulla aliquet quam at vehicula dictum.
     </p>
-    <blockquote>
+    <blockquote class="iati-quote">
       <p>
         Integer lorem leo, rutrum quis erat in, commodo tincidunt magna. Aenean
         ut libero at dolor tempus porta eget hendrerit mi. Curabitur molestie
