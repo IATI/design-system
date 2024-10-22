@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-a,
+a[href],
 button {
   cursor: pointer;
 }
@@ -22,4 +22,8 @@ body {
 button,
 input {
   font-weight: inherit;
+}
+
+input {
+  border-radius: 0;
 }

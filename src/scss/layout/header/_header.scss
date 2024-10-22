@@ -2,59 +2,85 @@
 @use "../../tokens/screens" as *;
 @use "../../tokens/spacing" as *;
 @use "../../base/mixins";
+@use "../../tokens/font" as *;
 
 .iati-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.iati-header__container {
   @include mixins.page-width-container();
-  @include mixins.columns();
-  background-color: $color-teal-90;
-  background-color: white;
-  flex-wrap: wrap;
-  padding: $padding-block 3rem 0 3rem;
+}
 
-  &__logo {
-    height: 40px;
-    max-width: 100%;
-    margin-bottom: $padding-block;
+.iati-header__section--first {
+  background-color: #fff;
+  .iati-header__container {
+    @include mixins.columns();
+    flex-wrap: wrap;
+    padding-block: 0.5rem;
+  }
+}
 
+.iati-header__section--last {
+  .iati-header__container {
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    &:not(:has(.iati-header__nav[hidden])) {
+      padding-block-end: 0;
+    }
     @media (min-width: $screen-sm) {
-      height: 56px;
+      padding-block: 2rem;
     }
   }
+}
 
-  &__nav {
-    @include mixins.unstyled-list();
-    align-self: flex-end;
+.iati-header__actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+  border-block-end: 1px solid #fff;
+  padding-block-end: 1rem;
+  margin-block-end: 1rem;
+  > :last-child {
+    margin-inline-start: auto;
   }
-
-  &__nav-item {
-    display: inline-block;
-    position: relative;
-    margin: 0 0.2rem;
-
-    & a {
-      display: inline-block;
-      padding: $padding-block 0.2rem;
-      color: $color-grey-90;
-      letter-spacing: 0.1rem;
-      text-decoration: none;
-      text-transform: uppercase;
+  @media (min-width: $screen-sm) {
+    border-block-end: none;
+    padding-block-end: 0;
+    margin-block-end: 0;
+    > :last-child {
+      margin-inline-start: 0;
     }
+  }
+}
 
-    &::after {
-      position: absolute;
-      content: "";
-      background-color: $color-teal-30;
-      bottom: 0;
-      height: 4px;
-      right: 0;
-      width: 0;
-      transition: all ease-out 0.3s;
-    }
+.iati-header__nav {
+  margin-block-start: 1.5rem;
+  border-block-start: 1px solid #fff;
+}
 
-    &:hover::after {
-      width: 100%;
-      left: 0;
-      right: auto;
+.iati-header__logo {
+  height: 2.5rem;
+  max-width: 100%;
+  @media (min-width: $screen-sm) {
+    height: 3.5rem;
+  }
+}
+
+.iati-header__general-nav {
+  a {
+    font-family: $font-stack-heading;
+    text-decoration: none;
+    font-weight: $font-weight-heading;
+    color: $color-teal-90;
+    font-size: 1.0625rem;
+    line-height: 1.1;
+    &:visited,
+    &:hover {
+      color: $color-blue-70;
     }
   }
 }
