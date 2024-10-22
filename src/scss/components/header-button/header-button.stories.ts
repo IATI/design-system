@@ -18,7 +18,7 @@ type Story = StoryObj;
 
 export const Info: Story = {
   render: () => html`
-    <a href="#" class="header-button">
+    <a href="#" class="header-button header-button--hide-mobile">
       <span class="header-button__title">Help docs</span>
       <img class="header-button__icon" src="${iconInfoUrl}" alt="" />
     </a>

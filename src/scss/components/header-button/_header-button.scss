@@ -15,8 +15,17 @@
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   line-height: 1.1;
+
   &:hover {
     background-color: $color-blue-30;
+  }
+
+  &--hide-mobile {
+    display: none;
+
+    @media (min-width: $mobile_nav_breakpoint) {
+      display: inline-flex;
+    }
   }
 }
 
