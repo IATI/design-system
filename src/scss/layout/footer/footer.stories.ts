@@ -58,9 +58,21 @@ export const Footer: Story = {
             </nav>
             ${CountrySwitcher.render?.call({ ...args })}
             <div class="iati-footer__social">
-              <a href="#">${Linkedin.render?.call({ ...args })}</a>
-              <a href="#">${Twitter.render?.call({ ...args })}</a>
-              <a href="#">${Youtube.render?.call({ ...args })}</a>
+              <a
+                https://www.linkedin.com/company/international-aid-transparency-initiative/"
+                aria-label="LinkedIn"
+              >
+                ${Linkedin.render?.call({ ...args })}
+              </a>
+              <a href="https://twitter.com/IATI_aid" aria-label="Twitter">
+                ${Twitter.render?.call({ ...args })}
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCAVH1gcgJXElsj8ENC-bDQQ"
+                aria-label="YouTube"
+              >
+                ${Youtube.render?.call({ ...args })}
+              </a>
             </div>
           </div>
         </div>
