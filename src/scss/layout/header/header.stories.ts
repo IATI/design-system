@@ -16,12 +16,6 @@ const meta: Meta = {
   parameters: {
     layout: "fullscreen",
   },
-  argTypes: {
-    open: {
-      defaultValue: true,
-      control: { type: "boolean" },
-    },
-  },
 };
 
 export default meta;
@@ -33,8 +27,9 @@ const logo = html`
   </a>
 `;
 
-export const WithHorizontalNav: Story = {
-  render: (args) => html`
+export const Header: Story = {
+  render: (args, context) => html`
+    ${MobileNav.render({ ...args }, context)}
     <header class="iati-header">
       <div class="iati-header__section iati-header__section--first">
         <div class="iati-header__container">
@@ -61,43 +56,13 @@ export const WithHorizontalNav: Story = {
             ${CountrySwitcher.render?.call({ ...args })}
             ${InfoButton.render?.call({ ...args })}
             ${SearchButton.render?.call({ ...args })}
+            ${MenuToggle.render?.call({ ...args })}
           </div>
           ${TitleBar.render?.call({ ...args })}
           <div class="iati-header__nav">
             ${ToolNav.render?.call({ ...args })}
           </div>
         </div>
-      </div>
-    </header>
-  `,
-};
-
-export const WithMobileNav: Story = {
-  parameters: {
-    viewport: {
-      defaultviewport: "tablet",
-    },
-  },
-  render: (args, context) => html`
-    ${MobileNav.render({ ...args }, context)}
-    <header class="iati-header">
-      <div class="iati-header__section iati-header__section--first">
-        <div class="iati-header__container">
-          ${logo}
-        </div>
-      </div>
-      <div class="iati-header__section iati-header__section--last iati-brand-background">
-        <div class="iati-header__container iati-brand-background__content">
-          <div class="iati-header__actions">
-            ${CountrySwitcher.render?.call({ ...args })}
-            ${SearchButton.render?.call({ ...args })}
-            ${MenuToggle.render?.call({ ...args })}
-          </div>
-          ${TitleBar.render?.call({ ...args })}
-          <div class="iati-header__nav" hidden>
-            ${ToolNav.render?.call({ ...args })}
-          </div>
-        <div>
       </div>
     </header>
     <script src="js/header.js"></script>
