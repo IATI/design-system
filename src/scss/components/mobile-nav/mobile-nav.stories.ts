@@ -9,7 +9,7 @@ const toolItems = [
   "Data Dashboards",
   "Custom Data Download",
 ];
-const generalItems = ["IATI home", "News", "Events", "Contact", "Help docs"];
+const generalItems = ["IATI Home", "News", "Events", "Contact", "Help Docs"];
 
 const meta: Meta = {
   title: "Components/Mobile Nav",
