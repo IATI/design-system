@@ -1,0 +1,39 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/font" as *;
+@use "../../tokens/spacing" as *;
+@use "../../tokens/screens" as *;
+
+.iati-header-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-inline-start: 1rem;
+  border-inline-start: $border-width solid $color-blue-50;
+  & > * {
+    margin: 0;
+  }
+}
+
+.iati-header-title__eyebrow,
+.iati-header-title__heading {
+  color: white;
+  font-family: $font-stack-heading;
+  font-weight: 800;
+}
+
+.iati-header-title__eyebrow {
+  font-size: 1.1rem;
+  line-height: 1;
+  @media (min-width: $screen-sm) {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+}
+
+.iati-header-title__heading {
+  font-size: 1.625rem;
+  line-height: 1;
+  @media (min-width: $screen-sm) {
+    font-size: 2.5rem;
+  }
+}
