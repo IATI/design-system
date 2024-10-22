@@ -11,8 +11,6 @@ import { MobileNav } from "../../components/mobile-nav/mobile-nav.stories";
 import { Default as TitleBar } from "../../components/title-bar/title-bar.stories";
 import { ToolNav } from "../../components/tool-nav/tool-nav.stories";
 
-const generalNavItems = ["IATI home", "News", "Events", "Contacts"];
-
 const meta: Meta = {
   title: "Layout/Header",
   parameters: {
@@ -43,7 +41,14 @@ export const WithHorizontalNav: Story = {
           ${logo}
           <nav class="iati-header__general-nav">
             <ul class="iati-piped-list">
-              ${generalNavItems.map((i) => html`<li><a href="#">${i}</a></li>`)}
+              <li><a href="https://iatistandard.org/">IATI Home</a></li>
+              <li><a href="https://iatistandard.org/news/">News</a></li>
+              <li><a href="https://iatistandard.org/events/">Events</a></li>
+              <li>
+                <a href="https://iatistandard.org/guidance/get-support/">
+                  Contacts
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
