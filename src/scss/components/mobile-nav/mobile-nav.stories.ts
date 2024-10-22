@@ -15,8 +15,14 @@ const meta: Meta = {
   title: "Components/Mobile Nav",
   argTypes: {
     open: {
-      defaultValue: true,
       control: { type: "boolean" },
+    },
+  },
+  parameters: {
+    docs: {
+      story: {
+        height: "600px",
+      },
     },
   },
 };
@@ -25,6 +31,9 @@ export default meta;
 type Story = StoryObj;
 
 export const MobileNav: Story = {
+  args: {
+    open: true,
+  },
   render: (args) => html`
     <div
       class="iati-mobile-nav js-iati-mobile-nav ${args.open
