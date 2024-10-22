@@ -58,8 +58,12 @@
 }
 
 .iati-header__nav {
-  margin-block-start: 1.5rem;
   border-block-start: 1px solid #fff;
+  display: none;
+
+  @media (min-width: $mobile_nav_breakpoint) {
+    display: block;
+  }
 }
 
 .iati-header__logo {
@@ -71,6 +75,12 @@
 }
 
 .iati-header__general-nav {
+  display: none;
+
+  @media (min-width: $mobile_nav_breakpoint) {
+    display: block;
+  }
+
   a {
     font-family: $font-stack-heading;
     text-decoration: none;
@@ -82,5 +92,11 @@
     &:hover {
       color: $color-blue-70;
     }
+  }
+}
+
+.iati-header .iati-menu-toggle--open {
+  @media (min-width: $mobile_nav_breakpoint) {
+    display: none;
   }
 }
