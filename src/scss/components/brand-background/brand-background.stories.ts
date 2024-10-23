@@ -13,7 +13,8 @@ export const Default: Story = {
   render: () =>
     html`<div class="iati-brand-background">
       <div class="iati-brand-background__content">
-        <p>Some words</p>
+        <!-- Example child container for documentation purposes only -->
+        <div style="height: 500px;"></div>
       </div>
     </div>`,
 };
