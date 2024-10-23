@@ -1,23 +1,42 @@
 @use "../../tokens/color" as *;
+@use "../../tokens/font" as *;
 @use "../../tokens/spacing" as *;
 
 .iati-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
   background-color: $color-teal-90;
   border: none;
   color: white;
-  text-transform: uppercase;
-  padding: $padding-block;
+  font-family: $font-stack-heading;
+  line-height: 1.1;
+  padding: 0.7em;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: $color-teal-80;
   }
-}
 
-.iati-button--submit {
-  color: $color-grey-90;
-  font-weight: 600;
-  background-color: $color-green-50;
-  &:hover {
-    background-color: $color-green-40;
+  &__icon {
+    width: 1rem;
+  }
+
+  &--light {
+    color: $color-grey-90;
+    background-color: #fff;
+    &:hover {
+      background-color: $color-blue-30;
+    }
+  }
+
+  &--submit {
+    color: $color-grey-90;
+    background-color: $color-green-50;
+    &:hover {
+      background-color: $color-green-40;
+    }
   }
 }
