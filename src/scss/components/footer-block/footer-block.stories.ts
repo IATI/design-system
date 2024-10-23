@@ -23,7 +23,7 @@ export const UsefulLinks: Story = {
           <li><a href="#">Useful link</a></li>
           <li><a href="#">Translation FAQs</a></li>
           <li><a href="#">Another useful link</a></li>
-          <li><a href="#">Another even more useful longer lin</a></li>
+          <li><a href="#">Another even more useful longer link</a></li>
         </ul>
       </div>
     </div>`,
