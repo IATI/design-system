@@ -1,11 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
+import iconInfoUrl from "../../../assets/svg/icon-info.svg";
+import iconSearchUrl from "../../../assets/svg/icon-search.svg";
 import logoColourUrl from "../../../assets/svg/logo-colour.svg";
 import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
-import {
-  Info as InfoButton,
-  Search as SearchButton,
-} from "../../components/header-button/header-button.stories";
 import { Open as MenuToggle } from "../../components/menu-toggle/menu-toggle.stories";
 import { MobileNav } from "../../components/mobile-nav/mobile-nav.stories";
 import { Default as TitleBar } from "../../components/title-bar/title-bar.stories";
@@ -54,8 +52,14 @@ export const Header: Story = {
         <div class="iati-header__container iati-brand-background__content">
           <div class="iati-header__actions">
             ${CountrySwitcher.render?.call({ ...args })}
-            ${InfoButton.render?.call({ ...args })}
-            ${SearchButton.render?.call({ ...args })}
+            <button class="iati-button iati-button--light">
+              <span>Help Docs</span>
+              <img class="iati-button__icon" src="${iconInfoUrl}" alt="" />
+            </button>
+            <button class="iati-button iati-button--light">
+              <span>Search</span>
+              <img class="iati-button__icon" src="${iconSearchUrl}" alt="" />
+            </button>
             ${MenuToggle.render?.call({ ...args })}
           </div>
           ${TitleBar.render?.call({ ...args })}
