@@ -1,0 +1,37 @@
+import { Meta, Title } from "@storybook/blocks";
+
+<Meta title="Installation" />
+
+<Title>Installing the IATI Design System</Title>
+
+## CDN (Recommended)
+
+The recommended installation method is including the CSS and Javascript files which we are distirbuted using the [jsDelivr](https://www.jsdelivr.com/) CDN.
+
+Add the following code inside the `<head>` of your HTML pages, replacing `<VERSION>` with the version you want to use, e.g. `1.2.3`.
+This project is versioned using [Semantic Versioning](https://semver.org/), and the latest version is shown on the [GitHub releases page](https://github.com/IATI/design-system/releases).
+You can [watch the Github repository](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository) to be notified when a new version is released.
+
+```html
+<link
+  href="https://cdn.jsdelivr.net/npm/iati-design-system@<VERSION>/dist/css/iati.min.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.jsdelivr.net/npm/iati-design-system@<VERSION>/dist/js/iati.js"></script>
+```
+
+## NPM (Optional)
+
+It is also possible to include the design system in a [Sass](https://sass-lang.com/) project.
+
+First install with npm:
+
+```code
+npm install iati-design-system
+```
+
+Then import the package in your `.scss` file. The [Node.js Package Importer](https://sass-lang.com/documentation/at-rules/use/#node-js-package-importer) is required to use this syntax.
+
+```css
+@use "pkg:iati-design-system";
+```
