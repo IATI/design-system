@@ -1,0 +1,16 @@
+import { Canvas, Meta, Title } from "@storybook/blocks";
+import * as ButtonStories from "./scss/components/button/button.stories";
+
+<Meta title="Usage" />
+
+<Title>Using the IATI Design System</Title>
+
+After completing the <a href="../?path=/docs/installation--docs">installation</a> instructions,
+core styles, such as typography, should be applied to your site.
+
+This Storybook shows the components available in the design system.
+For each component, the **Docs** page shows available variants of the component, like the example shown below for the default variant of the Button component.
+
+Click on **Show code** in the bottom right to see the HTML elements and classes being used and apply them to your own site.
+
+<Canvas of={ButtonStories.Default} />
