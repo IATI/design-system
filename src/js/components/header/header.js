@@ -14,7 +14,6 @@
 
     show = () => {
       this.wrapper.removeAttribute("hidden");
-      const reflow = this.wrapper.offsetHeight;
       document.addEventListener("keydown", (e) => this.handleKeyDown(e));
       this.wrapper.classList.add(this.openClass);
       setTimeout(() => {
@@ -48,20 +47,22 @@
     }
   }
 
-  const iatiMobileNav = new IatiMobileNav(
-    document.querySelector(".js-iati-mobile-nav"),
-    "iati-mobile-nav--open",
-  );
+  document.addEventListener("DOMContentLoaded", function () {
+    const iatiMobileNav = new IatiMobileNav(
+      document.querySelector(".js-iati-mobile-nav"),
+      "iati-mobile-nav--open",
+    );
 
-  const overlay = document.querySelector(".js-iati-mobile-overlay");
-  const menuOpenBtn = document.querySelector(".js-iati-menu-toggle-open");
-  const menuCloseBtn = document.querySelector(".js-iati-menu-toggle-close");
-  const restoreFocus = () => {
-    menuOpenBtn.focus();
-  };
-  menuOpenBtn.addEventListener("click", iatiMobileNav.show);
-  menuCloseBtn.addEventListener("click", () =>
-    iatiMobileNav.hide(restoreFocus),
-  );
-  overlay.addEventListener("click", () => iatiMobileNav.hide(restoreFocus));
+    const overlay = document.querySelector(".js-iati-mobile-overlay");
+    const menuOpenBtn = document.querySelector(".js-iati-menu-toggle-open");
+    const menuCloseBtn = document.querySelector(".js-iati-menu-toggle-close");
+    const restoreFocus = () => {
+      menuOpenBtn.focus();
+    };
+    menuOpenBtn.addEventListener("click", iatiMobileNav.show);
+    menuCloseBtn.addEventListener("click", () =>
+      iatiMobileNav.hide(restoreFocus),
+    );
+    overlay.addEventListener("click", () => iatiMobileNav.hide(restoreFocus));
+  });
 })();

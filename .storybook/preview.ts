@@ -1,5 +1,6 @@
 import type { Preview } from "@storybook/web-components";
 
+import "../src/js/main.js";
 import "../src/scss/main.scss";
 import DocsTemplate from "./DocsTemplate.mdx";
 
