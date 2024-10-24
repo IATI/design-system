@@ -4,6 +4,7 @@
 @use "typography";
 @use "components";
 @use "layout";
+@use "utilities";
 
 // Expose tokens as Sass variables
 @forward "tokens";

@@ -4,7 +4,7 @@ import { html } from "lit";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
 import { Notice as MessageNotice } from "../../components/message/message.stories";
 import { Footer } from "../footer/footer.stories";
-import { WithHorizontalNav, WithMobileNav } from "../header/header.stories";
+import { Header } from "../header/header.stories";
 
 const meta: Meta = {
   title: "Layout/Page",
@@ -16,22 +16,9 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-export const HorizontalNav: Story = {
+export const Page: Story = {
   render: (args) => html`
-    ${WithHorizontalNav.render?.call({ ...args })}
-    <main class="iati-main">
-      ${Breadcrumb.render?.call({ ...args })}
-      ${MessageNotice.render?.call({ ...args })}
-      <h1>Page heading</h1>
-      <p>Page contents</p>
-    </main>
-    ${Footer.render?.call({ ...args })}
-  `,
-};
-
-export const MobileNav: Story = {
-  render: (args) => html`
-    ${WithMobileNav.render?.call({ ...args })}
+    ${Header.render?.call({ ...args })}
     <main class="iati-main">
       ${Breadcrumb.render?.call({ ...args })}
       ${MessageNotice.render?.call({ ...args })}

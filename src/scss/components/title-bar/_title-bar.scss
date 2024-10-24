@@ -8,6 +8,7 @@
   flex-direction: column;
   gap: 0.8rem;
   padding-inline-start: 1rem;
+  margin-block-end: 1.5rem;
   border-inline-start: $border-width solid $color-blue-50;
   & > * {
     margin: 0;

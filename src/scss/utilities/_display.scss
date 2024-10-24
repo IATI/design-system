@@ -1,0 +1,15 @@
+@use "../tokens/screens" as *;
+
+:root {
+  --display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.display--sm {
+  @media (min-width: $screen-sm) {
+    display: var(--display);
+  }
+}
