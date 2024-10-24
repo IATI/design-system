@@ -1,13 +1,23 @@
 import type { Preview } from "@storybook/web-components";
 
-import "../src/scss/iati.scss";
+import "../src/js/main.js";
+import "../src/scss/main.scss";
 import DocsTemplate from "./DocsTemplate.mdx";
 
 const preview: Preview = {
   parameters: {
     options: {
       storySort: {
-        order: ["Get Started", "Brand", "Core", "Components", "Layout"],
+        order: [
+          "Get Started",
+          "Installation",
+          "Usage",
+          "Contributing",
+          "Brand",
+          "Core",
+          "Components",
+          "Layout",
+        ],
       },
     },
     backgrounds: {
