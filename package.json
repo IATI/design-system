@@ -14,7 +14,8 @@
   },
   "files": [
     "src/scss/**/*.scss",
-    "dist/css/**/*.css"
+    "dist/css/**/*.css",
+    "dist/js/**/*.js"
   ],
   "scripts": {
     "start": "storybook dev -p 6006",
