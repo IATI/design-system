@@ -1,5 +1,4 @@
 import type { StorybookConfig } from "@storybook/web-components-vite";
-import { NodePackageImporter } from "sass";
 
 const config: StorybookConfig = {
   framework: "@storybook/web-components-vite",
@@ -12,13 +11,6 @@ const config: StorybookConfig = {
   async viteFinal(config) {
     const { mergeConfig } = await import("vite");
     return mergeConfig(config, {
-      css: {
-        preprocessorOptions: {
-          scss: {
-            pkgImporter: new NodePackageImporter(),
-          },
-        },
-      },
       optimizeDeps: {
         exclude: [
           "@storybook/blocks",

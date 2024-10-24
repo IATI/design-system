@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/web-components";
 
-import "../src/scss/iati.scss";
+import "../src/scss/main.scss";
 import DocsTemplate from "./DocsTemplate.mdx";
 
 const preview: Preview = {
