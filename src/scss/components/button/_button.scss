@@ -3,7 +3,9 @@
 @use "../../tokens/spacing" as *;
 
 .iati-button {
-  display: inline-flex;
+  --display: inline-flex; // Used by .display--* utilities
+
+  display: var(--display);
   align-items: center;
   justify-content: center;
   gap: 0.25em;

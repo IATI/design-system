@@ -52,7 +52,7 @@ export const Header: Story = {
         <div class="iati-header__container iati-brand-background__content">
           <div class="iati-header__actions">
             ${CountrySwitcher.render?.call({ ...args })}
-            <button class="iati-button iati-button--light">
+            <button class="iati-button iati-button--light hide display--sm">
               <span>Help Docs</span>
               <img class="iati-button__icon" src="${iconInfoUrl}" alt="" />
             </button>
