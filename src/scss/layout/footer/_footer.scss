@@ -6,12 +6,12 @@
 
 .iati-footer {
   color: #fff;
-  padding-block: 2rem;
 }
 
 .iati-footer__section {
+  margin-block: 2rem;
+
   &:not(:first-of-type) {
-    margin-block-start: 2rem;
     padding-block-start: 2rem;
     border-block-start: 1px solid $color-blue-30;
   }
