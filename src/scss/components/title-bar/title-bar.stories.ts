@@ -17,7 +17,7 @@ export const Default: Story = {
   render: () => html`
     <div class="iati-header-title">
       <p class="iati-header-title__eyebrow">IATI Tools</p>
-      <p class="iati-header-title__heading">Country Development Finance Data</p>
+      <p class="iati-header-title__heading">Tool Name</p>
     </div>
   `,
 };

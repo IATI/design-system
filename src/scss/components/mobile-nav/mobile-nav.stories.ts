@@ -3,13 +3,7 @@ import { html } from "lit";
 import type { Meta, StoryObj } from "@storybook/web-components";
 import { Close as MenuToggle } from "../menu-toggle/menu-toggle.stories";
 
-const toolItems = [
-  "Tool Home",
-  "About",
-  "Data Dashboards",
-  "Custom Data Download",
-];
-const generalItems = ["IATI Home", "News", "Events", "Contact", "Help Docs"];
+const toolItems = ["Tool Home", "About"];
 
 const meta: Meta = {
   title: "Components/Mobile Nav",
@@ -55,12 +49,39 @@ export const MobileNav: Story = {
           )}
         </ul>
         <ul class="">
-          ${generalItems.map(
-            (i) =>
-              html`<li class="iati-mobile-nav__item">
-                <a href="#" class="iati-mobile-nav__link">${i}</a>
-              </li>`,
-          )}
+          <li class="iati-mobile-nav__item">
+            <a
+              href="https://iatistandard.org/en/about/"
+              class="iati-mobile-nav__link"
+              >About IATI</a
+            >
+          </li>
+          <li class="iati-mobile-nav__item">
+            <a
+              href="https://iatistandard.org/en/using-data/"
+              class="iati-mobile-nav__link"
+              >Use Data</a
+            >
+          </li>
+          <li class="iati-mobile-nav__item">
+            <a
+              href="https://iatistandard.org/en/guidance/publishing-data/"
+              class="iati-mobile-nav__link"
+            >
+              Publish Data
+            </a>
+          </li>
+          <li class="iati-mobile-nav__item">
+            <a
+              href="https://iatistandard.org/guidance/get-support/"
+              class="iati-mobile-nav__link"
+            >
+              Contact
+            </a>
+          </li>
+          <li class="iati-mobile-nav__item">
+            <a href="#" class="iati-mobile-nav__link">Help Docs</a>
+          </li>
         </ul>
       </nav>
     </div>
