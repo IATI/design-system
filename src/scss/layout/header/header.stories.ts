@@ -34,12 +34,20 @@ export const Header: Story = {
           ${logo}
           <nav class="iati-header__general-nav">
             <ul class="iati-piped-list">
-              <li><a href="https://iatistandard.org/">IATI Home</a></li>
-              <li><a href="https://iatistandard.org/news/">News</a></li>
-              <li><a href="https://iatistandard.org/events/">Events</a></li>
+              <li>
+                <a href="https://iatistandard.org/en/about/">About IATI</a>
+              </li>
+              <li>
+                <a href="https://iatistandard.org/en/using-data/">Use Data</a>
+              </li>
+              <li>
+                <a href="https://iatistandard.org/en/guidance/publishing-data/">
+                  Publish Data
+                </a>
+              </li>
               <li>
                 <a href="https://iatistandard.org/guidance/get-support/">
-                  Contacts
+                  Contact
                 </a>
               </li>
             </ul>
