@@ -2,8 +2,6 @@ import { html } from "lit";
 
 import type { Meta, StoryObj } from "@storybook/web-components";
 
-const items = ["IATI Home", "News", "Events", "Contacts"];
-
 const meta: Meta = {
   title: "Components/Piped List",
 };
@@ -14,7 +12,9 @@ type Story = StoryObj;
 export const PipedList: Story = {
   render: () => html`
     <ul class="iati-piped-list">
-      ${items.map((i) => html`<li>${i}</li>`)}
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
     </ul>
   `,
 };
