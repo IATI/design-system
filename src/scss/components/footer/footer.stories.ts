@@ -16,7 +16,7 @@ const legalNavItems = [
 ];
 
 const meta: Meta = {
-  title: "Layout/Footer",
+  title: "Components/Footer",
   parameters: {
     layout: "fullscreen",
   },
