@@ -2,12 +2,12 @@ import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 
 import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
+import { Linkedin, Twitter, Youtube } from "../../components/icon/icon.stories";
+import { Default as NewsletterForm } from "../../components/newsletter-form/newsletter-form.stories";
 import {
   AdditionInfo as AdditionalInfoFooterBlock,
   UsefulLinks as UsefulLinksFooterBlock,
-} from "../../components/footer-block/footer-block.stories";
-import { Linkedin, Twitter, Youtube } from "../../components/icon/icon.stories";
-import { Default as NewsletterForm } from "../../components/newsletter-form/newsletter-form.stories";
+} from "./footer-block/footer-block.stories";
 
 const legalNavItems = [
   html`<a href="#">Privacy</a>`,
