@@ -10,7 +10,7 @@ import { Default as TitleBar } from "../../components/title-bar/title-bar.storie
 import { ToolNav } from "../../components/tool-nav/tool-nav.stories";
 
 const meta: Meta = {
-  title: "Layout/Header",
+  title: "Components/Header",
   parameters: {
     layout: "fullscreen",
   },

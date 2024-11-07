@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb.stories";
+import { Header } from "../../components/header/header.stories";
 import { Notice as MessageNotice } from "../../components/message/message.stories";
 import { Footer } from "../footer/footer.stories";
-import { Header } from "../header/header.stories";
 
 const meta: Meta = {
   title: "Layout/Page",
