@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 
 const meta: Meta = {
-  title: "Components/Title Bar",
+  title: "Components/Header/Title Bar",
   parameters: {
     backgrounds: {
       default: "dark",
