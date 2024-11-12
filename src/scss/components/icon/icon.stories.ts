@@ -3,6 +3,11 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Components/Icon",
+  parameters: {
+    backgrounds: {
+      default: "dark",
+    },
+  },
 };
 
 export default meta;
