@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 
 const meta: Meta = {
-  title: "Components/Title Bar",
+  title: "Components/Header/Title Bar",
   parameters: {
     backgrounds: {
       default: "dark",
@@ -17,7 +17,7 @@ export const Default: Story = {
   render: () => html`
     <div class="iati-header-title">
       <p class="iati-header-title__eyebrow">IATI Tools</p>
-      <p class="iati-header-title__heading">Country Development Finance Data</p>
+      <p class="iati-header-title__heading">Tool Name</p>
     </div>
   `,
 };

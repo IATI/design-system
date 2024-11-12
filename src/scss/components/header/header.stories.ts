@@ -6,11 +6,11 @@ import logoColourUrl from "../../../assets/svg/logo-colour.svg";
 import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
 import { Open as MenuToggle } from "../../components/menu-toggle/menu-toggle.stories";
 import { MobileNav } from "../../components/mobile-nav/mobile-nav.stories";
-import { Default as TitleBar } from "../../components/title-bar/title-bar.stories";
-import { ToolNav } from "../../components/tool-nav/tool-nav.stories";
+import { Default as TitleBar } from "./title-bar/title-bar.stories";
+import { ToolNav } from "./tool-nav/tool-nav.stories";
 
 const meta: Meta = {
-  title: "Layout/Header",
+  title: "Components/Header",
   parameters: {
     layout: "fullscreen",
   },

@@ -2,7 +2,7 @@ import { html } from "lit";
 
 import type { Meta, StoryObj } from "@storybook/web-components";
 
-const items = ["Tool Home", "About", "Data Dashboards", "Custom Data Download"];
+const items = ["Tool Name", "About"];
 
 const meta: Meta = {
   title: "Components/Header/Tool Nav",

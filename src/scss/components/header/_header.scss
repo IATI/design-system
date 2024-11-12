@@ -1,3 +1,6 @@
+@forward "title-bar/title-bar";
+@forward "tool-nav/tool-nav";
+
 @use "../../tokens/color" as *;
 @use "../../tokens/screens" as *;
 @use "../../tokens/spacing" as *;

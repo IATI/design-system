@@ -4,7 +4,6 @@ const config: StorybookConfig = {
   framework: "@storybook/web-components-vite",
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: ["@storybook/addon-essentials"],
-  staticDirs: ["../static"],
   docs: {
     autodocs: true,
   },
