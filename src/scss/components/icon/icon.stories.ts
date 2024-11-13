@@ -24,3 +24,7 @@ export const X: Story = {
 export const Linkedin: Story = {
   render: () => html`<i class="iati-icon iati-icon--linkedin"></i>`,
 };
+
+export const Facebook: Story = {
+  render: () => html`<i class="iati-icon iati-icon--facebook"></i>`,
+};

@@ -2,7 +2,12 @@ import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 
 import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
-import { Linkedin, X, Youtube } from "../../components/icon/icon.stories";
+import {
+  Facebook,
+  Linkedin,
+  X,
+  Youtube,
+} from "../../components/icon/icon.stories";
 import { Default as NewsletterForm } from "../../components/newsletter-form/newsletter-form.stories";
 import {
   AdditionInfo as AdditionalInfoFooterBlock,
@@ -72,6 +77,12 @@ export const Footer: Story = {
                 aria-label="YouTube"
               >
                 ${Youtube.render?.call({ ...args })}
+              </a>
+              <a
+                href="https://www.facebook.com/IATIaid/"
+                aria-label="Facebook"
+              >
+                ${Facebook.render?.call({ ...args })}
               </a>
             </div>
           </div>

@@ -19,4 +19,10 @@
   &--linkedin {
     background-image: url("/src/assets/svg/linkedin-logo.svg");
   }
+
+  &--facebook {
+    background-image: url("/src/assets/svg/facebook-logo-white.svg");
+    background-color: transparent;
+    background-size: 100%;
+  }
 }
