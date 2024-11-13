@@ -6,6 +6,18 @@
   background-position: center;
   background-size: 100%;
 
+  &--info {
+    background-image: url("/src/assets/svg/icon-info.svg");
+  }
+
+  &--search {
+    background-image: url("/src/assets/svg/icon-search.svg");
+  }
+
+  &--globe {
+    background-image: url("/src/assets/svg/icon-globe.svg");
+  }
+
   &--youtube {
     background-image: url("/src/assets/svg/youtube-logo.svg");
     aspect-ratio: 1.2 / 1;

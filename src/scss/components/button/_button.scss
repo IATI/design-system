@@ -22,8 +22,9 @@
     background-color: $color-teal-80;
   }
 
-  &__icon {
-    width: 1rem;
+  &__icon,
+  & .iati-icon {
+    height: 1rem;
   }
 
   &--light {

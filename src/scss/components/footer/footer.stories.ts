@@ -4,7 +4,7 @@ import { html } from "lit";
 import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
 import {
   Facebook,
-  Linkedin,
+  LinkedIn,
   X,
   Youtube,
 } from "../../components/icon/icon.stories";
@@ -67,7 +67,7 @@ export const Footer: Story = {
                 href="https://www.linkedin.com/company/international-aid-transparency-initiative/"
                 aria-label="LinkedIn"
               >
-                ${Linkedin.render?.call({ ...args })}
+                ${LinkedIn.render?.call({ ...args })}
               </a>
               <a href="https://x.com/IATI_aid" aria-label="X">
                 ${X.render?.call({ ...args })}
