@@ -17,8 +17,8 @@ export const Youtube: Story = {
   render: () => html`<i class="iati-icon iati-icon--youtube"></i>`,
 };
 
-export const Twitter: Story = {
-  render: () => html`<i class="iati-icon iati-icon--twitter"></i>`,
+export const X: Story = {
+  render: () => html`<i class="iati-icon iati-icon--x"></i>`,
 };
 
 export const Linkedin: Story = {
