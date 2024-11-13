@@ -77,6 +77,5 @@ export const Header: Story = {
         </div>
       </div>
     </header>
-    <script src="js/header.js"></script>
   `,
 };
