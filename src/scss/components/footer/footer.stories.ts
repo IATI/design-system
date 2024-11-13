@@ -64,7 +64,7 @@ export const Footer: Story = {
             ${CountrySwitcher.render?.call({ ...args })}
             <div class="iati-footer__social">
               <a
-                https://www.linkedin.com/company/international-aid-transparency-initiative/"
+                href="https://www.linkedin.com/company/international-aid-transparency-initiative/"
                 aria-label="LinkedIn"
               >
                 ${Linkedin.render?.call({ ...args })}
