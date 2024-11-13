@@ -78,10 +78,7 @@ export const Footer: Story = {
               >
                 ${Youtube.render?.call({ ...args })}
               </a>
-              <a
-                href="https://www.facebook.com/IATIaid/"
-                aria-label="Facebook"
-              >
+              <a href="https://www.facebook.com/IATIaid/" aria-label="Facebook">
                 ${Facebook.render?.call({ ...args })}
               </a>
             </div>

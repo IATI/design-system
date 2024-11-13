@@ -1,15 +1,14 @@
 .iati-icon {
   display: inline-block;
-  height: 45px;
-  width: 45px;
-  border-radius: 100%;
-  background-color: white;
+  height: 36px;
+  aspect-ratio: 1 / 1;
   background-repeat: no-repeat;
-  background-size: 60%;
   background-position: center;
+  background-size: 100%;
 
   &--youtube {
     background-image: url("/src/assets/svg/youtube-logo.svg");
+    aspect-ratio: 1.2 / 1;
   }
 
   &--x {
@@ -21,8 +20,6 @@
   }
 
   &--facebook {
-    background-image: url("/src/assets/svg/facebook-logo-white.svg");
-    background-color: transparent;
-    background-size: 100%;
+    background-image: url("/src/assets/svg/facebook-logo.svg");
   }
 }
