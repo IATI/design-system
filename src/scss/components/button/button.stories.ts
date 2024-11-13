@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
-import iconInfoUrl from "../../../assets/svg/icon-info.svg";
 
 import { html } from "lit";
 
@@ -38,7 +37,7 @@ export const WithIcon: Story = {
   render: () => html`
     <button class="iati-button iati-button--light">
       <span>Info</span>
-      <img class="iati-button__icon" src="${iconInfoUrl}" alt="" />
+      <i class="iati-icon iati-icon--info"></i>
     </button>
   `,
 };
