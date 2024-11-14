@@ -2,16 +2,13 @@
 @use "../../tokens/screens" as *;
 
 .iati-brand-background {
-  $var-background-image: --background-image;
-  #{$var-background-image}: url("/src/assets/svg/marque-white.svg");
-
   background-color: $color-teal-90;
   display: grid;
   @media (min-width: $screen-md) {
     &:after {
       content: "";
       grid-area: 1/-1;
-      background-image: var($var-background-image);
+      background-image: url("@assets/svg/marque-white.svg");
       background-repeat: no-repeat;
       background-position: right 2rem top;
       background-size: 32.3rem auto;
