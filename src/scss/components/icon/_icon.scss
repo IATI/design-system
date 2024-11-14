@@ -7,31 +7,31 @@
   background-size: 100%;
 
   &--info {
-    background-image: url("/src/assets/svg/icon-info.svg");
+    background-image: url("@assets/svg/icon-info.svg");
   }
 
   &--search {
-    background-image: url("/src/assets/svg/icon-search.svg");
+    background-image: url("@assets/svg/icon-search.svg");
   }
 
   &--globe {
-    background-image: url("/src/assets/svg/icon-globe.svg");
+    background-image: url("@assets/svg/icon-globe.svg");
   }
 
   &--youtube {
-    background-image: url("/src/assets/svg/youtube-logo.svg");
+    background-image: url("@assets/svg/youtube-logo.svg");
     aspect-ratio: 1.2 / 1;
   }
 
   &--x {
-    background-image: url("/src/assets/svg/x-logo.svg");
+    background-image: url("@assets/svg/x-logo.svg");
   }
 
   &--linkedin {
-    background-image: url("/src/assets/svg/linkedin-logo.svg");
+    background-image: url("@assets/svg/linkedin-logo.svg");
   }
 
   &--facebook {
-    background-image: url("/src/assets/svg/facebook-logo.svg");
+    background-image: url("@assets/svg/facebook-logo.svg");
   }
 }

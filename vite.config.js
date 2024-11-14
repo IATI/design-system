@@ -1,5 +1,6 @@
 import path from "path";
 import { NodePackageImporter } from "sass";
+import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -30,6 +31,11 @@ export default defineConfig({
       scss: {
         pkgImporter: new NodePackageImporter(),
       },
+    },
+  },
+  resolve: {
+    alias: {
+      "@assets": fileURLToPath(new URL("./src/assets", import.meta.url)),
     },
   },
 });
