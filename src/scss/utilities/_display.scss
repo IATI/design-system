@@ -8,6 +8,13 @@
   display: none;
 }
 
+.hide--mobile-nav {
+  display: none;
+  @media (min-width: $mobile_nav_breakpoint) {
+    display: var(--display);
+  }
+}
+
 .display--sm {
   @media (min-width: $screen-sm) {
     display: var(--display);

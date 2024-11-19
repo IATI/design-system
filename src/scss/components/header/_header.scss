@@ -33,7 +33,7 @@
     &:not(:has(.iati-header__nav[hidden])) {
       padding-block-end: 0;
     }
-    @media (min-width: $screen-sm) {
+    @media (min-width: $mobile_nav_breakpoint) {
       padding-block: 2rem;
     }
   }
@@ -50,7 +50,7 @@
   > :last-child {
     margin-inline-start: auto;
   }
-  @media (min-width: $screen-sm) {
+  @media (min-width: $mobile_nav_breakpoint) {
     border-block-end: none;
     padding-block-end: 0;
     margin-block-end: 0;
