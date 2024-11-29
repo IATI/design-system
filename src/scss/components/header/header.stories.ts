@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
-import iconInfoUrl from "../../../assets/svg/icon-info.svg";
-import iconSearchUrl from "../../../assets/svg/icon-search.svg";
 import logoColourUrl from "../../../assets/svg/logo-colour.svg";
 import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
 import { Open as MenuToggle } from "../../components/menu-toggle/menu-toggle.stories";
@@ -62,11 +60,11 @@ export const Header: Story = {
             ${CountrySwitcher.render?.call({ ...args })}
             <button class="iati-button iati-button--light hide--mobile-nav">
               <span>Help Docs</span>
-              <img class="iati-button__icon" src="${iconInfoUrl}" alt="" />
+              <i class="iati-icon iati-icon--info"></i>
             </button>
             <button class="iati-button iati-button--light">
               <span>Search</span>
-              <img class="iati-button__icon" src="${iconSearchUrl}" alt="" />
+              <i class="iati-icon iati-icon--search"></i>
             </button>
             ${MenuToggle.render?.call({ ...args })}
           </div>
