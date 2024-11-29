@@ -2,7 +2,12 @@ import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 
 import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
-import { Linkedin, Twitter, Youtube } from "../../components/icon/icon.stories";
+import {
+  Facebook,
+  Linkedin,
+  X,
+  Youtube,
+} from "../../components/icon/icon.stories";
 import { Default as NewsletterForm } from "../../components/newsletter-form/newsletter-form.stories";
 import {
   AdditionInfo as AdditionalInfoFooterBlock,
@@ -59,19 +64,22 @@ export const Footer: Story = {
             ${CountrySwitcher.render?.call({ ...args })}
             <div class="iati-footer__social">
               <a
-                https://www.linkedin.com/company/international-aid-transparency-initiative/"
+                href="https://www.linkedin.com/company/international-aid-transparency-initiative/"
                 aria-label="LinkedIn"
               >
                 ${Linkedin.render?.call({ ...args })}
               </a>
-              <a href="https://twitter.com/IATI_aid" aria-label="Twitter">
-                ${Twitter.render?.call({ ...args })}
+              <a href="https://x.com/IATI_aid" aria-label="X">
+                ${X.render?.call({ ...args })}
               </a>
               <a
                 href="https://www.youtube.com/channel/UCAVH1gcgJXElsj8ENC-bDQQ"
                 aria-label="YouTube"
               >
                 ${Youtube.render?.call({ ...args })}
+              </a>
+              <a href="https://www.facebook.com/IATIaid/" aria-label="Facebook">
+                ${Facebook.render?.call({ ...args })}
               </a>
             </div>
           </div>
