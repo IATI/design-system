@@ -1,0 +1,21 @@
+import { Meta, Title, Canvas } from "@storybook/blocks";
+
+import * as ComponentStories from "./header.stories";
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+The IATI Tools header is for use on all IATI-branded tools. By using the same header on all tools, we're creating a more consistent experience for people using those tools and helping them be more confident moving between tools.
+
+Consistency across products is key, so the header should be used as-is without modification (including colours, fonts, icons and the "IATI Tools" label) except where described below.
+
+The language switcher must be included even if the tool is only available in one language. The Help Docs and Search must be used to access those function if the application supports them, but may be omitted otherwise. No other buttons may be added to the header.
+
+The "IATI Tools" label must remain intact, and the Tool Name in the design replaced with the name of the tool.
+
+The first link in the menu must return to the tool's home page. Further links are for primary navigation in the tool. No secondary navigation is supported in the header; this is left to the tool to provide.
+
+If breadcrumbs are to be used, these should be directly below the header.
+
+<Canvas of={ComponentStories.Header} />

@@ -114,7 +114,7 @@ export const AdditionalInformationSection: Story = {
 const legalNavItems = [
   html`<a href="https://iatistandard.org/en/privacy-policy/">Privacy</a>`,
   html`<a href="https://iatistandard.org/en/data-removal/">Data removal</a>`,
-  html`<span>© Copyright IATI 2024. All rights reserved</span>`,
+  html`<span>© Copyright IATI 2024</span>`,
 ];
 
 const legalSectionHtml = html`

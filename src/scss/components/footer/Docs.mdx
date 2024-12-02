@@ -6,26 +6,30 @@ import * as ComponentStories from "./footer.stories";
 
 <Title />
 
-### Full Footer
+The footer of an IATI website may contain 1-3 sections, depending on what's needed for the application. Each section is optional, except the legal section. The order shown here must be respected.
 
-{/* TODO: Documentation about the footer */}
+The colours, fonts, images and other styles are an inherent part of the design and must be used when this design is used.
+
+The footer designs are responsive for reduced widths. Beyond the maximum width shown here the footer should be extended to the full width of the page by continuation of the solid background and lines.
+
+### Full Footer
 
 <Canvas of={ComponentStories.Footer} />
 
 ### Useful Links Section
 
-{/* TODO: Documentation for this section */}
+Useful links might include a mini sitemap, related resources or signposts to alternative/complimentary tools. The Newsletter signup is optional; if omitted the second column may be used for more links per the "Additional Information" design.
 
 <Canvas of={ComponentStories.UsefulLinksSection} />
 
 ### Additional Information Section
 
-{/* TODO: Documentation for this section */}
+Additional Information should include details of licensing, software versions, and short statements about the software, if relevant.
 
 <Canvas of={ComponentStories.AdditionalInformationSection} />
 
 ### Legal Section
 
-{/* TODO: Documentation for this section */}
+The "Privacy" and "Data Removal" links must be included and link to the URLs provided here. If license information is not provided elsewhere in the footer it may be included here. The language switcher and social media links must be included.
 
 <Canvas of={ComponentStories.LegalSection} />
