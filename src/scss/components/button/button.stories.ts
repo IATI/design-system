@@ -13,6 +13,10 @@ export const Default: Story = {
   render: () => html`<button class="iati-button">Button</button>`,
 };
 
+export const Link: Story = {
+  render: () => html`<a href="#" class="iati-button">Button</a>`,
+};
+
 export const Light: Story = {
   parameters: {
     backgrounds: {
