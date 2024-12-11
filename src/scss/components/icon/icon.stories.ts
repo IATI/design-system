@@ -23,6 +23,7 @@ const createStory = (variant: string, background = "light") => {
 export const Info: Story = createStory("info");
 export const Search: Story = createStory("search");
 export const Globe: Story = createStory("globe");
+export const ChevronLeft: Story = createStory("chevron-left");
 export const Youtube: Story = createStory("youtube", "dark");
 export const X: Story = createStory("x", "dark");
 export const LinkedIn: Story = createStory("linkedin", "dark");
