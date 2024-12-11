@@ -54,3 +54,17 @@
     }
   }
 }
+
+.iati-card-gallery {
+  --min-card-width: 300px;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: $padding-block;
+
+  & > * {
+    flex: 1;
+    min-width: var(--min-card-width);
+  }
+}
