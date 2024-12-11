@@ -8,6 +8,8 @@
   background-color: white;
   border-top: $border-width solid $color-teal-90;
   padding: $padding-block;
+  display: flex;
+  flex-direction: column;
 
   & :first-child {
     margin-top: 0;
@@ -50,5 +52,19 @@
         font-weight: $font-weight-body-strong;
       }
     }
+  }
+}
+
+.iati-card-gallery {
+  --min-card-width: 300px;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: $padding-block;
+
+  & > * {
+    flex: 1;
+    min-width: var(--min-card-width);
   }
 }

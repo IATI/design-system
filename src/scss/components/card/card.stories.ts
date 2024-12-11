@@ -41,3 +41,10 @@ export const CardWithMenu: Story = {
     </div>
   `,
 };
+
+export const CardGallery: Story = {
+  render: () =>
+    html`<div class="iati-card-gallery">
+      ${Array(5).fill(Card.render?.call({}))}
+    </div>`,
+};
