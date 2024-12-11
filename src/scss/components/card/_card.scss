@@ -8,6 +8,8 @@
   background-color: white;
   border-top: $border-width solid $color-teal-90;
   padding: $padding-block;
+  display: flex;
+  flex-direction: column;
 
   & :first-child {
     margin-top: 0;
