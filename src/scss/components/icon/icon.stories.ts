@@ -3,28 +3,27 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Components/Icon",
-  parameters: {
-    backgrounds: {
-      default: "dark",
-    },
-  },
 };
 
 export default meta;
 type Story = StoryObj;
 
-export const Youtube: Story = {
-  render: () => html`<i class="iati-icon iati-icon--youtube"></i>`,
+const createStory = (variant: string, background = "light") => {
+  const classes = `iati-icon iati-icon--${variant}`;
+  return {
+    parameters: {
+      backgrounds: {
+        default: background,
+      },
+    },
+    render: () => html`<i class=${classes}></i>`,
+  };
 };
 
-export const X: Story = {
-  render: () => html`<i class="iati-icon iati-icon--x"></i>`,
-};
-
-export const Linkedin: Story = {
-  render: () => html`<i class="iati-icon iati-icon--linkedin"></i>`,
-};
-
-export const Facebook: Story = {
-  render: () => html`<i class="iati-icon iati-icon--facebook"></i>`,
-};
+export const Info: Story = createStory("info");
+export const Search: Story = createStory("search");
+export const Globe: Story = createStory("globe");
+export const Youtube: Story = createStory("youtube", "dark");
+export const X: Story = createStory("x", "dark");
+export const LinkedIn: Story = createStory("linkedin", "dark");
+export const Facebook: Story = createStory("facebook", "dark");

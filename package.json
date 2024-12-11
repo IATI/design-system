@@ -14,6 +14,7 @@
   },
   "files": [
     "src/scss/**/*.scss",
+    "src/assets/**/*",
     "dist/css/**/*.css",
     "dist/js/**/*.js"
   ],
