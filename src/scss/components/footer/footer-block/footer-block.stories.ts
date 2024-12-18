@@ -36,18 +36,18 @@ export const AdditionInfo: Story = {
       <div
         class="iati-footer-block__content iati-footer-block__content--columns"
       >
-        <p>
-          Part of the IATI Unified Platform Code licensed under the GNU AGPL.
-        </p>
-        <p>Documentation licensed under CC by 3.0</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
-        <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-        </p>
-        <p>Web v2.8.2</p>
-        <p>Services</p>
-        <p>v2.8.0</p>
-        <p>API v2.4.0</p>
+        <div>
+          <p>Part of the IATI Unified Platform.</p>
+          <p>Code licensed under <a href="#">GNU AGPL</a>.</p>
+          <p>Documentation licensed under <a href="#">CC BY 3.0</a>.</p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">Web v2.8.2</a></li>
+            <li><a href="#">Services v2.8.0</a></li>
+            <li><a href="#">API v2.4.0</a></li>
+          </ul>
+        </div>
       </div>
     </div>`,
 };

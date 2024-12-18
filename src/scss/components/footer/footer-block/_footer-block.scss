@@ -23,7 +23,6 @@
 .iati-footer-block__content {
   font-weight: 600;
   :where(p, li) {
-    line-height: 1.375;
     margin: 0;
   }
   a {
@@ -37,14 +36,15 @@
     margin: 0;
     padding: 0;
   }
-  > * + * {
-    margin-block-start: 0.5rem;
-  }
 }
 
 .iati-footer-block__content--columns {
-  @media (min-width: $screen-sm) {
-    columns: 3;
-    column-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+
+  & > * {
+    flex-grow: 1;
   }
 }
