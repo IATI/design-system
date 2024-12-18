@@ -41,7 +41,7 @@ export const Footer: Story = {
               <h2
                 class="iati-footer-block__title iati-footer-block__title--centered"
               >
-                Sign up to our newsletter
+                Sign Up to Our Newsletter
               </h2>
               <div class="iati-footer-block__content">
                 ${NewsletterForm.render?.call({ ...args })}

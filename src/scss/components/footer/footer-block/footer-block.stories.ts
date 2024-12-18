@@ -17,7 +17,7 @@ type Story = StoryObj;
 export const UsefulLinks: Story = {
   render: () =>
     html`<div class="iati-footer-block">
-      <h2 class="iati-footer-block__title">Useful links</h2>
+      <h2 class="iati-footer-block__title">Useful Links</h2>
       <div class="iati-footer-block__content">
         <ul>
           <li><a href="#">Useful link</a></li>
@@ -32,7 +32,7 @@ export const UsefulLinks: Story = {
 export const AdditionInfo: Story = {
   render: () =>
     html`<div class="iati-footer-block">
-      <h2 class="iati-footer-block__title">Additional information</h2>
+      <h2 class="iati-footer-block__title">Additional Information</h2>
       <div
         class="iati-footer-block__content iati-footer-block__content--columns"
       >
