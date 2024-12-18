@@ -31,6 +31,7 @@ const preview: Preview = {
       source: {
         format: "dedent",
       },
+      toc: true,
     },
   },
 };
