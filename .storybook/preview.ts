@@ -8,6 +8,7 @@ const preview: Preview = {
   parameters: {
     options: {
       storySort: {
+        method: "alphabetical",
         order: [
           "Get Started",
           "Installation",
@@ -31,6 +32,7 @@ const preview: Preview = {
       source: {
         format: "dedent",
       },
+      toc: true,
     },
   },
 };
