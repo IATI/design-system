@@ -82,8 +82,18 @@ const additionalInformationHtml = html`
         >
           <div>
             <p>Part of the IATI Unified Platform.</p>
-            <p>Code licensed under <a href="#">GNU AGPL</a>.</p>
-            <p>Documentation licensed under <a href="#">CC BY 3.0</a>.</p>
+            <p>
+              Code licensed under
+              <a href="https://www.gnu.org/licenses/agpl-3.0.en.html"
+                >GNU AGPL</a
+              >.
+            </p>
+            <p>
+              Documentation licensed under
+              <a href="https://creativecommons.org/licenses/by/4.0/"
+                >CC BY 3.0</a
+              >.
+            </p>
           </div>
           <div>
             <ul>
@@ -102,8 +112,8 @@ export const AdditionalInformationSection: Story = {
 };
 
 const legalNavItems = [
-  html`<a href="#">Privacy</a>`,
-  html`<a href="#">Data removal</a>`,
+  html`<a href="https://iatistandard.org/en/privacy-policy/">Privacy</a>`,
+  html`<a href="https://iatistandard.org/en/data-removal/">Data removal</a>`,
   html`<span>© Copyright IATI 2024. All rights reserved</span>`,
 ];
 
