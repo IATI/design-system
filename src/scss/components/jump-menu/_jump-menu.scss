@@ -1,0 +1,93 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+@use "../../tokens/screens" as *;
+
+.iati-jump-menu {
+  max-width: 30rem;
+  &__header {
+    background-color: $color-green-30;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: $screen-md) {
+      background: none;
+      padding: 0 0 0.5rem;
+    }
+  }
+  &__toggle {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("@assets/svg/chevron-circle.svg");
+      background-repeat: no-repeat;
+      width: 1.43rem;
+      height: 1.43rem;
+      background-size: contain;
+      transform-origin: 50% 50%;
+      transition: all 0.2s;
+    }
+    &[aria-expanded="true"] {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    color: $color-grey-90;
+    font-size: 0.9375rem;
+  }
+  &__items {
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0;
+    display: block;
+    transition: all 0.25s;
+    transition-behavior: allow-discrete;
+    opacity: 1;
+    @starting-style {
+      opacity: 0;
+    }
+    &[aria-hidden="true"] {
+      display: none;
+      opacity: 0;
+      @media (min-width: $screen-md) {
+        display: block;
+        opacity: 1;
+      }
+    }
+    @media (min-width: $screen-md) {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+  &__item {
+    border-inline-start: 4px solid $color-green-30;
+    line-height: 1;
+    padding: 0.4em;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $color-green-20;
+      border-color: $color-teal-90;
+    }
+  }
+  &__link {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-teal-90;
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.5;
+  }
+}
