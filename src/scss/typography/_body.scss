@@ -39,6 +39,34 @@ a {
   }
 }
 
+table:not([class]) {
+  border-collapse: collapse;
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+  overflow: auto;
+
+  thead,
+  th {
+    background-color: $color-grey-10;
+
+    &,
+    p {
+      font-weight: $font-weight-body-strong;
+    }
+  }
+
+  th,
+  td {
+    border: 1px solid $color-grey-20;
+    padding: 0.5rem;
+  }
+
+  caption {
+    margin: $padding-block 0;
+  }
+}
+
 .iati-quote {
   border-left: 4px solid $color-grey-90;
   padding: 0 $padding-block;
