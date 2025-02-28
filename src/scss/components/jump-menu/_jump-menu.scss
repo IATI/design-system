@@ -1,0 +1,82 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+@use "../../tokens/screens" as *;
+
+.iati-jump-menu {
+  max-width: 30rem;
+  &__header {
+    background-color: $color-green-30;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: $screen-md) {
+      background: none;
+      padding: 0 0 0.5rem;
+    }
+  }
+  &__toggle {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    &::after {
+      content: '';
+      display: block;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuNzU3NDUgMTAuNTg1OEw5LjE3MTY2IDkuMTcxNTRMMTIuMDAwMSAxMkwxNC44Mjg1IDkuMTcxNTdMMTYuMjQyNyAxMC41ODU4TDEyLjAwMDEgMTQuODI4NEw3Ljc1NzQ1IDEwLjU4NThaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEgMTJDMSA1LjkyNDg3IDUuOTI0ODcgMSAxMiAxQzE4LjA3NTEgMSAyMyA1LjkyNDg3IDIzIDEyQzIzIDE4LjA3NTEgMTguMDc1MSAyMyAxMiAyM0M1LjkyNDg3IDIzIDEgMTguMDc1MSAxIDEyWk0xMiAyMUM3LjAyOTQ0IDIxIDMgMTYuOTcwNiAzIDEyQzMgNy4wMjk0NCA3LjAyOTQ0IDMgMTIgM0MxNi45NzA2IDMgMjEgNy4wMjk0NCAyMSAxMkMyMSAxNi45NzA2IDE2Ljk3MDYgMjEgMTIgMjFaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K");
+      width: 1.6em;
+      height: 1.6em;
+      background-size: contain;
+      transform-origin: 50% 50%;
+    }
+    &[aria-expanded="true"] {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    color: $color-grey-90;
+    font-size: 0.9375rem;
+  }
+  &__items {
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0;
+    &[aria-hidden="true"] {
+      display: none;
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+    @media (min-width: $screen-md) {
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+  &__item {
+    border-inline-start: 4px solid $color-green-30;
+    line-height: 1;
+    padding: 0.4em;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $color-green-20;
+      border-color: $color-teal-90;
+    }
+  }
+  &__link {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-teal-90;
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.5;
+  }
+}
