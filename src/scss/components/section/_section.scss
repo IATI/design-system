@@ -1,0 +1,29 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/spacing" as *;
+
+.iati-section {
+  &__title {
+    text-transform: uppercase;
+    background-color: $color-teal-90;
+    color: #fff;
+    font-size: 1.0625rem;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  &__content {
+    padding-block: 1rem;
+    > * {
+      margin: 0 0 1rem;
+    }
+    > *:last-child {
+      margin: 0;
+    }
+  }
+  &--fill {
+    .iati-section__content {
+      padding-inline: 1rem;
+      background-color: $color-teal-10;
+    }
+  }
+}
