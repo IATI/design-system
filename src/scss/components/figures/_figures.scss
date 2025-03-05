@@ -1,0 +1,48 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/font" as *;
+@use "../../tokens/spacing" as *;
+
+.iati-figures {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  &__item {
+    flex: 1 0 0;
+    max-width: 14rem;
+    background-color: $color-teal-30;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    transition: background-color 0.1s;
+    &:has(a:hover) {
+      background-color: $color-teal-60;
+    }
+  }
+  &__label {
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  &__number {
+    font-size: 2.6rem;
+    font-weight: 600;
+  }
+  &__content {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+    color: $color-grey-90;
+  }
+}
