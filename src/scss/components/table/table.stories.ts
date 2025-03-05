@@ -10,13 +10,24 @@ type Story = StoryObj;
 
 export const Default: Story = {
   render: () => html`
-    <table>
+    <div class="iati-table">
+    <table class="iati-table__table">
+      <thead>
       <tr>
         <th>Column 1</th>
         <th>Column 2</th>
         <th>Column 3</th>
         <th>Column 4</th>
         <th>Column 5</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+        <td>Cell 3</td>
+        <td>Cell 4</td>
+        <td>Cell 5</td>
       </tr>
       <tr>
         <td>Cell 1</td>
@@ -25,14 +36,40 @@ export const Default: Story = {
         <td>Cell 4</td>
         <td>Cell 5</td>
       </tr>
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+        <td>Cell 3</td>
+        <td>Cell 4</td>
+        <td>Cell 5</td>
+      </tr>
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+        <td>Cell 3</td>
+        <td>Cell 4</td>
+        <td>Cell 5</td>
+      </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>Cell 2</td>
+          <td>Cell 3</td>
+          <td>Cell 4</td>
+          <td>Cell 5</td>
+        </tr>
+      </tfoot>
     </table>
+    </div>
   `,
 };
 
 export const Scrolling: Story = {
   render: () => html`
     <div style="width: 300px;">
-      <table>
+    <div class="iati-table">
+      <table class="iati-table__table">
         <caption>
           This table should scroll within its fixed-width container.
         </caption>
@@ -51,6 +88,7 @@ export const Scrolling: Story = {
           <td>Cell 5</td>
         </tr>
       </table>
+      </div>
     </div>
   `,
 };
