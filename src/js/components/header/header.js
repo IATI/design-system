@@ -48,8 +48,12 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    const mobileNavWrapper = document.querySelector(".js-iati-mobile-nav");
+    if (!mobileNavWrapper) {
+      return;
+    }
     const iatiMobileNav = new IatiMobileNav(
-      document.querySelector(".js-iati-mobile-nav"),
+      mobileNavWrapper,
       "iati-mobile-nav--open",
     );
 
