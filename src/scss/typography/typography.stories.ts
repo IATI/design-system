@@ -131,3 +131,34 @@ export const Code: Story = {
     </p>
   `,
 };
+
+export const Table: Story = {
+  render: () => html`
+    <table>
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lorem Ipsum</td>
+          <td>Dolor sit amet</td>
+          <td>Consectetur adipiscing</td>
+        </tr>
+        <tr>
+          <td>Vivamus luctus</td>
+          <td>Tempor incididunt</td>
+          <td>Magna aliqua</td>
+        </tr>
+        <tr>
+          <td>Ut enim ad</td>
+          <td>Minim veniam</td>
+          <td>Quis nostrud exercitation</td>
+        </tr>
+      </tbody>
+    </table>
+  `,
+};

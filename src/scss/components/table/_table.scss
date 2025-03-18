@@ -2,29 +2,46 @@
 @use "../../tokens/font" as *;
 @use "../../tokens/spacing" as *;
 
-table {
-  border-collapse: collapse;
-  display: inline-block;
-  max-width: 100%;
-  overflow: auto;
-
-  thead,
-  th {
-    background-color: $color-grey-10;
-
-    &,
-    p {
-      font-weight: $font-weight-body-strong;
-    }
+.iati-table {
+  overflow-x: auto;
+  table {
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+    font-weight: 500;
+    font-size: 0.8rem;
+    border: 1px solid $color-teal-60;
   }
-
+  tbody {
+    border: 1px solid $color-teal-60;
+  }
+  th {
+    text-transform: uppercase;
+    background-color: #{$color-green-30}cc;
+    color: $color-grey-90;
+  }
+  td,
+  th {
+    border-right: 1px solid $color-teal-60;
+    text-align: left;
+    min-width: 20ch;
+  }
   th,
   td {
-    border: 1px solid $color-grey-20;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
   }
-
-  caption {
-    margin: $padding-block 0;
+  tr {
+    border-bottom: 1px solid $color-teal-30;
+    &:last-of-type {
+      border-bottom: 1px solid $color-teal-60;
+    }
+  }
+  thead {
+    border-bottom: 1px solid $color-teal-60;
+  }
+  tfoot {
+    font-weight: 700;
+    border-top: 1px solid $color-teal-60;
+    text-transform: uppercase;
   }
 }
