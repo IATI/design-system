@@ -49,8 +49,8 @@ export const Body: Story = {
 
 export const Links: Story = {
   render: () => html`
-    <a>This is a link.</a>
-    <p>This is a <a>link</a> within a paragraph.</p>
+    <a href="#">This is a link.</a>
+    <p>This is a <a href="#">link</a> within a paragraph.</p>
   `,
 };
 
