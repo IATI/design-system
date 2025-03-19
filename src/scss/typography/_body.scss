@@ -32,6 +32,12 @@ a {
   text-decoration-color: $color-teal-30;
   text-underline-position: under;
 
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
   &:has(i),
   &:has(img) {
     text-decoration: none;
