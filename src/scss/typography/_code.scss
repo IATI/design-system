@@ -2,17 +2,55 @@
 @use "../tokens/font" as *;
 @use "../tokens/spacing" as *;
 
-.iati-code {
-  font-family: $font-stack-monospace;
+pre > code {
   background-color: $color-grey-10;
-  color: #000;
   border: 1px solid $color-grey-20;
+  border-radius: 4px;
+  color: $color-grey-90;
+  display: block;
+  font-family: $font-stack-monospace;
+  overflow-x: scroll;
+  padding: $padding-block;
+}
+
+:not(pre) > code {
+  background-color: $color-grey-10;
+  border: 1px solid $color-grey-20;
+  border-radius: 4px;
+  color: $color-grey-90;
+  font-family: $font-stack-monospace;
+  padding: 0.1em 0.2em;
+}
+
+.iati-code {
+  background-color: $color-grey-10;
+  border: 1px solid $color-grey-20;
+  border-radius: 4px;
+  color: $color-grey-90;
+  font-family: $font-stack-monospace;
   padding: 0.1em 0.2em;
 
   &--block {
+    border-radius: 4px;
     display: block;
-    padding: $padding-block;
     overflow-x: scroll;
+    padding: $padding-block;
+  }
+}
+
+.iati-reference {
+  background-color: #fff;
+  border: 1px solid $color-grey-20;
+  border-radius: 4px;
+  color: $color-blue-80;
+  font-family: $font-stack-monospace;
+  padding: 0.1em 0.2em;
+
+  &--block {
+    border-radius: 4px;
+    display: block;
+    overflow-x: scroll;
+    padding: $padding-block;
   }
 }
 
