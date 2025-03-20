@@ -111,14 +111,17 @@ export const Quotes: Story = {
 
 export const Code: Story = {
   render: () => html`
-    <h3>This heading contains <span class="iati-code">inline code</span>.</h3>
+    <h3>This heading contains <code>inline code</code>.</h3>
+    <p>This paragraph contains <code>inline code</code>.</p>
+    <pre>
+      <code>
+        print("This is a block of code")
+      </code>
+    </pre>
     <p>
-      This paragraph contains
-      <span class="iati-code">inline code</span>.
+      This paragraph contains a <span class="iati-reference">reference</span> to
+      an element in the standard.
     </p>
-    <code class="iati-code iati-code--block">
-      <span>print("This is a block of code")</span>
-    </code>
     <p>
       This paragraph contains a key-binding:
       <kbd class="iati-kbd">Ctrl</kbd> + <kbd class="iati-kbd">C</kbd>
