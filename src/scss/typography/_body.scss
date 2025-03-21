@@ -8,6 +8,11 @@ body {
   color: $color-grey-90;
 }
 
+.iati-dark-background {
+  color: $color-grey-10;
+  background-color: $color-teal-90;
+}
+
 p,
 a,
 li {
@@ -28,14 +33,14 @@ li p {
 
 a {
   color: $color-teal-80;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-color: $color-teal-30;
   text-underline-position: under;
 
   &:active,
   &:hover,
   &:focus {
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   &:has(i),
@@ -43,6 +48,21 @@ a {
     text-decoration: none;
     line-height: 0;
   }
+}
+
+p a {
+  text-decoration: underline;
+
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+a.light {
+  color: $color-teal-30;
+  text-decoration-color: $color-teal-70;
 }
 
 table:not([class]) {
