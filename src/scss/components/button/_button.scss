@@ -19,8 +19,11 @@
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 
+  &:active,
+  &:focus,
   &:hover {
     background-color: $color-teal-80;
+    text-decoration: none;
   }
 
   &__icon,

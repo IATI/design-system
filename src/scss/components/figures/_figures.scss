@@ -44,5 +44,11 @@
     text-decoration: none;
     line-height: 1;
     color: $color-grey-90;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
