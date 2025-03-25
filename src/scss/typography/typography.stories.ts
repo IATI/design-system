@@ -3,6 +3,11 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Core/Typography",
+  parameters: {
+    backgrounds: {
+      default: "light",
+    },
+  },
 };
 
 export default meta;
