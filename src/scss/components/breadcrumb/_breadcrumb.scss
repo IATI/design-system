@@ -31,6 +31,12 @@
 
 .iati-breadcrumb-link {
   text-decoration: none;
+
+  &[aria-current]:active,
+  &[aria-current]:focus,
+  &[aria-current]:hover {
+    text-decoration: none;
+  }
 }
 
 @media (min-width: $screen-sm) {
