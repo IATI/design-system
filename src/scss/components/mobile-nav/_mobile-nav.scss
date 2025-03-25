@@ -83,7 +83,11 @@
   padding-block: 0.75em;
   display: block;
   transition: all 0.2s ease-in-out;
+
+  &:active,
+  &:focus,
   &:hover {
     color: $color-blue-30;
+    text-decoration: none;
   }
 }
