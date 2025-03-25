@@ -2,6 +2,7 @@
 
 .iati-main {
   @include mixins.page-width-container();
+  background-color: white;
   flex: 1;
   padding-block: 1rem;
 }

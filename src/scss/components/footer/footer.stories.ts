@@ -13,6 +13,9 @@ const meta: Meta = {
   title: "Components/Footer",
   parameters: {
     layout: "fullscreen",
+    backgrounds: {
+      default: "light",
+    },
   },
 };
 
