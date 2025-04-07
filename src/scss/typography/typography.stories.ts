@@ -49,6 +49,10 @@ export const Body: Story = {
       id facilisis sem dapibus. Quisque at diam aliquet, convallis tellus a,
       bibendum justo. Proin in est feugiat, rhoncus sapien eu, suscipit ante.
     </p>
+    <p class="iati-dark-background">
+      This paragraph shows an example of <strong>strong text</strong> and
+      <em>emphasised text</em> against a dark background.
+    </p>
   `,
 };
 
@@ -56,6 +60,13 @@ export const Links: Story = {
   render: () => html`
     <a href="#">This is a link.</a>
     <p>This is a <a href="#">link</a> within a paragraph.</p>
+    <div class="iati-dark-background">
+      <a class="light" href="#">This is a link on a dark background.</a>
+      <p>
+        This is a <a class="light" href="#">link on a dark background</a> within
+        a paragraph.
+      </p>
+    </div>
   `,
 };
 
@@ -116,14 +127,17 @@ export const Quotes: Story = {
 
 export const Code: Story = {
   render: () => html`
-    <h3>This heading contains <span class="iati-code">inline code</span>.</h3>
+    <h3>This heading contains <code>inline code</code>.</h3>
+    <p>This paragraph contains <code>inline code</code>.</p>
+    <pre>
+      <code>
+        print("This is a block of code")
+      </code>
+    </pre>
     <p>
-      This paragraph contains
-      <span class="iati-code">inline code</span>.
+      This paragraph contains a <span class="iati-reference">reference</span> to
+      an element in the standard.
     </p>
-    <code class="iati-code iati-code--block">
-      <span>print("This is a block of code")</span>
-    </code>
     <p>
       This paragraph contains a key-binding:
       <kbd class="iati-kbd">Ctrl</kbd> + <kbd class="iati-kbd">C</kbd>
