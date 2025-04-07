@@ -4,6 +4,11 @@ import type { Meta, StoryObj } from "@storybook/web-components";
 
 const meta: Meta = {
   title: "Components/Piped List",
+  parameters: {
+    backgrounds: {
+      default: "light",
+    },
+  },
 };
 
 export default meta;
