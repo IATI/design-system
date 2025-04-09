@@ -1,7 +1,70 @@
 @use "../../base/mixins";
+@use "../../tokens/screens" as *;
 
+// remains for backwards compatibility.
 .iati-main {
   @include mixins.page-width-container();
   flex: 1;
   padding-block: 1rem;
+}
+
+.iati-page {
+  @include mixins.page-width-container();
+  flex: 1;
+  padding-block: 1rem;
+}
+
+.iati-page__before-content {
+  margin-block-end: 1rem;
+  @media (min-width: $screen-md) {
+    margin-block-end: 2rem;
+  }
+  & > * + * {
+    margin-block-start: 1rem;
+  }
+}
+
+.iati-page__content {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.iati-page__article {
+  & > * + * {
+    margin-top: 1rem;
+    @media (min-width: $screen-md) {
+      margin-top: 2rem;
+    }
+  }
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+.iati-page__side {
+  min-inline-size: 15rem;
+  flex-grow: 0;
+}
+
+.iati-page__side--sticky > * {
+  position: sticky;
+  top: 1rem;
+}
+
+.iati-page__after-content {
+  margin-block-start: 1rem;
+  @media (min-width: $screen-md) {
+    margin-block-start: 2rem;
+  }
+  & > * + * {
+    margin-block-start: 1rem;
+    @media (min-width: $screen-md) {
+      margin-top: 2rem;
+    }
+  }
 }
