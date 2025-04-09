@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
+import { Default as Table } from "../../components/table/table.stories";
 
 import { html } from "lit";
 
@@ -43,7 +44,7 @@ export const Default: Story = {
 };
 
 export const Fill: Story = {
-  render: () => html`
+  render: (args) => html`
     <div class="iati-section iati-section--fill">
       <h2 class="iati-section__title">About</h2>
       <div class="iati-section__content">
@@ -65,6 +66,7 @@ export const Fill: Story = {
           in each of the last twelve calendar months. The current month is shown
           for informational purposes, but excluded from the assessment.
         </p>
+        ${Table.render?.call({ ...args })}
       </div>
     </div>
   `,
