@@ -20,6 +20,9 @@
     background-color: #{$color-green-30}cc;
     color: $color-grey-90;
   }
+  td {
+    background-color: #fff;
+  }
   td,
   th {
     border-right: 1px solid $color-teal-60;

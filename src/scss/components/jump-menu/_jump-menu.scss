@@ -3,7 +3,6 @@
 @use "../../tokens/screens" as *;
 
 .iati-jump-menu {
-  max-width: 30rem;
   &__header {
     background-color: $color-green-30;
     padding: 0.5rem 1rem;
