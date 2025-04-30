@@ -9,29 +9,35 @@ const meta: Meta = {
       default: "light",
     },
   },
+  argTypes: {
+    type: { control: "select", options: ["notice", "info"] },
+  },
 };
 
 export default meta;
 type Story = StoryObj;
 
-export const Notice: Story = {
-  render: () => html`
-    <p class="iati-message iati-message--notice">
-      You are viewing
-      <span class="iati-message-highlight"
-        >VERSION 2.03 of IATI Standard Reference</span
-      >. <a href="#">View another version</a>.
+const Template = {
+  render: ({ type }) => html`
+    <p class="iati-message ${type ? "iati-message--" + type : ""}">
+      This message is used to
+      <span class="iati-message-highlight">inform the reader</span>
+      of something.
+      <a href="#">Or link to more info.</a>
     </p>
   `,
 };
 
+export const Notice: Story = {
+  args: {
+    type: "notice",
+  },
+  ...Template,
+};
+
 export const Info: Story = {
-  render: () => html`
-    <p class="iati-message iati-message--info">
-      You are viewing
-      <span class="iati-message-highlight"
-        >VERSION 2.03 of IATI Standard Reference</span
-      >. <a href="#">View another version</a>.
-    </p>
-  `,
+  args: {
+    type: "info",
+  },
+  ...Template,
 };

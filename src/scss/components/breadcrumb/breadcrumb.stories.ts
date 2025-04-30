@@ -14,24 +14,44 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-export const Breadcrumb: Story = {
-  render: () => html`
+const Template = {
+  render: ({ currentPageTitle, previousPageTitles }) => html`
     <nav class="iati-breadcrumb">
       <span class="iati-breadcrumb__previous">
         <i class="iati-icon iati-icon--chevron-left"></i>
-        <a href="#" class="iati-breadcrumb-link">About</a>
+        <a href="#" class="iati-breadcrumb-link"
+          >${previousPageTitles[previousPageTitles.length - 1]}</a
+        >
       </span>
       <ol class="iati-breadcrumb__list">
-        <li class="iati-breadcrumb-item">
-          <a href="#" class="iati-breadcrumb-link">Home</a>
-        </li>
-        <li class="iati-breadcrumb-item">
-          <a href="#" class="iati-breadcrumb-link">About</a>
-        </li>
+        ${previousPageTitles.map(
+          (pageTitle) =>
+            html`<li class="iati-breadcrumb-pageTitle">
+              <a href="#" class="iati-breadcrumb-link">${pageTitle}</a>
+            </li> `,
+        )}
         <li class="iati-breadcrumb-item iati-breadcrumb-item--current">
-          <a aria-current="page" class="iati-breadcrumb-link">Current page</a>
+          <a aria-current="page" class="iati-breadcrumb-link"
+            >${currentPageTitle}</a
+          >
         </li>
       </ol>
     </nav>
   `,
+};
+
+export const TwoLevel: Story = {
+  ...Template,
+  args: {
+    currentPageTitle: "Current Page",
+    previousPageTitles: ["Home"],
+  },
+};
+
+export const ThreeLevel: Story = {
+  ...Template,
+  args: {
+    currentPageTitle: "Current Page",
+    previousPageTitles: ["Home", "About"],
+  },
 };
