@@ -10,20 +10,20 @@ const meta: Meta = {
   },
 };
 
-const items = [
-  "Page summary",
-  "Narrative",
-  "Assessment",
-  "Exceptions",
-  "comparison with original global partnership indicator methodology",
-  "Pseudocode",
-];
-
 export default meta;
 type Story = StoryObj;
 
 export const Default: Story = {
-  render: () => html`
+  args: {
+    items: [
+      { text: "First section", link: "#" },
+      { text: "Second section", link: "#" },
+      { text: "Another section", link: "#" },
+      { text: "A slightly longer title", link: "#" },
+      { text: "Final section", link: "#" },
+    ],
+  },
+  render: ({ items }) => html`
     <nav class="iati-jump-menu">
       <div class="iati-jump-menu__header">
         <h2 class="iati-jump-menu__title">Jump to section</h2>
@@ -40,9 +40,9 @@ export const Default: Story = {
         class="iati-jump-menu__items js-jump-menu-items"
       >
         ${items.map(
-          (i) =>
+          (item) =>
             html`<li class="iati-jump-menu__item">
-              <a href="#" class="iati-jump-menu__link">${i}</a>
+              <a href=${item.link} class="iati-jump-menu__link">${item.text}</a>
             </li>`,
         )}
       </ul>
