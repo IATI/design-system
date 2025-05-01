@@ -8,7 +8,7 @@ export default defineConfig({
     lib: {
       entry: {
         iati: path.resolve(__dirname, "src/js/main.js"),
-        css: path.resolve(__dirname, "src/scss/main.scss"),
+        "css/iati": path.resolve(__dirname, "src/scss/main.scss"),
       },
       fileName: "iati",
       formats: ["es"],
@@ -16,15 +16,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         entryFileNames: "js/[name].js",
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name == "style.css") {
-            return `css/iati.css`;
-          }
-          return assetInfo.name;
-        },
       },
     },
     cssMinify: false,
+    cssCodeSplit: true,
   },
   css: {
     preprocessorOptions: {
