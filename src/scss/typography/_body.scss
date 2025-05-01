@@ -2,10 +2,18 @@
 @use "../tokens/font" as *;
 @use "../tokens/spacing" as *;
 
-body {
+// Typography styles that are usually applied at the `body` level
+// must be placed within this mixin so that they can be pulled into the
+//`.iati-design-system--enabled` class in `main-incremental.scss`
+@mixin body-styles {
   font-family: $font-stack-body;
   font-weight: $font-weight-body;
   color: $color-grey-90;
+  line-height: 1.15;
+}
+
+body {
+  @include body-styles();
 }
 
 .iati-dark-background {

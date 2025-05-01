@@ -110,3 +110,35 @@ export const LongPageLayout: Story = {
     ${Footer.render?.call({ ...args })}
   `,
 };
+
+export const IncrementalMigration: Story = {
+  parameters: {
+    designSystemEnabled: false,
+  },
+  render: (args) => html`
+    <div class="iati-design-system--enabled">
+      ${Header.render?.call({ ...args })}
+    </div>
+    <h1>Incremental Migration</h1>
+    <p>This example shows how to apply the IATI Design System incrementally.</p>
+    <p>
+      By wrapping the
+      <code>header</code>and <code>footer</code> in the
+      <code>.iati-design-system--enabled</code> class, the IATI Design System
+      styles are applied only to those sections of the page, leaving the rest
+      as-is.
+    </p>
+    <p>
+      See the
+      <a href="/?path=/docs/installation--docs#incremental-migration-version"
+        >installation</a
+      >
+      and
+      <a href="/?path=/docs/usage--docs#incremental-migration">usage</a> docs
+      for more information.
+    </p>
+    <div class="iati-design-system--enabled">
+      ${Footer.render?.call({ ...args })}
+    </div>
+  `,
+};

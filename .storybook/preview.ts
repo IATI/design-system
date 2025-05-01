@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/web-components";
+import { html } from "lit";
 
 import "../src/js/main.js";
 import "../src/scss/main.scss";
@@ -32,9 +33,22 @@ const preview: Preview = {
       page: DocsTemplate,
       source: {
         format: "dedent",
+        excludeDecorators: true,
       },
     },
+    designSystemEnabled: true,
   },
+  decorators: [
+    (storyFn, { parameters }) => {
+      const { designSystemEnabled } = parameters;
+      if (designSystemEnabled) {
+        return html`<div class="iati-design-system--enabled">
+          ${storyFn()}
+        </div>`;
+      }
+      return storyFn();
+    },
+  ],
 };
 
 export default preview;
