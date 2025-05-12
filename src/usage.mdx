@@ -9,11 +9,58 @@ The IATI Design System is intended to increase the visual consistency of the IAT
 
 It is continuously being updated. If, when updating a website to use the design system, you find that an important question is unanswered, open a GitHub issue to discuss. In the meantime, continue to use your best judgement for the task at hand.
 
-After completing the <a href="../?path=/docs/installation--docs">installation</a> instructions, core styles, such as typography, should be applied to your site.
+## Enable the Design System
 
-This Storybook shows the components available in the design system.
-For each component, the **Docs** page shows available variants of the component, like the example shown below for the default variant of the Button component.
+After completing the <a href="../?path=/docs/installation--docs">installation</a> instructions,
+you must enable the design system styles, by applying the `.iati-design-system--enabled` class on the `<body>` element of your page.
+This will apply core styles, such as typography, to the site, and enable you to use components from the design system.
 
-Click on **Show code** in the bottom right to see the HTML elements and classes being used and apply them to your own site.
+```html
+<body class="iati-design-system--enabled">
+  <!-- The rest of your page content -->
+</body>
+```
+
+## Using Components
+
+This Storybook site shows all the components available in the design system.
+For each component, the **"Docs"** page shows available variants of the component.
+
+Click on **Show code** in the bottom right to see a HTML snippet which shows which CSS classes to use.
+For example, the snippet for the example below shows us that the `.iati-button` class has been applied to a `<button>` element.
 
 <Canvas of={ButtonStories.Default} />
+
+## Incremental Migration
+
+For larger projects migrating to the IATI Design System, it can be useful to roll-out the styles incrementally instead of globally, to avoid clashes with existing styles.
+
+To support this this, instead of appling the `.iati-design-system--enabled` class to the `<body>` element,
+it is possible to wrap any section of the page in a container with the `.iati-design-system--enabled` class,
+so that the IATI Design System styles are only applied to that section.
+This can be used on large components like the Header or for smaller elements like a Button.
+
+### Example
+
+The following code shows how to apply the IATI Design System to the header and footer,
+leaving the rest of the page as-is:
+
+For a working example, see the <a href="/?path=/story/layout-page--incremental-migration">Incremental Migration story</a>.
+
+```html
+<body>
+  <div class="iati-design-system--enabled">
+    <header class="iati-header">
+      <!-- IATI Design System header code -->
+    </header>
+  </div>
+
+  <!-- The rest of your page content -->
+
+  <div class="iati-design-system--enabled">
+    <footer class="iati-footer">
+      <!-- IATI Design System footer code -->
+    </footer>
+  </div>
+</body>
+```

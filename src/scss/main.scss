@@ -1,13 +1,22 @@
 @use "sass:meta";
-@use "base";
 @use "tokens";
-@use "typography";
-@use "components";
-@use "layout";
-@use "utilities";
 
 // Expose tokens as Sass variables
 @forward "tokens";
+
+// Load fonts
+@import "typography/fonts";
+
+.iati-design-system--enabled {
+  @import "base";
+  @import "tokens";
+  @import "typography";
+  @import "components";
+  @import "layout";
+  @import "utilities";
+
+  @include body-styles();
+}
 
 // Expose tokens as CSS custom properties
 :root {
