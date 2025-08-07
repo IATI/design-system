@@ -10,8 +10,6 @@ import {
 } from "./title-bar/title-bar.stories";
 import { ToolNav } from "./tool-nav/tool-nav.stories";
 
-
-
 const meta: Meta = {
   title: "Components/Header",
   parameters: {
@@ -88,8 +86,7 @@ export const Header: Story = {
 
 export const CompactHeader: Story = {
   args: {
-    heading:
-      "Tool Name or a longer heading that may wrap on narrow screens",
+    heading: "Tool Name or a longer heading that may wrap on narrow screens",
   },
   render: (args, context) => html`
     ${MobileNav.render({ ...args }, context)}
