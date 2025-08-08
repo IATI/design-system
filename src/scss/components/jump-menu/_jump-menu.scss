@@ -100,8 +100,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-inline-start: .1rem;
-    
+    margin-inline-start: 0.1rem;
   }
 
   &__subitem {
@@ -132,6 +131,6 @@
 
   // Add top padding only to the first sublink in each subitems section
   &__subitem:first-child .iati-jump-menu__sublink {
-    padding-top: .25rem;
+    padding-top: 0.25rem;
   }
-  }
+}
