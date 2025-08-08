@@ -76,7 +76,7 @@
     padding: 0.4em;
     transition: all 0.2s ease-in-out;
     &:hover {
-      background-color: $color-green-20;
+      background-color: $color-green-10;
       border-color: $color-teal-90;
     }
   }
@@ -95,4 +95,43 @@
       text-decoration: none;
     }
   }
-}
+
+  &__subitems {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-inline-start: .1rem;
+    
+  }
+
+  &__subitem {
+    line-height: 1;
+    padding: 0.4em;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $color-green-20;
+    }
+  }
+
+  &__sublink {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: $color-teal-90;
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.5;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Add top padding only to the first sublink in each subitems section
+  &__subitem:first-child .iati-jump-menu__sublink {
+    padding-top: .25rem;
+  }
+  }
