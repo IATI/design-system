@@ -115,10 +115,18 @@ export const AdditionalInformationSection: Story = {
 };
 
 const legalNavItems = [
-  html`<a href="https://web-terms.iatistandard.org/en/latest/privacy-policy/">Privacy</a>`,
-  html`<a href="https://web-terms.iatistandard.org/en/latest/cookie-policy/">Cookies</a>`,
-  html`<a href="https://web-terms.iatistandard.org/en/latest/copyright/">Copyright</a>`,
-  html`<a href="https://web-terms.iatistandard.org/en/latest/data-removal/">Data Removal</a>`
+  html`<a href="https://web-terms.iatistandard.org/en/latest/privacy-policy/"
+    >Privacy</a
+  >`,
+  html`<a href="https://web-terms.iatistandard.org/en/latest/cookie-policy/"
+    >Cookies</a
+  >`,
+  html`<a href="https://web-terms.iatistandard.org/en/latest/copyright/"
+    >Copyright</a
+  >`,
+  html`<a href="https://web-terms.iatistandard.org/en/latest/data-removal/"
+    >Data Removal</a
+  >`,
 ];
 
 const legalSectionHtml = html`
