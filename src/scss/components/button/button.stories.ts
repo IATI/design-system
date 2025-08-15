@@ -37,6 +37,11 @@ export const Submit: Story = {
     html`<button class="iati-button iati-button--submit">Submit</button>`,
 };
 
+export const Compact: Story = {
+  render: () =>
+    html`<button class="iati-button iati-button--compact">Submit</button>`,
+};
+
 export const WithIcon: Story = {
   parameters: {
     backgrounds: {
