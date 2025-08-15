@@ -1,7 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/web-components";
 import { html } from "lit";
 import logoColourUrl from "../../../assets/svg/logo-colour.svg";
-import { CountrySwitcher } from "../../components/country-switcher/country-switcher.stories";
+import {
+  Compact as CompactCountrySwitcher,
+  CountrySwitcher,
+} from "../../components/country-switcher/country-switcher.stories";
 import { Open as MenuToggle } from "../../components/menu-toggle/menu-toggle.stories";
 import { MobileNav } from "../../components/mobile-nav/mobile-nav.stories";
 import {
@@ -86,7 +89,7 @@ export const Header: Story = {
 
 export const CompactHeader: Story = {
   args: {
-    heading: "Tool Name or a longer heading that may wrap on narrow screens",
+    heading: "Tool Name",
   },
   render: (args, context) => html`
     ${MobileNav.render({ ...args }, context)}
@@ -122,12 +125,16 @@ export const CompactHeader: Story = {
         <div class="iati-header__container iati-brand-background__content">
           <div class="iati-header__main-row">
             <div class="iati-header__actions">
-              ${CountrySwitcher.render?.call({ ...args })}
-              <button class="iati-button iati-button--light hide--mobile-nav">
+              ${CompactCountrySwitcher.render?.call({ ...args })}
+              <button
+                class="iati-button iati-button--light iati-button--compact hide--mobile-nav"
+              >
                 <span>Help Docs</span>
                 <i class="iati-icon iati-icon--info"></i>
               </button>
-              <button class="iati-button iati-button--light">
+              <button
+                class="iati-button iati-button--light iati-button--compact"
+              >
                 <span>Search</span>
                 <i class="iati-icon iati-icon--search"></i>
               </button>
