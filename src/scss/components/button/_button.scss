@@ -39,11 +39,17 @@
     }
   }
 
-  &--submit {
+  &--submit,
+  &--compact {
     color: $color-grey-90;
     background-color: $color-green-40;
     &:hover {
       background-color: $color-green-50;
     }
+  }
+
+  &--compact {
+    padding: 0.6875rem;
+    font-size: 0.875rem;
   }
 }
