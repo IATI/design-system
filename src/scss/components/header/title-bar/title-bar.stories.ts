@@ -24,7 +24,7 @@ export const Default: Story = {
 
 export const Compact: Story = {
   args: {
-    heading: "Tool Name or a longer heading that may wrap on small screens",
+    heading: "Tool Name",
   },
   argTypes: {
     heading: { control: "text" },
