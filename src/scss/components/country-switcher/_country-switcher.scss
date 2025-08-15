@@ -37,4 +37,16 @@
     background-color: currentColor;
     clip-path: polygon(15% 0, 0 0, 50% 100%, 100% 0, 85% 0, 50% 70%);
   }
+
+  &--compact {
+    .iati-country-switcher__control {
+      padding: 0.6875rem 2rem 0.6875rem calc(0.875rem + 1rem);
+      font-size: 0.875rem;
+    }
+    &::after {
+      right: 0.6875rem;
+      width: 0.625rem;
+      height: 0.3125rem;
+    }
+  }
 }
