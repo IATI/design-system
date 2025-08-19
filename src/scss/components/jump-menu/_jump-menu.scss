@@ -116,7 +116,6 @@
   &__sublink {
     display: block;
     text-transform: uppercase;
-    text-decoration: underline;
     color: $color-teal-90;
     font-size: 0.75rem;
     font-weight: 800;
@@ -125,7 +124,7 @@
     &:active,
     &:focus,
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
