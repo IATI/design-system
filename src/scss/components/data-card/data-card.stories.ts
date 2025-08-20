@@ -14,87 +14,76 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-export const Basic: Story = {
+export const Stat: Story = {
   render: () => html`
     <div class="iati-data-card">
-      <h3 class="iati-data-card__title">Project Overview</h3>
+      <h3 class="iati-data-card__title">IATI Publishers</h3>
       <p class="iati-data-card__tagline">
-        Essential metrics and insights for the IATI transparency initiative
-        project dashboard
+        How many organisations are publishing IATI data?
       </p>
+      <div class="iati-data-card__stats">
+        <div class="iati-data-card__stat">
+          <div class="iati-data-card__stat-label">Total Iati Publishers</div>
+          <div class="iati-data-card__stat-value">1719</div>
+        </div>
+      </div>
       <div class="iati-data-card__button">
-        <button class="iati-button">View Details</button>
+        <button class="iati-button">Learn more about IATI Publishers</button>
       </div>
     </div>
   `,
 };
 
-export const WithStats: Story = {
+export const ManyStats: Story = {
   render: () => html`
     <div class="iati-data-card">
-      <h3 class="iati-data-card__title">Country Data</h3>
+      <h3 class="iati-data-card__title">Organisation Identifiers</h3>
       <p class="iati-data-card__tagline">
-        Key statistics for development activities in this region
+        Which versions of the IATI Standard are being used?
       </p>
       <div class="iati-data-card__stats">
         <div class="iati-data-card__stat">
-          <div class="iati-data-card__stat-label">Files</div>
+          <div class="iati-data-card__stat-label">Active Files</div>
           <div class="iati-data-card__stat-value">845</div>
         </div>
         <div class="iati-data-card__stat">
-          <div class="iati-data-card__stat-label">Money</div>
+          <div class="iati-data-card__stat-label">Number</div>
           <div class="iati-data-card__stat-value">$100,000</div>
         </div>
+        <div class="iati-data-card__stat">
+          <div class="iati-data-card__stat-label">Stat 3</div>
+          <div class="iati-data-card__stat-value">502,476</div>
+        </div>
+        <div class="iati-data-card__stat">
+          <div class="iati-data-card__stat-label">Stat</div>
+          <div class="iati-data-card__stat-value">4071</div>
+        </div>
       </div>
+
       <div class="iati-data-card__button">
-        <button class="iati-button">Explore Data</button>
+        <button class="iati-button">
+          Learn more about Organisation Identifiers
+        </button>
       </div>
     </div>
   `,
 };
 
-export const WithSingleStat: Story = {
+export const Graph: Story = {
   render: () => html`
     <div class="iati-data-card">
-      <h3 class="iati-data-card__title">Organization Summary</h3>
+      <h3 class="iati-data-card__title">Codelists</h3>
       <p class="iati-data-card__tagline">
-        Total projects managed by this organization across all regions
+        How are codelists used in IATI data?
       </p>
-      <div class="iati-data-card__stats">
-        <div class="iati-data-card__stat">
-          <div class="iati-data-card__stat-label">Projects</div>
-          <div class="iati-data-card__stat-value">247</div>
-        </div>
-      </div>
-      <div class="iati-data-card__button">
-        <button class="iati-button">View Projects</button>
-      </div>
-    </div>
-  `,
-};
-
-export const WithGraph: Story = {
-  render: () => html`
-    <div class="iati-data-card">
-      <h3 class="iati-data-card__title">Funding Trends</h3>
-      <p class="iati-data-card__tagline">
-        Monthly funding distribution over the past 12 months
-      </p>
-      <div class="iati-data-card__stats">
-        <div class="iati-data-card__stat">
-          <div class="iati-data-card__stat-label">Total</div>
-          <div class="iati-data-card__stat-value">$2.4M</div>
-        </div>
-        <div class="iati-data-card__stat">
-          <div class="iati-data-card__stat-label">Growth</div>
-          <div class="iati-data-card__stat-value">+12%</div>
-        </div>
-      </div>
       <div class="iati-data-card__graph">
         <canvas
           class="iati-data-card__sparkline"
-          data-sparkline='{"labels":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"values":[435,321,532,801,1231,1098,732,321,451,482,513,397]}'
+          data-sparkline='{"labels":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],"values":[100,120,90,150,80,140,110,95,160,75,130,130,132,136,130,70,155,125,95,170,85,60,135,132,80,90,145,110,150,145]}'
         ></canvas>
+      </div>
+      <div class="iati-data-card__caption">
+        Description below chart showing changes over time
       </div>
       <div class="iati-data-card__button">
         <button class="iati-button">Full Report</button>
@@ -106,29 +95,29 @@ export const WithGraph: Story = {
 export const Complete: Story = {
   render: () => html`
     <div class="iati-data-card">
-      <h3 class="iati-data-card__title">Regional Analysis</h3>
-      <p class="iati-data-card__tagline">
-        Comprehensive view of development aid effectiveness across Sub-Saharan
-        Africa including funding patterns and project outcomes
-      </p>
+      <h3 class="iati-data-card__title">IATI Files</h3>
+      <p class="iati-data-card__tagline">How many IATI files are published?</p>
       <div class="iati-data-card__stats">
         <div class="iati-data-card__stat">
-          <div class="iati-data-card__stat-label">Countries</div>
-          <div class="iati-data-card__stat-value">48</div>
+          <div class="iati-data-card__stat-label">Big number title</div>
+          <div class="iati-data-card__stat-value">897,548</div>
         </div>
         <div class="iati-data-card__stat">
-          <div class="iati-data-card__stat-label">Budget</div>
-          <div class="iati-data-card__stat-value">$15.7M</div>
+          <div class="iati-data-card__stat-label">Small number title</div>
+          <div class="iati-data-card__stat-value">12</div>
         </div>
       </div>
       <div class="iati-data-card__graph">
         <canvas
           class="iati-data-card__sparkline"
-          data-sparkline='{"labels":["Q1","Q2","Q3","Q4","Q5","Q6"],"values":[12500000, 13200000, 15100000, 14800000, 15700000, 16200000]}'
+          data-sparkline='{"labels":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"],"values":[100,120,90,150,80,140,110,95,160,75,130,130,132,136,130,70,155,125,95,170,85,60,135,132,80,90,145,110,150,145]}'
         ></canvas>
       </div>
+      <div class="iati-data-card__caption">
+        Description below chart showing changes over time
+      </div>
       <div class="iati-data-card__button">
-        <button class="iati-button">Detailed Analysis</button>
+        <button class="iati-button">Full Report</button>
       </div>
     </div>
   `,
