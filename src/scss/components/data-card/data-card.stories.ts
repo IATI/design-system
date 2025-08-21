@@ -48,7 +48,7 @@ export const ManyStats: Story = {
         </div>
         <div class="iati-data-card__stat">
           <div class="iati-data-card__stat-label">Number</div>
-          <div class="iati-data-card__stat-value">$100,000</div>
+          <div class="iati-data-card__stat-value">$1000</div>
         </div>
         <div class="iati-data-card__stat">
           <div class="iati-data-card__stat-label">Stat 3</div>
