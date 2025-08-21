@@ -1,0 +1,21 @@
+@use "../../tokens/screens" as *;
+@use "../../tokens/spacing" as *;
+@use "../../base/mixins";
+
+.iati-masonry {
+  column-width: 16rem;
+  column-gap: 1.5rem;
+  column-fill: balance;
+
+  .iati-data-card {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    max-width: none;
+    min-width: 250px;
+  }
+}
+
+.iati-masonry-container {
+  padding-block: 1rem;
+}
