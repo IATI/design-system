@@ -6,13 +6,18 @@
   column-width: 16rem;
   column-gap: 1.5rem;
   column-fill: balance;
+  -webkit-column-break-inside: avoid;
 
   .iati-data-card {
     margin-bottom: 1.5rem;
     break-inside: avoid;
     page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    display: inline-flex;
+    width: 100%;
     max-width: none;
     min-width: 250px;
+    vertical-align: top;
   }
 }
 
