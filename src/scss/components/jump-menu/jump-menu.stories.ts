@@ -94,20 +94,18 @@ export const WithSubMenus: Story = {
         ${items.map((item) => {
           if (item.children) {
             return html`<li class="iati-jump-menu__item">
-              <a href=${item.link || "#"} class="iati-jump-menu__link"
-                >${item.text}</a
-              >
-              <ul class="iati-jump-menu__subitems">
-                ${item.children.map(
-                  (child) =>
-                    html`<li class="iati-jump-menu__subitem">
-                      <a href=${child.link} class="iati-jump-menu__sublink"
-                        >${child.text}</a
-                      >
-                    </li>`,
-                )}
-              </ul>
-            </li>`;
+                <a href=${item.link || "#"} class="iati-jump-menu__link"
+                  >${item.text}</a
+                >
+              </li>
+              ${item.children.map(
+                (child: any) =>
+                  html`<li class="iati-jump-menu__subitem">
+                    <a href=${child.link} class="iati-jump-menu__sublink"
+                      >${child.text}</a
+                    >
+                  </li>`,
+              )}`;
           } else {
             return html`<li class="iati-jump-menu__item">
               <a href=${item.link} class="iati-jump-menu__link">${item.text}</a>
