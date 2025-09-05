@@ -50,8 +50,8 @@ export const DataCardsLanding: Story = {
           ${ManyStats.render?.call({ ...args })}
           ${Graph.render?.call({ ...args })}
           ${Complete.render?.call({ ...args })}
-          ${Stat.render?.call({ ...args })}
           ${ManyStats.render?.call({ ...args })}
+          ${Stat.render?.call({ ...args })}
           ${ManyStats.render?.call({ ...args })}
           ${Stat.render?.call({ ...args })}
           ${Complete.render?.call({ ...args })}
