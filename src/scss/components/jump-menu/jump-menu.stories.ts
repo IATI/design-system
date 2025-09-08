@@ -30,7 +30,7 @@ export const Default: Story = {
         <button
           class="iati-jump-menu__toggle js-jump-menu-toggle"
           aria-controls="iati-jump-menu-items"
-          aria-expanded="true"
+          aria-expanded="false"
         >
           Open
         </button>
@@ -38,6 +38,7 @@ export const Default: Story = {
       <ul
         id="iati-jump-menu-items"
         class="iati-jump-menu__items js-jump-menu-items"
+        aria-hidden="true"
       >
         ${items.map(
           (item) =>
@@ -45,6 +46,72 @@ export const Default: Story = {
               <a href=${item.link} class="iati-jump-menu__link">${item.text}</a>
             </li>`,
         )}
+      </ul>
+    </nav>
+  `,
+};
+
+export const WithSubMenus: Story = {
+  args: {
+    items: [
+      { text: "First section", link: "#" },
+      {
+        text: "Second section",
+        children: [
+          { text: "First subsection", link: "#" },
+          { text: "Second subsection", link: "#" },
+          { text: "Another subsection", link: "#" },
+        ],
+      },
+      { text: "Another section", link: "#" },
+      {
+        text: "A slightly longer title",
+        children: [
+          { text: "Subsection", link: "#" },
+          { text: "Another subsection", link: "#" },
+        ],
+      },
+      { text: "Final section", link: "#" },
+    ],
+  },
+  render: ({ items }) => html`
+    <nav class="iati-jump-menu">
+      <div class="iati-jump-menu__header">
+        <h2 class="iati-jump-menu__title">Jump to section</h2>
+        <button
+          class="iati-jump-menu__toggle js-jump-menu-toggle"
+          aria-controls="iati-jump-menu-items"
+          aria-expanded="false"
+        >
+          Open
+        </button>
+      </div>
+      <ul
+        id="iati-jump-menu-items"
+        class="iati-jump-menu__items js-jump-menu-items"
+        aria-hidden="true"
+      >
+        ${items.map((item) => {
+          if (item.children) {
+            return html`<li class="iati-jump-menu__item">
+                <a href=${item.link || "#"} class="iati-jump-menu__link"
+                  >${item.text}</a
+                >
+              </li>
+              ${item.children.map(
+                (child: any) =>
+                  html`<li class="iati-jump-menu__subitem">
+                    <a href=${child.link} class="iati-jump-menu__sublink"
+                      >${child.text}</a
+                    >
+                  </li>`,
+              )}`;
+          } else {
+            return html`<li class="iati-jump-menu__item">
+              <a href=${item.link} class="iati-jump-menu__link">${item.text}</a>
+            </li>`;
+          }
+        })}
       </ul>
     </nav>
   `,
