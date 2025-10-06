@@ -41,9 +41,14 @@
 
   &--submit {
     color: $color-grey-90;
-    background-color: $color-green-50;
+    background-color: $color-green-40;
     &:hover {
-      background-color: $color-green-40;
+      background-color: $color-green-50;
     }
+  }
+
+  &--compact {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }

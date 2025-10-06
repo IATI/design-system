@@ -38,3 +38,45 @@
     font-size: 2.5rem;
   }
 }
+
+.iati-header--compact {
+  .iati-header-title {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    padding-inline-start: 0;
+    margin-block-end: 0.75rem;
+    border: none;
+    @media (min-width: $mobile_nav_breakpoint) {
+      margin-block-start: 0.5rem;
+    }
+  }
+
+  .iati-header-title__eyebrow {
+    border-right: 2px solid $color-blue-50;
+    padding-right: 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.0625rem;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+    span {
+      display: block;
+    }
+    @media (min-width: $screen-sm) {
+      line-height: 1.2;
+    }
+  }
+
+  .iati-header-title__heading {
+    white-space: normal;
+    word-break: break-word;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    @media (max-width: $screen-sm) {
+      font-size: 1rem;
+    }
+  }
+}

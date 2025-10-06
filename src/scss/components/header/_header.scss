@@ -33,9 +33,6 @@
     &:not(:has(.iati-header__nav[hidden])) {
       padding-block-end: 0;
     }
-    @media (min-width: $mobile_nav_breakpoint) {
-      padding-block: 2rem;
-    }
   }
 }
 
@@ -46,7 +43,7 @@
   align-items: flex-start;
   border-block-end: 1px solid #fff;
   padding-block-end: 1rem;
-  margin-block-end: 1rem;
+  margin-block-end: 0.5rem;
   > :last-child {
     margin-inline-start: auto;
   }
@@ -101,5 +98,34 @@
 .iati-header .iati-menu-toggle--open {
   @media (min-width: $mobile_nav_breakpoint) {
     display: none;
+  }
+}
+
+.iati-header--compact {
+  .iati-header__main-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @media (min-width: $mobile_nav_breakpoint) {
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  }
+
+  .iati-header-title {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .iati-header__actions {
+    flex-shrink: 0;
+  }
+
+  .iati-brand-background__content {
+    @media (min-width: $mobile_nav_breakpoint) {
+      padding-block: 0;
+    }
   }
 }
