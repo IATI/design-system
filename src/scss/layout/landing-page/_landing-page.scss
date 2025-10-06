@@ -1,0 +1,28 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/font" as *;
+
+.iati-landing-page {
+  &_header {
+    margin: 0 19%;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: $font-weight-body-xstrong;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    color: $color-teal-90;
+    font-size: 1.625rem;
+    font-weight: $font-weight-body-xstrong;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    color: $color-teal-90;
+    font-size: 1rem;
+    font-weight: $font-weight-body-xstrong;
+    margin-bottom: 2rem;
+  }
+}
