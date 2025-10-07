@@ -76,7 +76,7 @@
     padding: 0.4em;
     transition: all 0.2s ease-in-out;
     &:hover {
-      background-color: $color-green-20;
+      background-color: $color-green-10;
       border-color: $color-teal-90;
     }
   }
@@ -94,5 +94,37 @@
     &:hover {
       text-decoration: none;
     }
+  }
+
+  &__subitem {
+    line-height: 1;
+    padding: 0.4em;
+    padding-inline-start: 1rem;
+    margin-left: 0.25rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $color-green-10;
+    }
+  }
+
+  &__sublink {
+    display: block;
+    text-transform: uppercase;
+    color: $color-teal-90;
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.5;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  // Add top padding only to the first sublink in each subitems section
+  &__subitem:first-child .iati-jump-menu__sublink {
+    padding-top: 0.25rem;
   }
 }
