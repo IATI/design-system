@@ -1,0 +1,25 @@
+import { Meta, Title, Canvas } from "@storybook/blocks";
+
+import * as ComponentStories from "./landing-page.stories";
+
+<Meta of={ComponentStories} />
+
+<Title />
+
+The IATI Landing Page Layout uses a masonry grid system for displaying data cards in a responsive layout.
+
+## Masonry Layout
+
+The masonry layout uses CSS multi-column layout to create columns that adjust automatically based on screen width. Content flows sequentially down the first column, then moves to the second column, and continues across all available columns. The browser tries to balance the total height across all columns.
+
+```text
+Column 1    Column 2    Column 3
+--------    --------    --------
+Card 1      Card 4      Card 7
+Card 2      Card 5      Card 8
+Card 3      Card 6      Card 9
+```
+
+Each data card is added individually to the masonry layout, so if the automatic browser balancing isn't sufficient we can reorder them in the template to achieve the neatest visual pattern by mixing different card heights and types.
+
+<Canvas of={ComponentStories.DataCardsLanding} />

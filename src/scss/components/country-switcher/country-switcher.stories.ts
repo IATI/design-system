@@ -26,3 +26,22 @@ export const CountrySwitcher: Story = {
     </div>
   `,
 };
+
+export const Compact: Story = {
+  render: () => html`
+    <div class="iati-country-switcher iati-country-switcher--compact">
+      <label
+        for="iati-country-switcher-compact"
+        class="iati-country-switcher__label"
+        >Choose your language</label
+      >
+      <select
+        id="iati-country-switcher-compact"
+        class="iati-country-switcher__control"
+      >
+        <option>English</option>
+        <option>French</option>
+      </select>
+    </div>
+  `,
+};
