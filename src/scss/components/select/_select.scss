@@ -2,7 +2,7 @@
 @use "../../tokens/font" as *;
 
 .iati-select {
-  color: currentColor;
+  color: $color-grey-90;
 
   &__label {
     display: block;
@@ -11,7 +11,7 @@
 
   &__control-wrapper {
     position: relative;
-    display: inline-block;
+    width: 100%;
 
     &::after {
       position: absolute;
@@ -27,6 +27,7 @@
   }
 
   &__control {
+    display: inline-block;
     padding: 0.7em 2.1em 0.7em 0.7em;
     font-family: $font-stack-heading;
     line-height: 1.1;

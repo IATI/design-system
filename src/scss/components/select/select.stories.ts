@@ -5,6 +5,11 @@ import "./multi-select.ts";
 
 const meta: Meta = {
   title: "Components/Select",
+  parameters: {
+    backgrounds: {
+      default: "light",
+    },
+  },
   argTypes: {
     label: { control: "text" },
     options: { control: "object" },
