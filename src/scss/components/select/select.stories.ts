@@ -36,13 +36,40 @@ export const SingleSelect: Story = {
   `,
 };
 
-export const MultiSelect: Story = {
-  name: "Multi Select",
+export const MultiSelectProgrammatic: Story = {
+  name: "Multi Select (Programmatic)",
   args: {
     label: "Choose your language(s)",
     options: ["English", "French"],
   },
+  parameters: {
+    docs: {
+      source: {
+        code: `<multi-select label="Choose your language(s)" .options="['English', 'French']"></multi-select>`,
+      },
+    },
+  },
   render: (args) => html`
     <multi-select .label=${args.label} .options=${args.options}></multi-select>
+  `,
+};
+
+export const MultiSelectSlot: Story = {
+  name: "Multi Select (HTML Slot)",
+  render: () => html`
+    <multi-select label="Choose your language(s)">
+      <option>English</option>
+      <option>French</option>
+    </multi-select>
+  `,
+};
+
+export const MultiSelectWithValues: Story = {
+  name: "Multi Select (HTML Slot With Custom Values)",
+  render: () => html`
+    <multi-select label="Choose your language(s)">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+    </multi-select>
   `,
 };
