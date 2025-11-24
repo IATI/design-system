@@ -13,8 +13,43 @@ export class MultiSelect extends LitElement {
   @state()
   selectedItems: string[] = [];
 
+  @state()
+  optionsMap: Map<string, string> = new Map();
+
   createRenderRoot() {
     return this;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    if (this.options.length === 0) {
+      this._readOptionsFromSlot();
+    } else {
+      this.optionsMap = new Map(this.options.map((opt) => [opt, opt]));
+    }
+    this._hideSlottedOptions();
+  }
+
+  _hideSlottedOptions() {
+    const optionElements = this.querySelectorAll("option");
+    optionElements.forEach((opt) => {
+      opt.style.display = "none";
+    });
+  }
+
+  _readOptionsFromSlot() {
+    const optionElements = this.querySelectorAll("option");
+    this.optionsMap = new Map();
+
+    optionElements.forEach((opt) => {
+      const value = opt.value || opt.textContent || "";
+      const text = opt.textContent || "";
+      if (value) {
+        this.optionsMap.set(value, text);
+      }
+    });
+
+    this.options = Array.from(this.optionsMap.keys());
   }
 
   _handleSelect(e: Event) {
@@ -23,6 +58,7 @@ export class MultiSelect extends LitElement {
 
     if (value && !this.selectedItems.includes(value)) {
       this.selectedItems = [...this.selectedItems, value];
+      this._dispatchChangeEvent();
     }
     selectEl.value = "";
   }
@@ -31,6 +67,21 @@ export class MultiSelect extends LitElement {
     this.selectedItems = this.selectedItems.filter(
       (item) => item !== itemToRemove,
     );
+    this._dispatchChangeEvent();
+  }
+
+  _dispatchChangeEvent() {
+    this.dispatchEvent(
+      new CustomEvent("change", {
+        detail: { value: this.selectedItems },
+        bubbles: true,
+        composed: true,
+      }),
+    );
+  }
+
+  get value() {
+    return this.selectedItems;
   }
 
   render() {
@@ -53,7 +104,10 @@ export class MultiSelect extends LitElement {
             <option value="">---</option>
             ${map(
               availableOptions,
-              (opt) => html`<option value=${opt}>${opt}</option>`,
+              (opt) =>
+                html`<option value=${opt}>
+                  ${this.optionsMap.get(opt) || opt}
+                </option>`,
             )}
           </select>
         </div>
@@ -67,9 +121,9 @@ export class MultiSelect extends LitElement {
               <button
                 class="iati-button iati-button--pill iati-button--remove"
                 @click=${() => this._handleRemove(item)}
-                title="Remove ${item}"
+                title="Remove ${this.optionsMap.get(item) || item}"
               >
-                ${item}
+                ${this.optionsMap.get(item) || item}
               </button>
             </li>
           `,
