@@ -73,3 +73,23 @@ export const MultiSelectWithValues: Story = {
     </multi-select>
   `,
 };
+
+export const MultiSelectInForm: Story = {
+  name: "Multi Select (In Form)",
+  render: () => html`
+    <form
+      @submit=${(e: Event) => {
+        e.preventDefault();
+        const formData = new FormData(e.target as HTMLFormElement);
+        const selected = formData.getAll("language");
+        alert("Selected values: " + JSON.stringify(selected));
+      }}
+    >
+      <multi-select name="language" label="Choose your language(s)">
+        <option value="en">English</option>
+        <option value="fr">French</option>
+      </multi-select>
+      <button type="submit">Submit Form</button>
+    </form>
+  `,
+};
