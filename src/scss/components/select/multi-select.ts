@@ -54,6 +54,7 @@ export class MultiSelect extends LitElement {
       this.hiddenInputsContainer.parentNode.removeChild(
         this.hiddenInputsContainer,
       );
+      this.hiddenInputsContainer = undefined;
     }
   }
 
@@ -62,16 +63,18 @@ export class MultiSelect extends LitElement {
       this._createHiddenInputsContainer();
     }
 
-    this.hiddenInputsContainer!.innerHTML = "";
+    if (this.hiddenInputsContainer) {
+      this.hiddenInputsContainer.innerHTML = "";
 
-    if (this.name) {
-      this.selectedItems.forEach((value) => {
-        const input = document.createElement("input");
-        input.type = "hidden";
-        input.name = this.name;
-        input.value = value;
-        this.hiddenInputsContainer!.appendChild(input);
-      });
+      if (this.name) {
+        this.selectedItems.forEach((value) => {
+          const input = document.createElement("input");
+          input.type = "hidden";
+          input.name = this.name;
+          input.value = value;
+          this.hiddenInputsContainer!.appendChild(input);
+        });
+      }
     }
   }
 
@@ -85,16 +88,25 @@ export class MultiSelect extends LitElement {
   _readOptionsFromSlot() {
     const optionElements = this.querySelectorAll("option");
     this.optionsMap = new Map();
+    const preselected: string[] = [];
 
     optionElements.forEach((opt) => {
       const value = opt.value || opt.textContent || "";
       const text = opt.textContent || "";
       if (value) {
         this.optionsMap.set(value, text);
+        if (opt.hasAttribute("selected") || opt.selected) {
+          preselected.push(value);
+        }
       }
     });
 
     this.options = Array.from(this.optionsMap.keys());
+
+    if (preselected.length > 0) {
+      this.selectedItems = preselected;
+      this._updateHiddenInputs();
+    }
   }
 
   _handleSelect(e: Event) {
