@@ -84,14 +84,12 @@ const additionalInformationHtml = html`
           <p>Part of the IATI Unified Platform.</p>
           <p>
             Code licensed under
-            <a href="https://www.gnu.org/licenses/agpl-3.0.en.html"
-              >GNU AGPL</a
+            <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGPL</a
             >.
           </p>
           <p>
             Documentation licensed under
-            <a href="https://creativecommons.org/licenses/by/4.0/"
-              >CC BY 3.0</a
+            <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 3.0</a
             >.
           </p>
         </div>
