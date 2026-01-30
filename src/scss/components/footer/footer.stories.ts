@@ -76,34 +76,31 @@ export const UsefulLinksSection: Story = {
 };
 
 const additionalInformationHtml = html`
-  <div class="iati-footer__section">
+  <div class="iati-footer__section iati-footer__section--mid">
     <div class="iati-footer__container">
       <div class="iati-footer-block">
         <h2 class="iati-footer-block__title">Additional Information</h2>
-        <div
-          class="iati-footer-block__content iati-footer-block__content--columns"
-        >
-          <div>
-            <p>Part of the IATI Unified Platform.</p>
-            <p>
-              Code licensed under
-              <a href="https://www.gnu.org/licenses/agpl-3.0.en.html"
-                >GNU AGPL</a
-              >.
-            </p>
-            <p>
-              Documentation licensed under
-              <a href="https://creativecommons.org/licenses/by/4.0/"
-                >CC BY 3.0</a
-              >.
-            </p>
-          </div>
-          <div>
-            <ul>
-              <li><a href="#">Web vX.Y.Z</a></li>
-              <li><a href="#">API vX.Y.Z</a></li>
-            </ul>
-          </div>
+        <div class="iati-footer-block__content">
+          <p>Part of the IATI Unified Platform.</p>
+          <p>
+            Code licensed under
+            <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGPL</a
+            >.
+          </p>
+          <p>
+            Documentation licensed under
+            <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 3.0</a
+            >.
+          </p>
+        </div>
+      </div>
+      <div class="iati-footer-block iati-footer-block--bordered">
+        <h2 class="iati-footer-block__title">Your Feedback</h2>
+        <div class="iati-footer-block__content">
+          <ul>
+            <li><a href="#">Feedback &amp; Suggestions</a></li>
+            <li><a href="#">Translation Issues &amp; Feedback</a></li>
+          </ul>
         </div>
       </div>
     </div>

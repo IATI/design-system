@@ -31,13 +31,33 @@
   }
 }
 
-.iati-footer__section--first .iati-footer__container {
+.iati-footer__section--first .iati-footer__container,
+.iati-footer__section--mid .iati-footer__container {
   display: flex;
   gap: 2rem;
   flex-direction: column;
   @media (min-width: $screen-md) {
     justify-content: space-between;
     flex-direction: row;
+  }
+}
+
+.iati-footer__section--mid .iati-footer-block:first-child {
+  @media (min-width: $screen-md) {
+    flex: 3;
+  }
+}
+
+.iati-footer__section--mid .iati-footer-block:last-child {
+  @media (min-width: $screen-md) {
+    flex: 2;
+  }
+}
+
+.iati-footer-block--bordered {
+  @media (min-width: $screen-md) {
+    border-inline-start: 1px solid $color-blue-30;
+    padding-inline-start: 2rem;
   }
 }
 
@@ -68,6 +88,13 @@
   }
 }
 
+.iati-footer-block__subtitle {
+  margin: 0 0 0.75rem;
+  font-family: $font-stack-heading;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .iati-footer-block__content {
   :where(p, li) {
     margin: 0;
@@ -83,6 +110,11 @@
   & > * {
     flex-grow: 1;
   }
+}
+
+.iati-footer-block__content--divided > *:not(:first-child) {
+  border-inline-start: 1px solid $color-blue-30;
+  padding-inline-start: 2rem;
 }
 
 .iati-footer__legal-nav {
