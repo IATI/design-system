@@ -146,74 +146,73 @@ export const Summary: Story = {
   render: () => html`
     <div class="iati-data-card iati-data-card--wide">
       <header class="iati-data-card--header iati-data-card--header-dark">
-        <h3 class="iati-data-card__title">Headlines</h3>
+        <h3 class="iati-data-card__title">Summary title</h3>
       </header>
       <div class="iati-data-card--body">
         <div class="iati-data-card--columns">
           <div class="iati-data-card--column iati-data-card--column-title">
-            On the registry
+            Datapoint name
           </div>
           <div class="iati-data-card--column">
-            <a href="#">organisation_name</a>
+            <a href="#">link</a>
           </div>
           <div class="iati-data-card--column iati-data-card--column-title">
-            Hierarchies
+            Datapoint name
           </div>
           <div class="iati-data-card--column">
             <code>1</code> <code>2</code>
           </div>
           <div class="iati-data-card--column iati-data-card--column-title">
-            Reporting Org on registry
+            Datapoint name
           </div>
           <div class="iati-data-card--column">
-            <code>ABC-1234567890</code>
+            <code>INLINE CODE BLOCK</code>
           </div>
           <div class="iati-data-card--column iati-data-card--column-title">
-            Licenses
+            Datapoint name
           </div>
           <div class="iati-data-card--column">
-            <span class="iati-reference">other-open</span>
-            <span class="iati-reference">notspecified</span>
+            <span class="iati-reference">reference_item</span>
           </div>
           <div class="iati-data-card--column iati-data-card--column-title">
-            Reporting Org(s) in data
+            Datapoint name
           </div>
           <div class="iati-data-card--column">
-            <code>ABC-1234567890</code>
+            <code>ANOTHER INLINE CODE BLOCK</code>
           </div>
           <div class="iati-data-card--column iati-data-card--column-title">
-            Files failing schema validation
+            Datapoint name
           </div>
-          <div class="iati-data-card--column">0</div>
+          <div class="iati-data-card--column">generic text</div>
         </div>
         <div class="iati-data-card__stats">
           <div class="iati-data-card__stat">
-            <div class="iati-data-card__stat-label">Activity files</div>
-            <div class="iati-data-card__stat-value">2</div>
+            <div class="iati-data-card__stat-label">Big number title</div>
+            <div class="iati-data-card__stat-value">2,000</div>
           </div>
           <div class="iati-data-card__stat">
-            <div class="iati-data-card__stat-label">Organisation files</div>
+            <div class="iati-data-card__stat-label">Small number title</div>
             <div class="iati-data-card__stat-value">1</div>
           </div>
           <div class="iati-data-card__stat">
-            <div class="iati-data-card__stat-label">Total file size</div>
-            <div class="iati-data-card__stat-value">291.8kB</div>
+            <div class="iati-data-card__stat-label">Big number title</div>
+            <div class="iati-data-card__stat-value">291,765</div>
           </div>
           <div class="iati-data-card__stat">
-            <div class="iati-data-card__stat-label">Activities</div>
+            <div class="iati-data-card__stat-label">Small number title</div>
             <div class="iati-data-card__stat-value">19</div>
           </div>
           <div class="iati-data-card__stat">
-            <div class="iati-data-card__stat-label">Unique activities</div>
-            <div class="iati-data-card__stat-value">19</div>
+            <div class="iati-data-card__stat-label">Big number title</div>
+            <div class="iati-data-card__stat-value">1,984</div>
           </div>
           <div class="iati-data-card__stat">
-            <div class="iati-data-card__stat-label">Organisations</div>
+            <div class="iati-data-card__stat-label">Small number title</div>
             <div class="iati-data-card__stat-value">1</div>
           </div>
           <div class="iati-data-card__stat">
-            <div class="iati-data-card__stat-label">Versions</div>
-            <div class="iati-data-card__stat-value">2.03</div>
+            <div class="iati-data-card__stat-label">Big number title</div>
+            <div class="iati-data-card__stat-value">2.073</div>
           </div>
         </div>
       </div>
