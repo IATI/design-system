@@ -8,7 +8,7 @@ export class MultiSelect extends LitElement {
   @property({ type: String })
   label: string = "Select options";
 
-  @property({ type: String })
+  @property({ type: String, attribute: "field-name" })
   name: string = "";
 
   @property({ type: Array })

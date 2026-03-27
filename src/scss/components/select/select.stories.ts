@@ -83,7 +83,7 @@ export const MultiSelectInForm: Story = {
         alert("Selected values: " + JSON.stringify(selected));
       }}
     >
-      <multi-select name="language" label="Choose your language(s)">
+      <multi-select field-name="language" label="Choose your language(s)">
         <select-option value="en">English</select-option>
         <select-option value="fr">French</select-option>
       </multi-select>
