@@ -45,7 +45,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   > :first-child {
     margin-inline-end: auto;
   }
@@ -98,4 +98,11 @@
 .iati-footer__social {
   display: flex;
   gap: 18px;
+}
+
+.iati-footer__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: flex-start;
 }

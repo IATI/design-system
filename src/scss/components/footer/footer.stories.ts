@@ -137,7 +137,13 @@ const legalSectionHtml = html`
           ${legalNavItems.map((i) => html`<li>${i}</li>`)}
         </ul>
       </nav>
-      ${CountrySwitcher.render?.call({})}
+      <div class="iati-footer__actions">
+        ${CountrySwitcher.render?.call({})}
+        <button class="iati-button iati-button--light hide--mobile-nav">
+          <span>Feedback</span>
+          <i class="iati-icon iati-icon--feedback"></i>
+        </button>
+      </div>
       <div class="iati-footer__social">
         <a
           href="https://www.linkedin.com/company/international-aid-transparency-initiative/"
