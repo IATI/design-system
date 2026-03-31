@@ -139,10 +139,10 @@ const legalSectionHtml = html`
       </nav>
       <div class="iati-footer__actions">
         ${CountrySwitcher.render?.call({})}
-        <button class="iati-button iati-button--light hide--mobile-nav">
+        <a href="#" class="iati-button iati-button--light hide--mobile-nav">
           <span>Feedback</span>
           <i class="iati-icon iati-icon--feedback"></i>
-        </button>
+        </a>
       </div>
       <div class="iati-footer__social">
         <a

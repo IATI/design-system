@@ -9,7 +9,7 @@
   font-weight: 600;
   margin-top: auto;
 
-  a {
+  a:not([class]) {
     color: currentColor;
     &:hover {
       color: $color-blue-30;

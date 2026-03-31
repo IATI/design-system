@@ -130,18 +130,20 @@ export const CompactHeader: Story = {
           <div class="iati-header__main-row">
             <div class="iati-header__actions">
               ${CompactCountrySwitcher.render?.call({ ...args })}
-              <button
+              <a
                 class="iati-button iati-button--light iati-button--compact hide--mobile-nav"
+                href="#"
               >
                 <span>Feedback</span>
                 <i class="iati-icon iati-icon--feedback"></i>
-              </button>
-              <button
+              </a>
+              <a
                 class="iati-button iati-button--light iati-button--compact hide--mobile-nav"
+                href="#"
               >
                 <span>Help Docs</span>
                 <i class="iati-icon iati-icon--info"></i>
-              </button>
+              </a>
               <button
                 class="iati-button iati-button--light iati-button--compact"
               >
