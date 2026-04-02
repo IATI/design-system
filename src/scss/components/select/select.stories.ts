@@ -6,9 +6,7 @@ import "./multi-select.ts";
 const meta: Meta = {
   title: "Components/Select",
   parameters: {
-    backgrounds: {
-      default: "light",
-    },
+    backgrounds: { default: "light" },
   },
   argTypes: {
     label: { control: "text" },
@@ -58,8 +56,8 @@ export const MultiSelectSlot: Story = {
   name: "Multi Select (HTML Slot)",
   render: () => html`
     <multi-select label="Choose your language(s)">
-      <option>English</option>
-      <option>French</option>
+      <select-option>English</select-option>
+      <select-option>French</select-option>
     </multi-select>
   `,
 };
@@ -68,8 +66,8 @@ export const MultiSelectWithValues: Story = {
   name: "Multi Select (HTML Slot With Custom Values)",
   render: () => html`
     <multi-select label="Choose your language(s)">
-      <option value="en">English</option>
-      <option value="fr">French</option>
+      <select-option value="en">English</select-option>
+      <select-option value="fr">French</select-option>
     </multi-select>
   `,
 };
@@ -85,11 +83,13 @@ export const MultiSelectInForm: Story = {
         alert("Selected values: " + JSON.stringify(selected));
       }}
     >
-      <multi-select name="language" label="Choose your language(s)">
-        <option value="en">English</option>
-        <option value="fr">French</option>
+      <multi-select field-name="language" label="Choose your language(s)">
+        <select-option value="en">English</select-option>
+        <select-option value="fr">French</select-option>
       </multi-select>
-      <button type="submit">Submit Form</button>
+      <button class="iati-button iati-button--submit" type="submit">
+        Submit Form
+      </button>
     </form>
   `,
 };

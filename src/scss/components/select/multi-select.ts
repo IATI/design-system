@@ -1,13 +1,14 @@
 import { LitElement, html } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { map } from "lit/directives/map.js";
+import "./select-option.ts";
 
 @customElement("multi-select")
 export class MultiSelect extends LitElement {
   @property({ type: String })
   label: string = "Select options";
 
-  @property({ type: String })
+  @property({ type: String, attribute: "field-name" })
   name: string = "";
 
   @property({ type: Array })
@@ -27,19 +28,34 @@ export class MultiSelect extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    if (this.options.length === 0) {
-      this._readOptionsFromSlot();
-    } else {
-      this.optionsMap = new Map(this.options.map((opt) => [opt, opt]));
-    }
-    this._hideSlottedOptions();
-    this._createHiddenInputsContainer();
+    Promise.resolve().then(() => {
+      if (this.options.length === 0) {
+        this._readOptionsFromSlot();
+      } else {
+        this.optionsMap = new Map(this.options.map((opt) => [opt, opt]));
+      }
+      this._hideSlottedOptions();
+      this._createHiddenInputsContainer();
+    });
+
+    this.addEventListener("select-option-connected", this._onOptionConnected);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
+    this.removeEventListener(
+      "select-option-connected",
+      this._onOptionConnected,
+    );
     this._removeHiddenInputsContainer();
   }
+
+  private _onOptionConnected = () => {
+    if (this.options.length === 0) {
+      this._readOptionsFromSlot();
+      this._hideSlottedOptions();
+    }
+  };
 
   _createHiddenInputsContainer() {
     if (!this.hiddenInputsContainer) {
@@ -50,7 +66,7 @@ export class MultiSelect extends LitElement {
   }
 
   _removeHiddenInputsContainer() {
-    if (this.hiddenInputsContainer && this.hiddenInputsContainer.parentNode) {
+    if (this.hiddenInputsContainer?.parentNode) {
       this.hiddenInputsContainer.parentNode.removeChild(
         this.hiddenInputsContainer,
       );
@@ -79,23 +95,22 @@ export class MultiSelect extends LitElement {
   }
 
   _hideSlottedOptions() {
-    const optionElements = this.querySelectorAll("option");
-    optionElements.forEach((opt) => {
-      opt.style.display = "none";
+    this.querySelectorAll<HTMLElement>("select-option").forEach((el) => {
+      el.style.display = "none";
     });
   }
 
   _readOptionsFromSlot() {
-    const optionElements = this.querySelectorAll("option");
+    const optionElements = this.querySelectorAll("select-option");
     this.optionsMap = new Map();
     const preselected: string[] = [];
 
     optionElements.forEach((opt) => {
-      const value = opt.value || opt.textContent || "";
-      const text = opt.textContent || "";
+      const value = opt.getAttribute("value") || opt.textContent?.trim() || "";
+      const text = opt.textContent?.trim() || "";
       if (value) {
         this.optionsMap.set(value, text);
-        if (opt.hasAttribute("selected") || opt.selected) {
+        if (opt.hasAttribute("selected")) {
           preselected.push(value);
         }
       }
