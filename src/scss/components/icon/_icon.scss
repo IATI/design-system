@@ -10,6 +10,11 @@
     background-image: url("@assets/svg/icon-info.svg");
   }
 
+  &--feedback {
+    background-image: url("@assets/svg/icon-feedback.svg");
+    background-size: 120%;
+  }
+
   &--search {
     background-image: url("@assets/svg/icon-search.svg");
   }
