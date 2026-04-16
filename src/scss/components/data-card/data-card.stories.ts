@@ -150,40 +150,44 @@ export const Summary: Story = {
       </header>
       <div class="iati-data-card--body">
         <div class="iati-data-card--columns">
-          <div class="iati-data-card--column iati-data-card--column-title">
-            Datapoint name
+          <div class="iati-data-card--left">
+            <div class="iati-data-card--column iati-data-card--column-title">
+              Datapoint name
+            </div>
+            <div class="iati-data-card--column">
+              <a href="#">link</a>
+            </div>
+            <div class="iati-data-card--column iati-data-card--column-title">
+              Datapoint name
+            </div>
+            <div class="iati-data-card--column">
+              <code>INLINE CODE BLOCK</code>
+            </div>
+            <div class="iati-data-card--column iati-data-card--column-title">
+              Datapoint name
+            </div>
+            <div class="iati-data-card--column">
+              <code>ANOTHER INLINE CODE BLOCK</code>
+            </div>
+            <div class="iati-data-card--column iati-data-card--column-title">
+              Datapoint name
+            </div>
+            <div class="iati-data-card--column">
+              <code>1</code> <code>2</code>
+            </div>
           </div>
-          <div class="iati-data-card--column">
-            <a href="#">link</a>
+          <div class="iati-data-card--right">
+            <div class="iati-data-card--column iati-data-card--column-title">
+              Datapoint name
+            </div>
+            <div class="iati-data-card--column">
+              <span class="iati-reference">reference_item</span>
+            </div>
+            <div class="iati-data-card--column iati-data-card--column-title">
+              Datapoint name
+            </div>
+            <div class="iati-data-card--column">generic text</div>
           </div>
-          <div class="iati-data-card--column iati-data-card--column-title">
-            Datapoint name
-          </div>
-          <div class="iati-data-card--column">
-            <code>1</code> <code>2</code>
-          </div>
-          <div class="iati-data-card--column iati-data-card--column-title">
-            Datapoint name
-          </div>
-          <div class="iati-data-card--column">
-            <code>INLINE CODE BLOCK</code>
-          </div>
-          <div class="iati-data-card--column iati-data-card--column-title">
-            Datapoint name
-          </div>
-          <div class="iati-data-card--column">
-            <span class="iati-reference">reference_item</span>
-          </div>
-          <div class="iati-data-card--column iati-data-card--column-title">
-            Datapoint name
-          </div>
-          <div class="iati-data-card--column">
-            <code>ANOTHER INLINE CODE BLOCK</code>
-          </div>
-          <div class="iati-data-card--column iati-data-card--column-title">
-            Datapoint name
-          </div>
-          <div class="iati-data-card--column">generic text</div>
         </div>
         <div class="iati-data-card__stats">
           <div class="iati-data-card__stat">
