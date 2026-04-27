@@ -1,5 +1,6 @@
 @use "../../tokens/color" as *;
 @use "../../tokens/font" as *;
+@use "../../tokens/screens" as *;
 @use "../../tokens/spacing" as *;
 @use "../../base/mixins";
 
@@ -104,7 +105,12 @@
   &--columns {
     display: flex;
     gap: 0.5rem;
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+    }
   }
+
 
   &--left,
   &--right {
