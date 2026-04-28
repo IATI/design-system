@@ -101,6 +101,7 @@ function initialiseSparklines() {
               labels: {
                 pointStyle: "line",
                 usePointStyle: true,
+                color: "#155366",
               },
             },
             tooltip: {
