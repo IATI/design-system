@@ -108,6 +108,7 @@ function initialiseSparklines() {
               mode: "nearest",
               intersect: false,
               displayColors: isNested,
+              boxPadding: 4,
               backgroundColor: "rgba(255, 255, 255, 0.9)",
               titleColor: "#155366",
               bodyColor: "#155366",
