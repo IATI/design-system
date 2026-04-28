@@ -1,5 +1,6 @@
 @use "../../tokens/color" as *;
 @use "../../tokens/font" as *;
+@use "../../tokens/screens" as *;
 @use "../../tokens/spacing" as *;
 @use "../../base/mixins";
 
@@ -75,6 +76,7 @@
   &__stat {
     display: grid;
     background-color: $color-teal-10;
+    border-radius: 4px;
     padding: 0.75rem;
     gap: 0.5rem;
     min-width: 0;
@@ -95,6 +97,7 @@
       font-family: $font-stack-heading;
       font-weight: $font-weight-heading;
       font-size: 1.5rem;
+      line-height: 2.6rem;
       color: $color-teal-90;
       margin: 0;
       align-self: end;
@@ -104,6 +107,10 @@
   &--columns {
     display: flex;
     gap: 0.5rem;
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+    }
   }
 
   &--left,
