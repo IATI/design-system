@@ -51,4 +51,40 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+
+  &--pill {
+    color: $color-grey-90;
+    background-color: $color-teal-10;
+    border: 1px solid $color-teal-50;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  &--remove {
+    position: relative;
+    padding-right: 2.1em;
+
+    &::after {
+      position: absolute;
+      right: 0.7em;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "×";
+      color: currentColor;
+      pointer-events: none;
+      padding-bottom: 0.1rem;
+      font-size: 1em;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        color: $color-red-40;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
 }
