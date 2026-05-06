@@ -28,4 +28,3 @@ export const Youtube: Story = createStory("youtube", "dark");
 export const X: Story = createStory("x", "dark");
 export const LinkedIn: Story = createStory("linkedin", "dark");
 export const Facebook: Story = createStory("facebook", "dark");
-
