@@ -22,6 +22,10 @@
     background-image: url("@assets/svg/icon-chevron-left.svg");
   }
 
+  &--download {
+    background-image: url("@assets/svg/icon-download.svg");
+  }
+
   &--youtube {
     background-image: url("@assets/svg/youtube-logo.svg");
     aspect-ratio: 1.2 / 1;

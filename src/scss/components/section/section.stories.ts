@@ -16,8 +16,14 @@ export default meta;
 type Story = StoryObj;
 
 const Template = {
-  render: ({ title, content, fill, headingId }) => html`
-    <div class=${fill ? "iati-section iati-section--fill" : "iati-section"}>
+  render: ({ title, content, fill, fillDarker, headingId }) => html`
+    <div
+      class=${fillDarker
+        ? "iati-section iati-section--fill-darker"
+        : fill
+          ? "iati-section iati-section--fill"
+          : "iati-section"}
+    >
       <h2 class="iati-section__title" id=${headingId ? headingId : undefined}>
         ${title}
       </h2>
@@ -70,6 +76,23 @@ export const Fill: Story = {
         non egestas varius, libero lorem ullamcorper libero, non rutrum leo
         lacus a enim. Donec consequat ac odio tincidunt posuere. Maecenas
         maximus tellus nisl, eget ornare ligula vehicula vel.
+      </p>
+      ${Table.render?.call({})}
+    `,
+  },
+};
+
+export const FillDarker: Story = {
+  ...Template,
+  args: {
+    title: "Section",
+    fillDarker: true,
+    content: html`
+      <p>
+        This section has a darker background using color-teal-20. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Pellentesque non augue
+        diam. Morbi nibh arcu, pulvinar sit amet erat ut, gravida imperdiet
+        erat.
       </p>
       ${Table.render?.call({})}
     `,
