@@ -10,14 +10,14 @@
     width: 100%;
     font-weight: 500;
     font-size: 0.8rem;
-    border: 1px solid $color-grey-20;
+    border: 1px solid $color-teal-60;
   }
   tbody {
-    border: 1px solid $color-grey-20;
+    border: 1px solid $color-teal-60;
   }
   th {
     text-transform: uppercase;
-    background-color: $color-teal-30;
+    background-color: #{$color-green-30}cc;
     color: $color-grey-90;
   }
   td {
@@ -30,7 +30,7 @@
   }
   td,
   th {
-    border-right: 1px solid $color-grey-20;
+    border-right: 1px solid $color-teal-60;
     text-align: left;
     min-width: 20ch;
   }
@@ -39,17 +39,17 @@
     padding: 0.5rem 1rem;
   }
   tr {
-    border-bottom: 1px solid $color-grey-20;
+    border-bottom: 1px solid $color-teal-30;
     &:last-of-type {
-      border-bottom: 1px solid $color-grey-20;
+      border-bottom: 1px solid $color-teal-60;
     }
   }
   thead {
-    border-bottom: 1px solid $color-grey-20;
+    border-bottom: 1px solid $color-teal-60;
   }
   tfoot {
     font-weight: 700;
-    border-top: 1px solid $color-grey-20;
+    border-top: 1px solid $color-teal-60;
     text-transform: uppercase;
   }
 }

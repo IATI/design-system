@@ -121,6 +121,28 @@
     }
   }
 
+  .iati-table {
+    table,
+    tbody,
+    thead,
+    tfoot {
+      border-color: $color-grey-20;
+    }
+    td,
+    th {
+      border-right-color: $color-grey-20;
+    }
+    tr {
+      border-bottom-color: $color-grey-20;
+    }
+    th {
+      background-color: $color-teal-30;
+    }
+    &--plain th {
+      background-color: transparent;
+    }
+  }
+
   .iati-subsection_intro {
     display: flex;
     flex-direction: column;
