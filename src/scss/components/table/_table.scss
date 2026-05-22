@@ -10,22 +10,27 @@
     width: 100%;
     font-weight: 500;
     font-size: 0.8rem;
-    border: 1px solid $color-teal-60;
+    border: 1px solid $color-grey-20;
   }
   tbody {
-    border: 1px solid $color-teal-60;
+    border: 1px solid $color-grey-20;
   }
   th {
     text-transform: uppercase;
-    background-color: #{$color-green-30}cc;
+    background-color: $color-teal-30;
     color: $color-grey-90;
   }
   td {
     background-color: #fff;
   }
+  &--plain {
+    th {
+      background-color: transparent;
+    }
+  }
   td,
   th {
-    border-right: 1px solid $color-teal-60;
+    border-right: 1px solid $color-grey-20;
     text-align: left;
     min-width: 20ch;
   }
@@ -34,17 +39,53 @@
     padding: 0.5rem 1rem;
   }
   tr {
-    border-bottom: 1px solid $color-teal-30;
+    border-bottom: 1px solid $color-grey-20;
     &:last-of-type {
-      border-bottom: 1px solid $color-teal-60;
+      border-bottom: 1px solid $color-grey-20;
     }
   }
   thead {
-    border-bottom: 1px solid $color-teal-60;
+    border-bottom: 1px solid $color-grey-20;
   }
   tfoot {
     font-weight: 700;
-    border-top: 1px solid $color-teal-60;
+    border-top: 1px solid $color-grey-20;
     text-transform: uppercase;
+  }
+}
+
+.iati-table,
+.iati-file-card-table__header {
+  [aria-sort] {
+    cursor: pointer;
+  }
+
+  [aria-sort] button {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25em;
+  }
+
+  [aria-sort] button::before {
+    content: "▴▾";
+    opacity: 0.4;
+    font-size: 0.8em;
+  }
+
+  [aria-sort="ascending"] button::before {
+    content: "▴";
+    opacity: 1;
+  }
+
+  [aria-sort="descending"] button::before {
+    content: "▾";
+    opacity: 1;
   }
 }

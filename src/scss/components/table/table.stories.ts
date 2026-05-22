@@ -97,3 +97,41 @@ export const Scrolling: Story = {
     </div>
   `,
 };
+
+export const Sortable: Story = {
+  render: () => html`
+    <div class="iati-table">
+      <table class="iati-table__table" data-sortable>
+        <thead>
+          <tr>
+            <th aria-sort="none" data-sort-type="string">Name</th>
+            <th aria-sort="none" data-sort-type="number">Files</th>
+            <th aria-sort="none" data-sort-type="number">Size (kB)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Africalia</td>
+            <td>11</td>
+            <td>223.1</td>
+          </tr>
+          <tr>
+            <td>Alcis</td>
+            <td>1</td>
+            <td>14.89</td>
+          </tr>
+          <tr>
+            <td>BRAC</td>
+            <td>27</td>
+            <td>891.4</td>
+          </tr>
+          <tr>
+            <td>CAFOD</td>
+            <td>3</td>
+            <td>52.6</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `,
+};
