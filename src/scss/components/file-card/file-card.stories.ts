@@ -56,22 +56,35 @@ export const Default: Story = {
             </div>
           </div>
           <div class="iati-file-card__footer-row">
-            <div class="iati-file-card__metadata">
-              <span>Last updated: 2024-01-15</span>
-              <span>Status: Valid</span>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Recipient country info</span
+              >
+              <span>Algeria, Greece, Saint Helena</span>
             </div>
-            <div class="iati-file-card__actions">
-              <button
-                class="iati-button iati-button--submit iati-button--compact"
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Something else here</span
               >
-                <i class="iati-icon iati-icon--download"></i>
-                <span>Download</span>
-              </button>
-              <button
-                class="iati-button iati-button--outline iati-button--compact"
+              <div class="iati-file-card__chart-container">
+                <canvas
+                  class="iati-data-card__sparkline"
+                  data-sparkline='{"labels":["1","2","3","4","5","6","7","8","9","10"],"values":[15,3,25,8,18,5,22,12,28,6]}'
+                ></canvas>
+              </div>
+            </div>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Something else here</span
               >
-                View Details
-              </button>
+              <span>Another value</span>
+            </div>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label">Validation status</span>
+              <span
+                class="iati-file-card__status iati-file-card__status--success"
+                >Success</span
+              >
             </div>
           </div>
         </div>
@@ -104,22 +117,35 @@ export const Default: Story = {
             </div>
           </div>
           <div class="iati-file-card__footer-row">
-            <div class="iati-file-card__metadata">
-              <span>Last updated: 2024-01-10</span>
-              <span>Status: Valid</span>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Recipient country info</span
+              >
+              <span>Algeria, Greece, Saint Helena</span>
             </div>
-            <div class="iati-file-card__actions">
-              <button
-                class="iati-button iati-button--submit iati-button--compact"
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Something else here</span
               >
-                <i class="iati-icon iati-icon--download"></i>
-                <span>Download</span>
-              </button>
-              <button
-                class="iati-button iati-button--outline iati-button--compact"
+              <div class="iati-file-card__chart-container">
+                <canvas
+                  class="iati-data-card__sparkline"
+                  data-sparkline='{"labels":["1","2","3","4","5","6","7","8","9","10"],"values":[15,3,25,8,18,5,22,12,28,6]}'
+                ></canvas>
+              </div>
+            </div>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Something else here</span
               >
-                View Details
-              </button>
+              <span>Another value</span>
+            </div>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label">Validation status</span>
+              <span
+                class="iati-file-card__status iati-file-card__status--critical"
+                >Critical</span
+              >
             </div>
           </div>
         </div>
@@ -152,22 +178,34 @@ export const Default: Story = {
             </div>
           </div>
           <div class="iati-file-card__footer-row">
-            <div class="iati-file-card__metadata">
-              <span>Last updated: 2024-01-12</span>
-              <span>Status: Valid</span>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Recipient country info</span
+              >
+              <span>Algeria, Greece, Saint Helena</span>
             </div>
-            <div class="iati-file-card__actions">
-              <button
-                class="iati-button iati-button--submit iati-button--compact"
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Something else here</span
               >
-                <i class="iati-icon iati-icon--download"></i>
-                <span>Download</span>
-              </button>
-              <button
-                class="iati-button iati-button--outline iati-button--compact"
+              <div class="iati-file-card__chart-container">
+                <canvas
+                  class="iati-data-card__sparkline"
+                  data-sparkline='{"labels":["1","2","3","4","5","6","7","8","9","10"],"values":[15,3,25,8,18,5,22,12,28,6]}'
+                ></canvas>
+              </div>
+            </div>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Something else here</span
               >
-                View Details
-              </button>
+              <span>Another value</span>
+            </div>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label">Validation status</span>
+              <span class="iati-file-card__status iati-file-card__status--error"
+                >Error</span
+              >
             </div>
           </div>
         </div>
@@ -216,23 +254,35 @@ export const SingleCard: Story = {
             </div>
           </div>
           <div class="iati-file-card__footer-row">
-            <div class="iati-file-card__metadata">
-              <span>Last updated: 2024-01-20</span>
-              <span>Status: Valid</span>
-              <span>Format: XML</span>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Recipient country info</span
+              >
+              <span>Algeria, Greece, Saint Helena</span>
             </div>
-            <div class="iati-file-card__actions">
-              <button
-                class="iati-button iati-button--submit iati-button--compact"
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Something else here</span
               >
-                <i class="iati-icon iati-icon--download"></i>
-                <span>Download</span>
-              </button>
-              <button
-                class="iati-button iati-button--outline iati-button--compact"
+              <div class="iati-file-card__chart-container">
+                <canvas
+                  class="iati-data-card__sparkline"
+                  data-sparkline='{"labels":["1","2","3","4","5","6","7","8","9","10"],"values":[15,3,25,8,18,5,22,12,28,6]}'
+                ></canvas>
+              </div>
+            </div>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label"
+                >Something else here</span
               >
-                View Details
-              </button>
+              <span>Another value</span>
+            </div>
+            <div class="iati-file-card__cell">
+              <span class="iati-file-card__info-label">Validation status</span>
+              <span
+                class="iati-file-card__status iati-file-card__status--success"
+                >Success</span
+              >
             </div>
           </div>
         </div>

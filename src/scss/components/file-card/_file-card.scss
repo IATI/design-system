@@ -126,21 +126,44 @@
     }
   }
 
-  // Third row spanning all columns
+  // Third row: labeled info cells
   &__footer-row {
     min-width: 800px;
-    padding: 0.75rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
     border-top: 1px solid $color-teal-60;
-    align-items: center;
+    text-align: center;
+
+    .iati-file-card__cell {
+      padding: 0.75rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
   }
 
-  &__cell {
+  &__info-label {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: $color-teal-90;
+  }
+}
+
+.iati-file-card__status {
+  font-weight: 700;
+
+  &--success {
+    color: $color-green-70;
   }
 
-  &__flex {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    justify-content: space-between;
+  &--error {
+    color: $color-orange-70;
+  }
+
+  &--critical {
+    color: $color-purple-70;
   }
 }
