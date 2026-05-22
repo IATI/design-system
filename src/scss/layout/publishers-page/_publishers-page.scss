@@ -66,6 +66,7 @@
 }
 
 .iati-publishers-page__article {
+  flex: 1;
   min-width: 0;
   & > * + * {
     margin-top: 1rem;
@@ -103,32 +104,21 @@
 }
 
 .iati-publishers-page {
-  .iati-figures__items {
-    gap: 0.5rem;
-  }
-
-  .iati-figures__item {
-    background-color: $color-blue-10;
-    padding: 0.75rem 0.5rem;
-    font-size: 0.75rem;
-  }
-
-  .iati-figures__content {
-    color: $color-teal-90;
-  }
-
-  .iati-figures__number {
-    font-size: 1.75rem;
-  }
-
-  .iati-section--fill-darker .iati-section__title {
-    text-align: center;
-  }
-
   .iati-section__subheading {
     font-size: 1.0625rem;
     font-weight: 700;
     text-transform: uppercase;
+  }
+
+  .iati-section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    .iati-section__subheading {
+      flex: 1;
+    }
   }
 
   .iati-subsection_intro {
@@ -162,60 +152,6 @@
     }
   }
 
-  .iati-publishers-page__headlines {
-    margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    @media (max-width: $screen-xl) {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-  }
-
-  .iati-publishers-page__headline-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.5rem;
-    min-height: 18px;
-    line-height: 1.2;
-
-    @media (max-width: $screen-sm) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-      margin-bottom: 0.75rem;
-    }
-  }
-
-  .iati-publishers-page__headline-key {
-    color: #121212;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 12px;
-    flex-shrink: 0;
-  }
-
-  .iati-publishers-page__headline-value {
-    color: #121212;
-    font-size: 14px;
-    text-align: right;
-    line-height: 1.2;
-
-    a,
-    code,
-    span {
-      line-height: 1.2;
-      vertical-align: baseline;
-    }
-
-    a code {
-      color: $color-teal-90;
-      background-color: $color-teal-10;
-    }
-  }
-
   .iati-publishers-page__data-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -224,27 +160,10 @@
 
     .iati-data-card {
       max-width: 350px;
-      padding: 0;
-      gap: 0;
     }
 
-    .iati-data-card__title {
-      background-color: $color-teal-40;
-      color: $color-grey-90;
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-
-      margin: 0;
-      padding: 0.75rem 1.25rem;
-    }
-
-    .iati-data-card__content {
-      padding: 1.25rem;
-      display: flex;
-      flex-direction: column;
+    .iati-data-card--body {
       justify-content: space-between;
-      gap: 0.75rem;
       flex: 1;
 
       .iati-data-card__graph {
