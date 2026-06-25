@@ -26,4 +26,10 @@
       background-color: $color-teal-10;
     }
   }
+  &--fill-darker {
+    .iati-section__content {
+      padding-inline: 1rem;
+      background-color: $color-teal-20;
+    }
+  }
 }

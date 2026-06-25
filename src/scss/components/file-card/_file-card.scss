@@ -1,0 +1,169 @@
+@use "../../tokens/color" as *;
+@use "../../tokens/font" as *;
+@use "../../tokens/spacing" as *;
+
+.iati-file-card-table {
+  overflow-x: auto;
+  min-width: 100%;
+  background: $color-blue-10;
+
+  // Table header that appears visually like a table head
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    min-width: 800px;
+    gap: 0;
+    border: 1px solid $color-teal-60;
+    border-bottom: 1px solid $color-teal-60;
+    background-color: $color-teal-30;
+
+    .iati-file-card-table__header-cell {
+      padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      color: $color-grey-90;
+      font-weight: 800;
+      font-size: 0.75rem;
+      border-right: 1px solid $color-teal-60;
+      text-align: center;
+      min-width: 20ch;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  // Container for all file cards
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: $padding-block;
+    margin-top: $padding-block;
+    min-width: 800px;
+  }
+}
+
+.iati-file-card {
+  border: 1px solid $color-teal-60;
+  border-top: 3px solid $color-teal-60;
+  background: white;
+  font-size: 0.75rem;
+  color: $color-teal-90;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 800px;
+  width: 100%;
+  text-align: center;
+
+  // First row with 5 cells
+  &__main-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    min-width: 800px;
+    gap: 0;
+    align-items: center;
+    font-weight: 800;
+
+    .iati-file-card__cell {
+      padding: 0.5rem 0;
+      border-right: 1px solid $color-teal-60;
+
+      &:first-child {
+        text-transform: uppercase;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  // Second row with 5 cells
+  &__details-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    min-width: 800px;
+    gap: 0;
+    align-items: stretch;
+    padding-top: 0;
+    border-top: 1px solid $color-teal-60;
+
+    .iati-file-card__cell {
+      padding: 0.5rem 1rem;
+      border-right: 1px solid $color-teal-60;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 100%;
+
+      .iati-button {
+        max-width: 125px;
+        width: auto;
+      }
+
+      .iati-file-card__chart-container {
+        .iati-data-card__sparkline {
+          // width: 100px !important;
+          height: 30px !important;
+          max-width: 100%;
+        }
+
+        .iati-file-card_chart-caption {
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          line-height: 14px;
+        }
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  // Third row: labeled info cells
+  &__footer-row {
+    min-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid $color-teal-60;
+    text-align: center;
+
+    .iati-file-card__cell {
+      padding: 0.75rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+
+  &__info-label {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: $color-teal-90;
+  }
+}
+
+.iati-file-card__status {
+  font-weight: 700;
+
+  &--success {
+    color: $color-green-70;
+  }
+
+  &--error {
+    color: $color-orange-70;
+  }
+
+  &--critical {
+    color: $color-purple-70;
+  }
+}

@@ -1,0 +1,208 @@
+@use "../../base/mixins";
+@use "../../tokens/screens" as *;
+@use "../../tokens/color" as *;
+
+.iati-publishers-page {
+  @include mixins.page-width-container();
+  background-color: white;
+  flex: 1;
+  padding-block: 1rem;
+}
+
+.iati-publishers-page__before-content {
+  margin-block-end: 1rem;
+  @media (min-width: $screen-md) {
+    margin-block-end: 2rem;
+  }
+  & > * + * {
+    margin-block-start: 1rem;
+  }
+}
+
+.iati-publishers-page__intro-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 1rem;
+  @media (min-width: $screen-lg) {
+    position: relative;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+}
+
+.iati-publishers-page__intro-text {
+  margin: 0;
+  color: $color-teal-90;
+  line-height: 25px;
+  @media (min-width: $screen-lg) {
+    width: 75%;
+    padding-right: 2rem;
+  }
+}
+
+.iati-publishers-page__intro-button {
+  @media (min-width: $screen-lg) {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+  }
+
+  .iati-button {
+    white-space: nowrap;
+  }
+}
+
+.iati-publishers-page__content {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.iati-publishers-page__article {
+  flex: 1;
+  min-width: 0;
+  & > * + * {
+    margin-top: 1rem;
+    @media (min-width: $screen-md) {
+      margin-top: 2rem;
+    }
+  }
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+.iati-publishers-page__side {
+  min-inline-size: 15rem;
+  flex-grow: 0;
+}
+
+.iati-publishers-page__side--sticky > * {
+  position: sticky;
+  top: 1rem;
+  margin-top: 20px;
+}
+
+.iati-publishers-page__after-content {
+  margin-block-start: 1rem;
+  @media (min-width: $screen-md) {
+    margin-block-start: 2rem;
+  }
+  & > * + * {
+    margin-block-start: 1rem;
+    @media (min-width: $screen-md) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.iati-publishers-page {
+  .iati-section__subheading {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .iati-section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    .iati-section__subheading {
+      flex: 1;
+    }
+  }
+
+  .iati-table {
+    table,
+    tbody,
+    thead,
+    tfoot {
+      border-color: $color-grey-20;
+    }
+    td,
+    th {
+      border-right-color: $color-grey-20;
+    }
+    tr {
+      border-bottom-color: $color-grey-20;
+    }
+    th {
+      background-color: $color-teal-30;
+    }
+    &--plain th {
+      background-color: transparent;
+    }
+  }
+
+  .iati-subsection_intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media (min-width: $screen-lg) {
+      position: relative;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 2rem;
+    }
+
+    p {
+      margin: 0;
+
+      @media (min-width: $screen-lg) {
+        width: 75%;
+      }
+    }
+
+    .iati-button {
+      align-self: flex-start;
+
+      @media (min-width: $screen-lg) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .iati-publishers-page__data-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+
+    .iati-data-card {
+      max-width: 350px;
+    }
+
+    .iati-data-card--body {
+      justify-content: space-between;
+      flex: 1;
+
+      .iati-data-card__graph {
+        width: unset;
+        margin: 0;
+      }
+
+      .iati-button {
+        font-size: 14px;
+      }
+    }
+  }
+  .iati-button {
+    gap: 0.5rem;
+
+    .iati-icon--download {
+      height: 1.5rem;
+    }
+  }
+}

@@ -23,6 +23,11 @@
   td {
     background-color: #fff;
   }
+  &--plain {
+    th {
+      background-color: transparent;
+    }
+  }
   td,
   th {
     border-right: 1px solid $color-teal-60;
@@ -46,5 +51,41 @@
     font-weight: 700;
     border-top: 1px solid $color-teal-60;
     text-transform: uppercase;
+  }
+}
+
+.iati-table,
+.iati-file-card-table__header {
+  [aria-sort] {
+    cursor: pointer;
+  }
+
+  [aria-sort] button {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25em;
+  }
+
+  [aria-sort] button::before {
+    content: "▴▾";
+    opacity: 0.4;
+    font-size: 0.8em;
+  }
+
+  [aria-sort="ascending"] button::before {
+    content: "▴";
+    opacity: 1;
+  }
+
+  [aria-sort="descending"] button::before {
+    content: "▾";
+    opacity: 1;
   }
 }
