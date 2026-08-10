@@ -14,17 +14,11 @@
   text-align: center;
 
   &--header {
-    color: $color-grey-90;
-    background-color: $color-teal-40;
-    padding: 0.5rem;
+    color: $color-teal-90;
+    padding: 1rem 1rem 0 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
-
-    &-dark {
-      background-color: $color-teal-90;
-      color: white;
-    }
   }
 
   &--body {
@@ -54,13 +48,12 @@
     margin: 0;
     font-family: $font-stack-heading;
     font-weight: $font-weight-body-xstrong;
-    font-size: 1rem;
-    text-transform: uppercase;
+    font-size: 1.6rem;
   }
 
   &__tagline {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: $font-weight-body-xstrong;
     line-height: 1.4;
   }
