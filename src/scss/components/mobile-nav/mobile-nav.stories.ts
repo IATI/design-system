@@ -33,9 +33,9 @@ export const MobileNav: Story = {
   },
   render: (args) => html`
     <div
-      class="iati-mobile-nav js-iati-mobile-nav ${args.open
-        ? "iati-mobile-nav--open"
-        : ""}"
+      class="iati-mobile-nav js-iati-mobile-nav ${
+        args.open ? "iati-mobile-nav--open" : ""
+      }"
     >
       <div class="iati-mobile-nav__overlay js-iati-mobile-overlay"></div>
       <nav class="iati-mobile-nav__menu">

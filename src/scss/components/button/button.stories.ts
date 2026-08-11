@@ -27,8 +27,8 @@ export const Light: Story = {
     html`<button class="iati-button iati-button--light">Button</button>`,
   globals: {
     backgrounds: {
-      value: "dark"
-    }
+      value: "dark",
+    },
   },
 };
 
@@ -46,8 +46,8 @@ export const WithIcon: Story = {
   `,
   globals: {
     backgrounds: {
-      value: "dark"
-    }
+      value: "dark",
+    },
   },
 };
 
@@ -63,8 +63,8 @@ export const CompactLight: Story = {
     </button>`,
   globals: {
     backgrounds: {
-      value: "dark"
-    }
+      value: "dark",
+    },
   },
 };
 

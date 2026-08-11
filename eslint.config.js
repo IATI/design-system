@@ -7,11 +7,18 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
 
-export default [gitignore(), {
-  languageOptions: {
-    globals: {
-      ...globals.node,
-      ...globals.browser,
+export default [
+  gitignore(),
+  {
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+      },
     },
   },
-}, js.configs.recommended, ...tsEslint.configs.recommended, eslintConfigPrettier, ...storybook.configs["flat/recommended"]];
+  js.configs.recommended,
+  ...tsEslint.configs.recommended,
+  eslintConfigPrettier,
+  ...storybook.configs["flat/recommended"],
+];

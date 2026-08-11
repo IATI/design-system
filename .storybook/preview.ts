@@ -26,7 +26,7 @@ const preview: Preview = {
       options: {
         light: { name: "light", value: "#fff" },
         grey: { name: "grey", value: "#f6f6f6" },
-        dark: { name: "dark", value: "#155366" }
+        dark: { name: "dark", value: "#155366" },
       },
     },
     docs: {
@@ -51,7 +51,7 @@ const preview: Preview = {
     },
   ],
 
-  tags: ["autodocs"]
+  tags: ["autodocs"],
 };
 
 export default preview;
