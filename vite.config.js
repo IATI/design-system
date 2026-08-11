@@ -1,5 +1,4 @@
 import path from "path";
-import { NodePackageImporter } from "sass";
 import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
 
@@ -24,7 +23,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        pkgImporter: new NodePackageImporter(),
+        api: "modern",
+        quietDeps: true,
       },
     },
   },
