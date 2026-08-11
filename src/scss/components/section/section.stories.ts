@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/web-components";
+import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { Default as Table } from "../../components/table/table.stories";
 
 import { html } from "lit";

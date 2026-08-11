@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/web-components";
+import type { Meta, StoryObj } from "@storybook/web-components-vite";
 
 import { html } from "lit";
 
@@ -23,13 +23,13 @@ export const Link: Story = {
 };
 
 export const Light: Story = {
-  parameters: {
-    backgrounds: {
-      default: "dark",
-    },
-  },
   render: () =>
     html`<button class="iati-button iati-button--light">Button</button>`,
+  globals: {
+    backgrounds: {
+      value: "dark"
+    }
+  },
 };
 
 export const Submit: Story = {
@@ -38,17 +38,17 @@ export const Submit: Story = {
 };
 
 export const WithIcon: Story = {
-  parameters: {
-    backgrounds: {
-      default: "dark",
-    },
-  },
   render: () => html`
     <button class="iati-button iati-button--light">
       <span>Info</span>
       <i class="iati-icon iati-icon--info"></i>
     </button>
   `,
+  globals: {
+    backgrounds: {
+      value: "dark"
+    }
+  },
 };
 
 export const Compact: Story = {
@@ -57,15 +57,15 @@ export const Compact: Story = {
 };
 
 export const CompactLight: Story = {
-  parameters: {
-    backgrounds: {
-      default: "dark",
-    },
-  },
   render: () =>
     html`<button class="iati-button iati-button--light iati-button--compact">
       Button
     </button>`,
+  globals: {
+    backgrounds: {
+      value: "dark"
+    }
+  },
 };
 
 export const CompactSubmit: Story = {

@@ -1,6 +1,6 @@
 import { html } from "lit";
 
-import type { Meta, StoryObj } from "@storybook/web-components";
+import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { Close as MenuToggle } from "../menu-toggle/menu-toggle.stories";
 
 const toolItems = ["Tool Home", "About"];
