@@ -5,11 +5,10 @@
 @forward "tokens";
 
 // Load fonts
-@import "typography/fonts";
+@use "typography/fonts";
 
 .iati-design-system--enabled {
   @import "base";
-  @import "tokens";
   @import "typography";
   @import "components";
   @import "layout";
