@@ -1,5 +1,6 @@
 @use "sass:meta";
 @use "tokens";
+@use "base/mixins";
 
 // Expose tokens as Sass variables
 @forward "tokens";
@@ -8,13 +9,13 @@
 @use "typography/fonts";
 
 .iati-design-system--enabled {
-  @import "base";
-  @import "typography";
-  @import "components";
-  @import "layout";
-  @import "utilities";
+  @include meta.load-css("base");
+  @include meta.load-css("typography");
+  @include meta.load-css("components");
+  @include meta.load-css("layout");
+  @include meta.load-css("utilities");
 
-  @include body-styles();
+  @include mixins.body-styles();
 }
 
 // Expose tokens as CSS custom properties
