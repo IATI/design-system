@@ -16,6 +16,7 @@ const meta: Meta = {
     backgrounds: {
       default: "light",
     },
+    contentBackground: false,
   },
 };
 

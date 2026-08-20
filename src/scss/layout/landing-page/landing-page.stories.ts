@@ -18,6 +18,8 @@ const meta: Meta = {
     backgrounds: {
       default: "grey",
     },
+    contentBackground: false,
+    fullHeight: true,
   },
 };
 
