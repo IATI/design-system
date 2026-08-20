@@ -15,9 +15,7 @@ const meta: Meta = {
   title: "Layout/Landing Page",
   parameters: {
     layout: "fullscreen",
-    backgrounds: {
-      default: "grey",
-    },
+    pageShell: true,
   },
 };
 

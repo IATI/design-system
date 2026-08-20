@@ -4,11 +4,6 @@ import type { Meta, StoryObj } from "@storybook/web-components-vite";
 
 const meta: Meta = {
   title: "Components/Message",
-  parameters: {
-    backgrounds: {
-      default: "light",
-    },
-  },
   argTypes: {
     type: { control: "select", options: ["notice", "info"] },
   },

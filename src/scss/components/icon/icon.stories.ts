@@ -8,14 +8,10 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj;
 
-const createStory = (variant: string, background = "light") => {
+const createStory = (variant: string, onDarkBackground = false) => {
   const classes = `iati-icon iati-icon--${variant}`;
   return {
-    parameters: {
-      backgrounds: {
-        default: background,
-      },
-    },
+    globals: onDarkBackground ? { backgrounds: { value: "dark" } } : {},
     render: () => html`<i class=${classes}></i>`,
   };
 };
@@ -24,7 +20,7 @@ export const Info: Story = createStory("info");
 export const Search: Story = createStory("search");
 export const Globe: Story = createStory("globe");
 export const ChevronLeft: Story = createStory("chevron-left");
-export const Youtube: Story = createStory("youtube", "dark");
-export const X: Story = createStory("x", "dark");
-export const LinkedIn: Story = createStory("linkedin", "dark");
-export const Facebook: Story = createStory("facebook", "dark");
+export const Youtube: Story = createStory("youtube", true);
+export const X: Story = createStory("x", true);
+export const LinkedIn: Story = createStory("linkedin", true);
+export const Facebook: Story = createStory("facebook", true);

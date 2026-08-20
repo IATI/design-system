@@ -4,11 +4,6 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Components/Brand Background",
-  parameters: {
-    backgrounds: {
-      default: "light",
-    },
-  },
 };
 
 export default meta;

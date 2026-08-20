@@ -3,12 +3,15 @@
 @use "../tokens/font" as *;
 @use "../tokens/spacing" as *;
 
-body {
-  @include mixins.body-styles();
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
+// Typography styles that are usually applied at the `body` level
+// must be placed within this mixin so that they can be pulled into the
+//`.iati-design-system--enabled` class in `main.scss`
+@mixin body-styles {
+  color: $color-grey-90;
+  font-family: $font-stack-body;
+  font-weight: $font-weight-body;
+  line-height: 1.15;
+  margin: 0;
 }
 
 .iati-dark-background {

@@ -3,11 +3,6 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Components/Figures",
-  parameters: {
-    backgrounds: {
-      default: "light",
-    },
-  },
 };
 
 const items = [

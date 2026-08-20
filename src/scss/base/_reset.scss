@@ -9,16 +9,6 @@ button {
   cursor: pointer;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-}
-
 button,
 input {
   font-weight: inherit;
