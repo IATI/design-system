@@ -1,6 +1,6 @@
 import { html } from "lit";
 
-import type { Meta, StoryObj } from "@storybook/web-components";
+import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { Close as MenuToggle } from "../menu-toggle/menu-toggle.stories";
 
 const toolItems = ["Tool Home", "About"];
@@ -33,9 +33,9 @@ export const MobileNav: Story = {
   },
   render: (args) => html`
     <div
-      class="iati-mobile-nav js-iati-mobile-nav ${args.open
-        ? "iati-mobile-nav--open"
-        : ""}"
+      class="iati-mobile-nav js-iati-mobile-nav ${
+        args.open ? "iati-mobile-nav--open" : ""
+      }"
     >
       <div class="iati-mobile-nav__overlay js-iati-mobile-overlay"></div>
       <nav class="iati-mobile-nav__menu">

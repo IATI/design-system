@@ -1,4 +1,4 @@
-import type { Preview } from "@storybook/web-components";
+import type { Preview } from "@storybook/web-components-vite";
 import { html } from "lit";
 
 import "../src/js/main.js";
@@ -23,11 +23,11 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-      values: [
-        { name: "light", value: "#fff" },
-        { name: "grey", value: "#f6f6f6" },
-        { name: "dark", value: "#155366" },
-      ],
+      options: {
+        light: { name: "light", value: "#fff" },
+        grey: { name: "grey", value: "#f6f6f6" },
+        dark: { name: "dark", value: "#155366" },
+      },
     },
     docs: {
       page: DocsTemplate,
@@ -38,6 +38,7 @@ const preview: Preview = {
     },
     designSystemEnabled: true,
   },
+
   decorators: [
     (storyFn, { parameters }) => {
       const { designSystemEnabled } = parameters;
@@ -49,6 +50,8 @@ const preview: Preview = {
       return storyFn();
     },
   ],
+
+  tags: ["autodocs"],
 };
 
 export default preview;

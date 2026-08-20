@@ -1,5 +1,14 @@
 @use "../tokens/color" as *;
+@use "../tokens/font" as *;
 @use "../tokens/spacing" as *;
+
+@mixin body-styles {
+  font-family: $font-stack-body;
+  font-weight: $font-weight-body;
+  color: $color-grey-90;
+  line-height: 1.15;
+  margin: 0;
+}
 
 @mixin page-width-container {
   width: 100%;
