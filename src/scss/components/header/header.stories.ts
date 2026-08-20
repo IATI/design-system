@@ -17,10 +17,6 @@ const meta: Meta = {
   title: "Components/Header",
   parameters: {
     layout: "fullscreen",
-    backgrounds: {
-      default: "light",
-    },
-    contentBackground: false,
   },
 };
 

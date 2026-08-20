@@ -5,11 +5,6 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Components/Section",
-  parameters: {
-    backgrounds: {
-      default: "light",
-    },
-  },
 };
 
 export default meta;

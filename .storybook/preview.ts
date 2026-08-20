@@ -5,9 +5,8 @@ import "../src/js/main.js";
 import "../src/scss/main.scss";
 import DocsTemplate from "./DocsTemplate.mdx";
 
-const contentBackgroundStyles = "background-color: white;";
-const fullHeightStyles =
-  "display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh;";
+const pageShellStyles =
+  "background-color: var(--color-grey-10); display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh;";
 
 const preview: Preview = {
   parameters: {
@@ -41,25 +40,25 @@ const preview: Preview = {
       },
     },
     designSystemEnabled: true,
-    contentBackground: true,
-    fullHeight: false,
+  },
+  initialGlobals: {
+    backgrounds: {
+      value: "light",
+    },
   },
 
   decorators: [
     (storyFn, { parameters }) => {
-      const { designSystemEnabled, contentBackground, fullHeight } = parameters;
-      const story = contentBackground
-        ? html`<div style="${contentBackgroundStyles}">${storyFn()}</div>`
-        : storyFn();
+      const { designSystemEnabled, pageShell } = parameters;
       if (designSystemEnabled) {
         return html`<div
           class="iati-design-system--enabled"
-          style="${fullHeight ? fullHeightStyles : ""}"
+          style="${pageShell ? pageShellStyles : ""}"
         >
-          ${story}
+          ${storyFn()}
         </div>`;
       }
-      return story;
+      return storyFn();
     },
   ],
 

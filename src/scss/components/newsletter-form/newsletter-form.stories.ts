@@ -3,9 +3,9 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Components/Newsletter Form",
-  parameters: {
+  globals: {
     backgrounds: {
-      default: "dark",
+      value: "dark",
     },
   },
 };

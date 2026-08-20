@@ -6,9 +6,9 @@ const items = ["Tool Name", "About"];
 
 const meta: Meta = {
   title: "Components/Header/Tool Nav",
-  parameters: {
+  globals: {
     backgrounds: {
-      default: "dark",
+      value: "dark",
     },
   },
 };

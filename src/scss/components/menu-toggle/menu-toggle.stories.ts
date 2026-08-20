@@ -3,9 +3,9 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Components/Menu Toggle",
-  parameters: {
+  globals: {
     backgrounds: {
-      default: "dark",
+      value: "dark",
     },
   },
 };

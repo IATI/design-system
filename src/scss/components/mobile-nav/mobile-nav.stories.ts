@@ -18,9 +18,6 @@ const meta: Meta = {
         height: "600px",
       },
     },
-    backgrounds: {
-      default: "light",
-    },
   },
 };
 

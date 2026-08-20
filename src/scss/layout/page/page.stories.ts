@@ -16,11 +16,7 @@ const meta: Meta = {
   title: "Layout/Page",
   parameters: {
     layout: "fullscreen",
-    backgrounds: {
-      default: "grey",
-    },
-    contentBackground: false,
-    fullHeight: true,
+    pageShell: true,
   },
 };
 

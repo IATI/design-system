@@ -5,11 +5,6 @@ import "../select/multi-select.ts";
 
 const meta: Meta = {
   title: "Components/Form",
-  parameters: {
-    backgrounds: {
-      default: "light",
-    },
-  },
 };
 
 export default meta;

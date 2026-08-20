@@ -3,11 +3,6 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Components/Jump Menu",
-  parameters: {
-    backgrounds: {
-      default: "light",
-    },
-  },
 };
 
 export default meta;

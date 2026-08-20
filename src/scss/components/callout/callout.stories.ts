@@ -3,11 +3,6 @@ import { html } from "lit";
 
 const meta: Meta = {
   title: "Components/Callout",
-  parameters: {
-    backgrounds: {
-      default: "light",
-    },
-  },
 };
 
 export default meta;
