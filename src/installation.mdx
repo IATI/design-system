@@ -22,7 +22,7 @@ You can [watch the Github repository](https://docs.github.com/en/account-and-pro
 
 ## NPM (Optional)
 
-It is also possible to include the design system in a [Sass](https://sass-lang.com/) project.
+It is also possible to include the design system in a project which uses a bundler, such as [Vite](https://vite.dev/) or webpack.
 
 First install with npm:
 
@@ -30,8 +30,14 @@ First install with npm:
 npm install iati-design-system
 ```
 
-Then import the package in your `.scss` file. The [Node.js Package Importer](https://sass-lang.com/documentation/at-rules/use/#node-js-package-importer) is required to use this syntax.
+Then import it from a JavaScript or CSS entry point:
 
-```css
-@use "pkg:iati-design-system";
+```js
+import "iati-design-system/dist/css/iati.css";
+```
+
+To use the web components, import the package itself. This loads the JavaScript only; you will still need the CSS above.
+
+```js
+import "iati-design-system";
 ```
