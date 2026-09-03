@@ -8,12 +8,10 @@
   },
   "type": "module",
   "exports": {
-    ".": {
-      "sass": "./src/scss/main.scss"
-    }
+    ".": "./dist/js/iati.js",
+    "./dist/css/*": "./dist/css/*"
   },
   "files": [
-    "src/scss/**/*.scss",
     "src/assets/**/*",
     "dist/css/**/*.css",
     "dist/js/**/*.js"
